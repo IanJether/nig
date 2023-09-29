@@ -4,6 +4,7 @@ import { faBars, faCircle, faEnvelope, faLink, faLocationPin, faPhone, faX } fro
 import Link from "next/link";
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
+import { NavbarList } from "<nig>/data/navList";
 
 const Navbar = () => {
 
@@ -42,16 +43,16 @@ const Navbar = () => {
 
         window.onscroll = function () {
             try {
-                if (window.scrollY > 400) {
+                if (window.scrollY > 200) {
                     nav.classList.replace('absolute', 'fixed')
                     nav.classList.add('shadow-md', 'bg-black', 'bg-opacity-[80%]')
 
                     bignav.classList.replace('absolute', 'fixed',)
                     bignav.classList.replace('w-[98vw]', 'w-[100vw]',)
-                    bignav.classList.add('shadow-md', 'bg-black', 'bg-opacity-[50%]')
+                    bignav.classList.add('shadow-md', 'bg-black', 'bg-opacity-[70%]')
 
                     navtop.classList.add('bg-blue-500')
-                   
+
 
                 } else {
                     nav.classList.replace('fixed', 'absolute')
@@ -60,10 +61,10 @@ const Navbar = () => {
                     bignav.classList.replace('fixed', 'absolute')
                     bignav.classList.replace('w-[100vw]', 'w-[98vw]',)
                     // bignav.classList.replace('w-[100vw]', 'w-[98vw]',)
-                    bignav.classList.remove('shadow-md', 'bg-black', 'bg-opacity-[50%]')
+                    bignav.classList.remove('shadow-md', 'bg-black', 'bg-opacity-[70%]')
 
                     navtop.classList.remove('bg-blue-500')
-                 
+
 
                 }
             } catch { }
@@ -76,24 +77,29 @@ const Navbar = () => {
             {/* the mobile nav  */}
 
             <div className="mobilenav lg:hidden pad flex justify-between fixed top-[0px] w-[100vw] bg-black bg-opacity-[30%] py-[20px]">
-                <div className="logonav text-white font-bold text-[20px]">
-                
-<h2>LOGO</h2>
+                <div className="logonav text-white font-bold text-[20px] h-[40px]">
+
+                    <Image className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" />
                 </div>
                 <div onClick={menucl} className="barsnav text-white text-[23px]">
-                   <div className="navbars"> <FontAwesomeIcon className="navbars" icon={faBars} /> </div>
-                   <div className="navx hidden"> <FontAwesomeIcon className="navx hidden" icon={faX} /> </div>
+                    <div className="navbars"> <FontAwesomeIcon className="navbars" icon={faBars} /> </div>
+                    <div className="navx hidden"> <FontAwesomeIcon className="navx hidden" icon={faX} /> </div>
                 </div>
 
-                <div className="absolute navbarcontent hidden w-[100vw] bg-gray-200 bg-opacity-[90%] top-[70px] py-[30px] pad left-[0px]">
-                    <ul className="inline-flex flex-col gap-[20px] text-black font-semibold">
+                <div className="absolute transition ease-in-out duration-200 navbarcontent hidden w-[100vw] bg-tet1 top-[70px] py-[30px] pad left-[0px]">
+                    <ul className="inline-flex flex-col gap-[20px] text-primary2 font-semibold">
 
-                        <li>Retailers</li>
-                        <li>Advertisers</li>
-                        <li>Resources</li>
-                        <li>Off-site</li>
-                        <Link href="/about"> <li>About</li> </Link>
-                        <li>Contact</li>
+                        {NavbarList.map((items, index) => {
+
+                            return (
+                                <Link href={items.link}>
+                                    <li className="mappednavbarlist">
+                                        {items.title}
+                                    </li></Link>
+                            )
+                        })}
+
+
                     </ul>
                 </div>
             </div>
@@ -123,19 +129,26 @@ const Navbar = () => {
 
                 </div>
 
-                <div className="bottomnav flex flex-row-reverse justify-between items-center bg-black bg-opacity-[40%] h-[67px] pad">
-                    <div className="nvlinks w-[60%]">
-                        <ul className="inline-flex justify-between w-full font-semibold">
-                            <li>HOME</li>
-                            <li>ABOUT US</li>
-                            <li>PORTFOLIO</li>
-                            <li>CAREERS</li>
-                            <li>NEWS</li>
-                            <li>RESOURCES</li>
+                <div className="bottomnav flex flex-row-reverse justify-between items-center h-[67px] pad">
+                    <div className="nvlinks w-[55%]">
+                        <ul className="flex justify-between items-center font-semibold text-white text-[14px] mt-[4px]">
+                            {NavbarList.map((items, index) => {
+
+                                return (
+                                    <Link href={items.link}>
+                                        <li className="relative group uppercase " key={index}>
+                                            {items.title}
+                                            <span
+                                                className="absolute inset-x-0 bottom-0 h-[2px] bg-orange-500 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+                                            ></span>
+                                        </li>
+                                    </Link>
+                                )
+                            })}
                         </ul>
                     </div>
-                    <div className="h-[63px]">
-                        <Image className="h-full w-full" height={500} width={500} src="/images/logo/logo.png"/>
+                    <div className="h-[50px]">
+                        <Image priority className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" />
                     </div>
                     {/* <div className="nvsocial flex gap-[20px] text-[18px]">
                         <div><FontAwesomeIcon icon={faFacebook}/></div>

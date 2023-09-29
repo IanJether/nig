@@ -2,16 +2,20 @@
 
 export const statsList = [
     {
-        name: "",
+        name: "clients",
+        number: 500
     },
     {
-        name: "",
+        name: "projects",
+        number: 300
     },
     {
-        name: "",
+        name: "employess",
+        number: 1000
     },
     {
-        name: "",
+        name: "companies",
+        number: 9
     },
    
 ]

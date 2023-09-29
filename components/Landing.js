@@ -31,16 +31,16 @@ const Landing = () => {
 
           <div className="section11 flex gap-[10px]">
             <div className="border-t-[4px] border-orange-500 w-[40px] mt-[16px]"></div>
-            <div className="text-white font-semibold text-[20px]">
+            <div  data-aos='fade-right' data-aos-duration="200" className="text-white font-semibold text-[20px]">
               <h3>Building Ethiopia</h3>
             </div>
           </div>
 
-          <div className="section12 text-[32px] lg:text-[44px] leading-[36px] lg:leading-[48px] font-semibold ">
+          <div data-aos='fade-right' data-aos-duration="300" className="section12 text-[32px] lg:text-[44px] leading-[36px] lg:leading-[48px] font-semibold ">
             <h1> Transformation in Key Sectors Across Industries</h1>
           </div>
 
-          <div className="section12 lg:w-[80%] font-semibold text-[16px]">
+          <div data-aos='fade-right' data-aos-duration="400" className="section12 lg:w-[80%] font-semibold text-[16px]">
             <h2>
               The top investment group in Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.
             </h2>
@@ -48,13 +48,13 @@ const Landing = () => {
 
           <div className="section14 flex gap-[10px]">
             <div>
-              <button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr">
+              <button  data-aos='fade-right' data-aos-duration="500" className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr">
                 Learn more
               </button>
             </div>
 
             <div>
-              <button className="h-[54px] bg-transparent font-semibold">
+              <button data-aos='fade-right' data-aos-duration="600" className="h-[54px] bg-transparent font-semibold">
                 Our Businesses{" "}
                 <span className="ml-[3px] text-orange-500">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -70,11 +70,11 @@ const Landing = () => {
 
         <div className="absolute right-[4%] top-[0px] h-[100%] flex items-center">
           <div className="sosholanding hidden lg:flex text-white h-[350px] flex flex-col justify-between">
-            <div className="hover:text-green-600"><FontAwesomeIcon icon={faPhone} /></div>
-            <div className="hover:text-blue-700"><FontAwesomeIcon icon={faLinkedin} /></div>
-            <div className="hover:text-blue-400"><FontAwesomeIcon icon={faTwitter} /></div>
-            <div className="hover:text-blue-800"><FontAwesomeIcon icon={faFacebook} /></div>
-            <div className="hover:text-red-500"><FontAwesomeIcon icon={faEnvelope} /></div>
+            <div data-aos='fade-up' data-aos-duration="400" className="hover:text-green-600"><FontAwesomeIcon icon={faPhone} /></div>
+            <div data-aos='fade-up' data-aos-duration="600" className="hover:text-blue-700"><FontAwesomeIcon icon={faLinkedin} /></div>
+            <div data-aos='fade-up' data-aos-duration="800" className="hover:text-blue-400"><FontAwesomeIcon icon={faTwitter} /></div>
+            <div data-aos='fade-up' data-aos-duration="1000" className="hover:text-blue-800"><FontAwesomeIcon icon={faFacebook} /></div>
+            <div data-aos='fade-up' data-aos-duration="1200" className="hover:text-red-500"><FontAwesomeIcon icon={faEnvelope} /></div>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ const Landing = () => {
 
       {/* section two  */}
 
-      <div className="section2 pad flex flex-col lg:flex-row gap-[40px] py-[40px] lg:py-[100px]">
+      <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row gap-[40px] py-[40px] lg:py-[100px]">
 
         <div className="section11 bg-gray-500 shadow-md h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/about.jpg" alt="" />
@@ -140,7 +140,7 @@ const Landing = () => {
             <div className="lg:w-[50%] lg:text-[28px] lg:font-light"><p>Being the top investment group in key sectors of Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.</p></div>
           </div>
           <div className="line border-b-[2px] border-gray-500"></div>
-          <div className="41below flex flex-wrap gap-[8px] justify-between">
+          <div data-aos="fade-up" data-aos-duration="400" className="41below flex flex-wrap gap-[8px] justify-between">
             {statsList.map((items, index) => {
 
               return (
@@ -171,10 +171,10 @@ const Landing = () => {
           {businessList.map((items, index) => {
 
             return (
-              <div key={index} className="mappedbusinesslist cursor-pointer  w-[85vw] lg:w-[22vw] flex flex-col items-center gap-[20px]">
-                <div className="topbusines relative h-[250px] overflow-hidden lg:h-[33vh] rr w-full bg-gray-300">
+              <div key={index} className="mappedbusinesslist  cursor-pointer  w-[85vw] lg:w-[22vw] flex flex-col items-center gap-[20px]">
+                <div className="topbusines relative h-[260px] overflow-hidden lg:h-[33vh] rr w-full bg-gray-300">
                   <Image className="h-full ease-in-out transition duration-200 hover:scale-[120%] w-full object-cover hover:" height={1000} width={1000} priority src={items.image} alt="" />
-                  <div className="businessabsolute absolute shadow-xl bottom-[0px] w-[66%] left-[17%] bg-primary1  bg-opacity-[80%] text-center py-[10px] rr text-[18px] font-semibold text-white">
+                  <div className="businessabsolute absolute shadow-xl bottom-[0px] w-[66%] left-[17%] bg-primary1 hover:bg-sec1 hover:bg-opacity-[80%]  bg-opacity-[80%] text-center py-[10px] rr text-[18px] font-semibold text-white">
                     <p>{items.name}</p>
                   </div>
 
@@ -204,11 +204,11 @@ const Landing = () => {
           <div className="text-[28px] font-semibold"><h2>News and Stories <div className="und"></div></h2></div>
           <div className="hidden lg:block"><button className="bg-orange-500 hover:bg-sec2 h-[50px] rr text-white font-semibold px-[15px]">Explore More News</button></div>
         </div>
-        <div className="52bottom flex flex-wrap justify-between gap-[40px]">
+        <div data-aos="fade-up" data-aos-duration="400" className="52bottom flex flex-wrap justify-between gap-[40px]">
           {newsList.map((items, index) => {
 
             return (
-              <div className="mappednews cursor-pointer bg-white rr shadow-xl lg:w-[24vw]">
+              <div key={index} className="mappednews cursor-pointer bg-white rr shadow-xl hover:shadow-2xl lg:w-[24vw]">
                 <div className="h-[240px] lg:h-[30vh] overflow-hidden bg-gray-500">
                   <Image priority className="h-full w-full object-cover" quality={70} height={1000} width={1000} src={items.image} />
                 </div>

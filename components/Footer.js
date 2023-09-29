@@ -11,7 +11,7 @@ const Footer = () => {
 
                 <div className="footer1 cursor-pointer flex flex-col gap-[10px] lg:gap-[15px] lg:w-[25%]">
                     <div className="div mb-[15px] lg:mb-[5px] bg-teal-5 font-semibold text-orange-500">
-                        <Image className="h-[60px] ml-[-53px] lg:ml-[0] object-contain" height={500} width={500} src="/images/logo/logoc.png" />
+                        <Image className="h-[60px] w-[250px]" height={500} width={500} src="/images/logo/logoc.png" />
                     </div>
                     <div className="flex gap-[10px] ">
                         <div className="w-[20px] text-orange-500"><FontAwesomeIcon icon={faPhone} /></div>

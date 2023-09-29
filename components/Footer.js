@@ -15,11 +15,11 @@ const Footer = () => {
                     </div>
                     <div className="flex gap-[10px] ">
                         <div className="w-[20px] text-orange-500"><FontAwesomeIcon icon={faPhone} /></div>
-                        <div className="hover:text-primary1 hover:underline"><p>254-7-123-456-789</p></div>
+                        <div className="hover:text-primary1 hover:underline"><p>+252-911-201-722</p></div>
                     </div>
                     <div className="flex gap-[10px]">
                         <div className="w-[20px] text-orange-500"><FontAwesomeIcon icon={faEnvelope} /></div>
-                        <div className="hover:text-primary1 hover:underline"><p>info@niginternational.com</p></div>
+                        <div className="hover:text-primary1 hover:underline"><p>info@nationalinvestmentgoup.net</p></div>
                     </div>
                     <div className="flex gap-[10px]">
                         <div className="w-[24px] text-orange-500"><FontAwesomeIcon icon={faLocationPin} /></div>

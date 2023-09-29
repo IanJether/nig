@@ -86,7 +86,7 @@ const Navbar = () => {
                     <div className="navx hidden"> <FontAwesomeIcon className="navx hidden" icon={faX} /> </div>
                 </div>
 
-                <div className="absolute animate__fadeInDown animate__animated transition ease-in-out duration-200 navbarcontent hidden w-[100vw] bg-tet1 top-[70px] py-[30px] pad left-[0px]">
+                <div className="absolute animate__fadeInDown animate__animated animate__faster transition ease-in-out duration-200 navbarcontent hidden w-[100vw] bg-tet1 top-[70px] py-[30px] pad left-[0px]">
                     <ul className="inline-flex flex-col gap-[20px] text-primary2 font-semibold">
 
                         {NavbarList.map((items, index) => {
@@ -114,7 +114,7 @@ const Navbar = () => {
 
             {/* the desktop nav  */}
 
-            <div className="desktopnav animate__animated animate__fadeInDown hidden lg:block fixed top-[0px] w-[100vw]  text-white">
+            <div className="desktopnav hidden lg:block fixed top-[0px] w-[100vw]  text-white">
 
                 <div className="topnav hidden flex justify-between py-[14px] bg-opacity-[85%] pad">
                     <div className="nvlogo">

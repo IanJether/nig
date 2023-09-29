@@ -6,6 +6,7 @@ import {
   faBars,
   faCircle,
   faEnvelope,
+  faLocationPin,
   faPhone,
   faQuoteLeft,
   faX,
@@ -16,7 +17,7 @@ import { statsList } from "<nig>/data/stats";
 import { newsList } from "<nig>/data/news";
 import Footer from "./Footer";
 import Image from "next/image";
-import { faFacebook, faLinkedin, faTwitch, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faLinkedin, faTwitch, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Landing = () => {
   return (
@@ -31,7 +32,7 @@ const Landing = () => {
 
           <div className="section11 flex gap-[10px]">
             <div className="border-t-[4px] border-orange-500 w-[40px] mt-[16px]"></div>
-            <div  data-aos='fade-right' data-aos-duration="200" className="text-white font-semibold text-[20px]">
+            <div data-aos='fade-right' data-aos-duration="200" className="text-white font-semibold text-[20px]">
               <h3>Building Ethiopia</h3>
             </div>
           </div>
@@ -48,7 +49,7 @@ const Landing = () => {
 
           <div className="section14 flex gap-[10px]">
             <div>
-              <button  data-aos='fade-right' data-aos-duration="500" className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr">
+              <button data-aos='fade-right' data-aos-duration="500" className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr">
                 Learn more
               </button>
             </div>
@@ -70,11 +71,11 @@ const Landing = () => {
 
         <div className="absolute right-[4%] top-[0px] h-[100%] flex items-center">
           <div className="sosholanding hidden lg:flex text-white h-[350px] flex flex-col justify-between">
-            <div data-aos='fade-up' data-aos-duration="400" className="hover:text-green-600"><FontAwesomeIcon icon={faPhone} /></div>
-            <div data-aos='fade-up' data-aos-duration="600" className="hover:text-blue-700"><FontAwesomeIcon icon={faLinkedin} /></div>
-            <div data-aos='fade-up' data-aos-duration="800" className="hover:text-blue-400"><FontAwesomeIcon icon={faTwitter} /></div>
-            <div data-aos='fade-up' data-aos-duration="1000" className="hover:text-blue-800"><FontAwesomeIcon icon={faFacebook} /></div>
-            <div data-aos='fade-up' data-aos-duration="1200" className="hover:text-red-500"><FontAwesomeIcon icon={faEnvelope} /></div>
+            <div data-aos='fade-up' data-aos-duration="400" className="hover:text-green-500"><FontAwesomeIcon icon={faPhone} /></div>
+            <div data-aos='fade-up' data-aos-duration="600" className="hover:text-yellow-500"><FontAwesomeIcon icon={faEnvelope} /></div>
+            <div data-aos='fade-up' data-aos-duration="800" className="hover:text-green-500"><FontAwesomeIcon icon={faWhatsapp} /></div>
+            <div data-aos='fade-up' data-aos-duration="1000" className="hover:text-blue-700"><FontAwesomeIcon icon={faLinkedin} /></div>
+            <div data-aos='fade-up' data-aos-duration="1200" className="hover:text-red-500"><FontAwesomeIcon icon={faLocationPin} /></div>
           </div>
         </div>
 
@@ -134,12 +135,12 @@ const Landing = () => {
 
         <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/slide.png" />
 
-        <div className="section41 flex flex-col justify-center gap-[40px] lg:gap-[100px] absolute inset-0 bg-gray-800 bg-opacity-[99%] h-[100%] w-[100%] top-[0px] text-white pad py-[40px]">
+        <div className="section41 flex flex-col justify-center gap-[40px] lg:gap-[100px] absolute inset-0 bg-primary1 bg-opacity-[94%] h-[100%] w-[100%] top-[0px] text-white pad py-[40px]">
           <div className="41above flex flex-col lg:justify-between lg:flex-row gap-[20px]">
             <div className="text-[28px] lg:text-[60px] font-light lg:w-[30%]"><h2>Our Vision <div className="und"></div> </h2></div>
             <div className="lg:w-[50%] lg:text-[28px] lg:font-light"><p>Being the top investment group in key sectors of Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.</p></div>
           </div>
-          <div className="line border-b-[2px] border-gray-500"></div>
+          <div className="line border-b-[2px] border-gray-300"></div>
           <div data-aos="fade-up" data-aos-duration="400" className="41below flex flex-wrap gap-[8px] justify-between">
             {statsList.map((items, index) => {
 
@@ -160,10 +161,10 @@ const Landing = () => {
 
       {/* section three */}
 
-      <div className="sectoin3 flex flex-col gap-[40px] py-[40px] lg:py-[100px] pad">
+      <div className="sectoin3 flex flex-col  gap-[50px] lg:gap-[70px] py-[40px] lg:py-[100px] pad">
 
         <div className="section31 flex flex-col gap-[10px]">
-          <div className="text-[28px] font-semibold"><h2>Portfolio <div className="und"></div> </h2></div>
+          <div className="text-[28px] lg:w-[60%] font-semibold"><h2>Our Businesses <div className="und"></div> </h2></div>
           <div className="text-stone-600"><p> NIG's vision is being the top investment group in key sectors of Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.</p></div>
         </div>
 
@@ -171,18 +172,18 @@ const Landing = () => {
           {businessList.map((items, index) => {
 
             return (
-              <div key={index} className="mappedbusinesslist  cursor-pointer  w-[85vw] lg:w-[22vw] flex flex-col items-center gap-[20px]">
+              <div key={index} className="mappedbusinesslist cursor-pointer bg-white  w-[85vw] lg:w-[24vw] flex flex-col items-center gap-[20px]">
                 <div className="topbusines relative h-[260px] overflow-hidden lg:h-[33vh] rr w-full bg-gray-300">
-                  <Image className="h-full ease-in-out transition duration-200 hover:scale-[120%] w-full object-cover hover:" height={1000} width={1000} priority src={items.image} alt="" />
+                  <Image className="h-full ease-in-out transition duration-200 hover:scale-[110%] w-full object-cover hover:" height={1000} width={1000} priority src={items.image} alt="" />
                   <div className="businessabsolute absolute shadow-xl bottom-[0px] w-[66%] left-[17%] bg-primary1 hover:bg-sec1 hover:bg-opacity-[80%]  bg-opacity-[80%] text-center py-[10px] rr text-[18px] font-semibold text-white">
                     <p>{items.name}</p>
                   </div>
 
                 </div>
-                <div className="bottombusines flex flex-col gap-[15px] text-center">
+                <div className="bottombusines flex flex-col pb-[20px] px-[10px] gap-[15px]">
                   <div className="text-[15px] text-stone-600"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum explicabo officia voluptatem ducimus sint aspernatur necessitatibus! Voluptas recusandae tenetur necessitatibus omnis cum. Ab est recusandae, rerum a rem eos?</p></div>
                   <div className="border-b-[2px] border-gray-100"></div>
-                  <div className="font-semibold cursor-pointer hover:underline"><p>See more <FontAwesomeIcon className="text-orange-500" icon={faArrowRight} /></p></div>
+                  <div className="font-semibold cursor-pointer text-left hover:underline"><p>See more <FontAwesomeIcon className="text-orange-500" icon={faArrowRight} /></p></div>
                 </div>
               </div>
             )
@@ -196,10 +197,60 @@ const Landing = () => {
 
 
 
+      {/* section five  */}
+      <div className="sectionfive">
 
-      {/* sectoin five  */}
+      </div>
 
-      <div className="sectionfive flex flex-col gap-[50px] lg:gap-[70px] bg-gray-100 pad py-[40px] lg:py-[100px] lg:pb-[130px]">
+
+      {/* section six  */}
+
+      <div className="five hidden flex flex-col gap-[40px] bg-gray-100 py-[50px] lg:py-[120px] pad">
+
+        <div className="text-[28px] lg:w-[60%] font-semibold">
+          <h2>Message from the CEO <div className="und"></div> </h2>
+        </div>
+
+        <div className="flex flex-col lg:flex-row-reverse gap-[40px]">
+
+          <div className="div flex flex-col  gap-[10px] lg:w-[50%]">
+            <div className="picture h-[300px] lg:h-[56vh] rr overflow-hidden w-[100%] bg-gray-100">
+              <Image className="h-full w-full rr object-contain" priority height={700} width={700} src="/images/home/CEO.jpg" />
+            </div>
+
+          </div>
+
+          <div className="div flex flex-col lg:justify-center gap-[30px] lg:w-[50%]">
+
+            <div className="flex flex-col gap-[5px]">
+              <div className="text-[28px] font-light font-semibold"><h2>Captain Abera Lemi </h2></div>
+              <div className="name text-[17px] font-semibold">
+                <h2>Director & President at NIG</h2>
+              </div>
+              <div className="flex gap-[20px] text-[23px] text-primary1">
+                <div><FontAwesomeIcon icon={faPhone} /></div>
+                <div><FontAwesomeIcon icon={faEnvelope} /></div>
+                <div><FontAwesomeIcon icon={faLinkedin} /></div>
+                <div><FontAwesomeIcon icon={faFacebook} /></div>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-[10px] text-[15px] text-stone-600">
+              <div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam est tempora, ut quo consequatur expedita repellat cum omnis molestias, repudiandae tenetur deserunt labore blanditiis amet voluptas minima.</p></div>
+              <div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam est tempora, ut quo consequatur expedita repellat cum omnis molestias, repudiandae tenetur deserunt labore blanditiis amet voluptas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum architecto recusandae est ullam, quasi magni minus voluptas. Dolorum, dignissimos, quis et cum temporibus possimus cumque placeat nostrum sint hic excepturi? </p></div>
+              {/* <div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam est tempora, ut quo consequatur expedita repellat cum omnis molestias, repudiandae tenetur deserunt labore blanditiis amet voluptas minima porro </p></div> */}
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      {/* sectoin five hidden news and articles  */}
+
+      <div className="sectionfive hidden flex flex-col gap-[50px] lg:gap-[70px] pad py-[40px] lg:py-[100px] lg:pb-[130px]">
         <div className="51top flex flex-col lg:flex-row lg:justify-between gap-[20px]">
           <div className="text-[28px] font-semibold"><h2>News and Stories <div className="und"></div></h2></div>
           <div className="hidden lg:block"><button className="bg-orange-500 hover:bg-sec2 h-[50px] rr text-white font-semibold px-[15px]">Explore More News</button></div>

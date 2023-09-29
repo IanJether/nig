@@ -6,15 +6,15 @@ export const NavbarList = [
         link: "/"
     },
     {
-        title: "About",
+        title: "Who We Are",
         link: ""
     },
     {
-        title: "Portfolio",
+        title: "Our Businesses",
         link: ""
     },
     {
-        title: "Careers",
+        title: "Sustainability",
         link: ""
     },
     {

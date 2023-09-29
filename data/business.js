@@ -3,7 +3,7 @@ import pic2 from "../public/images/home/resw.jpg"
 import pic3 from "../public/images/home/ex.jpg"
 import pic4 from "../public/images/home/cargo.jpg"
 import pic5 from "../public/images/home/tel.jpg"
-import pic6 from "../public/images/home/air.jpg"
+import pic6 from "../public/images/home/air4.jpg"
 
 
 

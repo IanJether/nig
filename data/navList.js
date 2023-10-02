@@ -15,7 +15,7 @@ export const NavbarList = [
     },
     {
         title: "Sustainability",
-        link: ""
+        link: "/sustainability"
     },
     {
         title: "News",

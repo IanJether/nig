@@ -90,8 +90,6 @@ const Landing = () => {
 
         <div className="section11 bg-gray-500 shadow-md h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/about.jpg" alt="" />
-          {/* <div className="11abs absolute rr bg-white h-[70px] w-[70px] lg:w-[100px] left-[2px] top-[20%] shadow-md"></div> */}
-          {/* <div className="11abs absolute rr bg-white h-[70px] w-[70px] lg:w-[100px] right-[10%] top-[1%] shadow-md"></div> */}
           <div className="11abs absolute p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[170px] right-[0px] bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>

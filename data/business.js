@@ -1,4 +1,4 @@
-import pic1 from "../public/images/home/college.jpg"
+import pic1 from "../public/images/New/bluesit.png"
 import pic2 from "../public/images/home/resw.jpg"
 import pic3 from "../public/images/home/ex.jpg"
 import pic4 from "../public/images/home/cargo.jpg"

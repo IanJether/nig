@@ -156,7 +156,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="h-[50px]">
-                        <Image priority className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" />
+                       <Link href="/"> <Image priority className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" /> </Link>
                     </div>
                     {/* <div className="nvsocial flex gap-[20px] text-[18px]">
                         <div><FontAwesomeIcon icon={faFacebook}/></div>

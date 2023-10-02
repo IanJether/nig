@@ -5,6 +5,8 @@ import Header from "./commons/Header";
 import { faArrowRight, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { statsList } from "<nig>/data/stats";
+import { teamList } from "<nig>/data/team";
+import { partnersList } from "<nig>/data/partners";
 
 
 const About = () => {
@@ -100,9 +102,74 @@ const About = () => {
 
       {/* section three - Team */}
 
-      <div className="sectionthree">
-        
-        
+      <div className="sectionthree pad py-[40px] lg:py-[100px] flex flex-col gap-[40px]">
+
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-[20px]">
+          <div>
+            <div className="font-semibold text-primary1 text-[16px]"><h3>Our Lead Team</h3></div>
+            <div className="font-semibold text-[28px]"><h2>Meet Our Top Executives <div className="und"></div> </h2></div>
+          </div>
+          <div>
+            <button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">View Team</button>
+          </div>
+
+        </div>
+
+        <div className="flex flex-wrap gap-[30px] justify-center lg:justify-between">
+          {teamList.map((items, index) => {
+
+            return (
+              <div className="mappedteamlist h-[350px] lg:h-[50vh] rr w-[75vw] lg:w-[17vw] relative">
+                <div className="h-full w-full overflow-hidden bg-gray-600">
+
+                </div>
+                <div className="absolute rr flex flex-col items-center justify-center bottom-[0px] h-[100px] w-[90%] left-[5%] bg-primary1 text-white bg-opacity-[70%]">
+                  <div className="text-[30px] font-light"><h2>Juma Osman </h2></div>
+                  <div className="text-[14px]"><h4>Chief Executive Officer</h4></div>
+                </div>
+
+              </div>
+            )
+          })}
+
+        </div>
+
+
+      </div>
+
+      {/* section four - partners  */}
+
+      <div className="sectionfourpartners relative h-[500px] lg:h-[80vh] ">
+        <Image className="h-full w-full object-cover filter brightness-[65%]" height={1000} width={1000} src="/images/home/home.jpg" priority />
+
+        <div className="pad flex flex-col justify-center gap-[45px] absolute top-[0px] w-full h-full inset-0 text-white py-[40px]">
+          <div className="flex flex-col gap-[20px]">
+            <div className="text-[28px] font-semibold"><h3>Our Partners <div className="und"></div></h3></div>
+            <div className="lg:w-[60%]"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi saepe numquam, placeat, sunt adipisci facilis eaque ducimus incidunt illum!</p></div>
+          </div>
+          <div className="lg:hidden ">
+            {partnersList.filter((items, index) => index == 0).map((items, index) => {
+
+              return (
+                <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[66%] rr h-[150px] flex items-center justify-center">
+                  <Image className="h-full w-full object-contain" height={400} width={400} priority src={items.logo} />
+                </div>
+              )
+            })}
+          </div>
+          <div className="hidden lg:flex justify-between gap-[10px]">
+            {partnersList.map((items, index) => {
+
+              return (
+                <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[70%] px-[6px] rr h-[140px] w-[14vw] flex items-center justify-center">
+                  <Image className="h-full w-full object-contain" height={400} width={400} priority src={items.logo} />
+                </div>
+              )
+            })}
+          </div>
+
+        </div>
+
       </div>
 
 

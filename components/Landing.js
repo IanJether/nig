@@ -173,7 +173,7 @@ const Landing = () => {
           {businessList.map((items, index) => {
 
             return (
-              <div key={index} className="mappedbusinesslist rr shadow-xl cursor-pointer bg-white  w-[85vw] lg:w-[24vw] flex flex-col items-center gap-[20px]">
+              <div key={index} className="mappedbusinesslist rr shadow-xl cursor-pointer bg-white  w-[85vw] lg:w-[24vw] flex flex-col items-center gap-[30px]">
                 <div className="topbusines relative h-[260px] overflow-hidden lg:h-[33vh] rr w-full bg-gray-300">
                   <Image className="h-full ease-in-out transition duration-200 hover:scale-[110%] w-full object-cover hover:" height={1000} width={1000} priority src={items.image} alt="" />
                   <div className="businessabsolute absolute shadow-xl bottom-[0px] w-[66%] left-[17%] bg-primary1 hover:bg-sec1 hover:bg-opacity-[80%]  bg-opacity-[80%] text-center py-[10px] rr text-[18px] font-semibold text-white">
@@ -181,7 +181,7 @@ const Landing = () => {
                   </div>
 
                 </div>
-                <div className="bottombusines bg-white flex flex-col pb-[20px] px-[10px] gap-[15px]">
+                <div className="bottombusines bg-white flex flex-col pb-[30px] px-[10px] gap-[15px]">
                   <div className="text-[15px] text-stone-600"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum explicabo officia voluptatem ducimus sint aspernatur necessitatibus! Voluptas recusandae tenetur necessitatibus omnis cum. Ab est recusandae, rerum a rem eos?</p></div>
                   {/* <div className="border-b-[2px] border-gray-100"></div> */}
                   <div className="font-semibold cursor-pointer text-left hover:underline"><p>See more <FontAwesomeIcon className="text-orange-500" icon={faArrowRight} /></p></div>

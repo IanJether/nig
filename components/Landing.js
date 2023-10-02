@@ -166,7 +166,7 @@ const Landing = () => {
 
         <div className="section31 flex flex-col gap-[10px]">
           <div className="text-[28px] lg:w-[60%] font-semibold"><h2>Our Businesses <div className="und"></div> </h2></div>
-          <div className="text-stone-600"><p> NIG's vision is being the top investment group in key sectors of Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.</p></div>
+          <div className="text-stone-600 lg:w-[60%]"><p> NIG's vision is being the top investment group in key sectors of Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.</p></div>
         </div>
 
         <div className="section32 flex flex-wrap justify-center lg:justify-between gap-[40px]">
@@ -191,53 +191,6 @@ const Landing = () => {
           })}
         </div>
 
-      </div>
-
-  
-
-
-      {/* section six  */}
-
-      <div className="five hidden flex flex-col gap-[40px] bg-gray-100 py-[50px] lg:py-[120px] pad">
-
-        <div className="text-[28px] lg:w-[60%] font-semibold">
-          <h2>Message from the CEO <div className="und"></div> </h2>
-        </div>
-
-        <div className="flex flex-col lg:flex-row-reverse gap-[40px]">
-
-          <div className="div flex flex-col  gap-[10px] lg:w-[50%]">
-            <div className="picture h-[300px] lg:h-[56vh] rr overflow-hidden w-[100%] bg-gray-100">
-              <Image className="h-full w-full rr object-contain" priority height={700} width={700} src="/images/home/CEO.jpg" />
-            </div>
-
-          </div>
-
-          <div className="div flex flex-col lg:justify-center gap-[30px] lg:w-[50%]">
-
-            <div className="flex flex-col gap-[5px]">
-              <div className="text-[28px] font-light font-semibold"><h2>Captain Abera Lemi </h2></div>
-              <div className="name text-[17px] font-semibold">
-                <h2>Director & President at NIG</h2>
-              </div>
-              <div className="flex gap-[20px] text-[23px] text-primary1">
-                <div><FontAwesomeIcon icon={faPhone} /></div>
-                <div><FontAwesomeIcon icon={faEnvelope} /></div>
-                <div><FontAwesomeIcon icon={faLinkedin} /></div>
-                <div><FontAwesomeIcon icon={faFacebook} /></div>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-[10px] text-[15px] text-stone-600">
-              <div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam est tempora, ut quo consequatur expedita repellat cum omnis molestias, repudiandae tenetur deserunt labore blanditiis amet voluptas minima.</p></div>
-              <div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam est tempora, ut quo consequatur expedita repellat cum omnis molestias, repudiandae tenetur deserunt labore blanditiis amet voluptas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum architecto recusandae est ullam, quasi magni minus voluptas. Dolorum, dignissimos, quis et cum temporibus possimus cumque placeat nostrum sint hic excepturi? </p></div>
-              {/* <div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam est tempora, ut quo consequatur expedita repellat cum omnis molestias, repudiandae tenetur deserunt labore blanditiis amet voluptas minima porro </p></div> */}
-
-            </div>
-
-          </div>
-
-        </div>
       </div>
 
 

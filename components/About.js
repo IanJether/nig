@@ -172,6 +172,32 @@ const About = () => {
 
       </div>
 
+      {/* section five - message from the ceo  */}
+
+
+      <div className="sectionfiveabout flex flex-col gap-[40px] py-[40px] lg:py-[100px] pad">
+
+        <div className="text-[28px] font-semibold">
+          <h2>Message from the CEO <div className="und"></div></h2>
+        </div>
+
+        <div className="ceo w-full rr overflow-hidden h-[400px] lg:h-[60vh] mb-[40px] relative">
+          <Image className="h-full rr w-full object-cover filter brightness-[75%]" height={1000} width={1000} src="/images/home/air4.jpg" priority />
+
+          <div className="ceotext text-white px-[10px] rr flex flex-col gap-[25px] items-center justify-center text-center absolute bg-black bg-opacity-[60%] top-[10%] left-[10%] lg:left-[6%] h-[80%] w-[80%] lg:w-[30%] ">
+            <div className="text-[20px] font-semibold"><p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, officiis minima sed ea numquam !"</p></div>
+            <div className="text-[25px] font-light">
+              <div>  <h2>Cpt Abera Lemi</h2></div>
+              <div className="text-primary2 text-[14px] font-semibold">Founder and CEO</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
 
 
 

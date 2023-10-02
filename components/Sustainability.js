@@ -56,7 +56,7 @@ const SustainabilityComp = () => {
 
             <div data-aos="fade-up" data-aos-duration="400" className={`section2 pad flex flex-col ${lgFlexClass} gap-[40px] py-[40px] lg:py-[100px]`}>
 
-              <div className="section11 text-[170px] lg:text-[200px] flex items-center justify-center text-green-500 h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
+              <div className="section11 text-[170px] lg:text-[290px] flex items-center justify-center text-green-500 h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
                 <FontAwesomeIcon icon={items.icon}/>
                 {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/about.jpg" alt="" /> */}
               </div>

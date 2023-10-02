@@ -77,9 +77,9 @@ const Navbar = () => {
             {/* the mobile nav  */}
 
             <div className="mobilenav lg:hidden pad flex justify-between fixed top-[0px] w-[100vw] bg-black bg-opacity-[30%] py-[20px]">
-                <div className="logonav text-white font-bold text-[20px] h-[40px]">
+                <div className="logonav text-white font-bold text-[20px] h-[40px] w-[200px]">
 
-                    <Image className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" />
+                  <Link href="/">  <Image className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" /> </Link>
                 </div>
                 <div onClick={menucl} className="barsnav text-white text-[23px]">
                     <div className="navbars"> <FontAwesomeIcon className="navbars" icon={faBars} /> </div>

@@ -15,5 +15,9 @@ export const newsList = [
         name: "",
         image: pic3
     },
+    {
+        name: "",
+        image: pic3
+    },
    
 ]

@@ -19,10 +19,10 @@ export const NavbarList = [
     },
     {
         title: "News",
-        link: ""
+        link: "/news"
     },
     {
         title: "Contact",
-        link: ""
+        link: "/contact"
     },
 ]

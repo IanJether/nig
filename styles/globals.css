@@ -14,6 +14,17 @@
   @apply w-[20%] lg:w-[10%] mt-[5px] border-b-[4px] border-orange-500
 }
 
+.cc{
+  @apply rr w-full lg:w-[26vw] bg-gray-100 h-[88vw] lg:h-[26vw]
+}
+
+.inp{
+  @apply h-[60px] w-full bg-gray-100 rr border border-gray-200 mt-[5px] px-[10px]
+}
+
+.contactform label{
+  @apply font-semibold text-neutral-700;
+}
 
 
 

@@ -18,13 +18,14 @@ import { newsList } from "<nig>/data/news";
 import Footer from "./Footer";
 import Image from "next/image";
 import { faFacebook, faLinkedin, faTwitch, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { sustainabiltyList } from "<nig>/data/sustainable";
 
 const Landing = () => {
   return (
     <div className="Landing">
       {/* section one  */}
 
-      <div className="section1 relative h-[700px] lg:h-[98vh] bg-primary1">
+      <div className="section1 relative h-[700px] lg:h-[100vh] bg-primary1">
 
         {/* <Image className="h-full w-full object-cover filter brightness-[54%]" priority height={1500} width={1500} src="/images/home/home.jpg" alt="" /> */}
 
@@ -182,7 +183,7 @@ const Landing = () => {
                 </div>
                 <div className="bottombusines flex flex-col pb-[20px] px-[10px] gap-[15px]">
                   <div className="text-[15px] text-stone-600"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum explicabo officia voluptatem ducimus sint aspernatur necessitatibus! Voluptas recusandae tenetur necessitatibus omnis cum. Ab est recusandae, rerum a rem eos?</p></div>
-                  <div className="border-b-[2px] border-gray-100"></div>
+                  {/* <div className="border-b-[2px] border-gray-100"></div> */}
                   <div className="font-semibold cursor-pointer text-left hover:underline"><p>See more <FontAwesomeIcon className="text-orange-500" icon={faArrowRight} /></p></div>
                 </div>
               </div>
@@ -276,6 +277,40 @@ const Landing = () => {
         </div>
         <div className="lg:hidden">
           <button className="bg-orange-500 h-[50px] rr text-white font-semibold px-[15px]">Explore More News</button>
+        </div>
+      </div>
+
+
+      {/* section six  */}
+
+      <div className="sectionsix h-[740px] lg:h-[100vh] relative">
+
+      <Image className="h-full w-full object-cover filter brightness-[54%]" priority height={1500} width={1500} src="/images/home/land.jpg" alt="" />
+
+        <div className="h-full w-[98vw] absolute inset-0 flex gap-[30px] flex-col lg:flex-row lg:items-center justify-center pad text-white">
+            <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[50%] lg:h-[300px]">
+
+              <div className="text-[14px] font-semibold"><h3>Sustainability</h3></div>
+              <div className="text-[32px] font-bold leading-[35px]"><h2>Building prosperity & self-sufficiency</h2></div>
+              <div className="text-[16px] font-semibold leading-[22px]"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptate, maiores rem eaque voluptatum, amet tempora repellendus sapiente magni neque ipsa accusantium? Eveniet debitis error libero assumenda nihil repellat odit.</p></div>
+              <div className="font-light"> <p>Read More <span className="text-orange-500"><FontAwesomeIcon icon={faArrowRight}/></span></p> </div>
+
+            </div>
+            <div className="hidden lg:block"></div>
+            <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[50%] lg:h-[300px]">
+                <div className="uppercase font-semibold text-[14px]"><p>7 Sustainability Pillars</p></div>
+                <div className="flex flex-wrap justify-between lg:justify-start gap-[20px]">
+                  {sustainabiltyList.map((items,index)=>{
+
+                    return(
+                      <div className="mappedsustainability flex flex-col w-[65px] lg:w-[70px] gap-[5px]">
+                        <div className="flex items-center justify-center border rr h-[50px] w-[60px]"><FontAwesomeIcon icon={items.icon}/></div>
+                        <div className="uppercase font-semibold text-center text-[10px]"><p>{items.title}</p></div>
+                      </div>
+                    )
+                  })}
+                </div>
+            </div>
         </div>
       </div>
 

@@ -7,11 +7,11 @@ export const NavbarList = [
     },
     {
         title: "Who We Are",
-        link: ""
+        link: "/about"
     },
     {
         title: "Our Businesses",
-        link: ""
+        link: "/businesses"
     },
     {
         title: "Sustainability",

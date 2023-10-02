@@ -125,7 +125,7 @@ const About = () => {
 
                 </div>
                 <div className="absolute rr flex flex-col items-center justify-center bottom-[0px] h-[100px] w-[90%] left-[5%] bg-primary1 text-white bg-opacity-[70%]">
-                  <div className="text-[30px] font-light"><h2>Juma Osman </h2></div>
+                  <div className="text-[30px] font-light"><h2>Ian John </h2></div>
                   <div className="text-[14px]"><h4>Chief Executive Officer</h4></div>
                 </div>
 

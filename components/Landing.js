@@ -162,7 +162,7 @@ const Landing = () => {
 
       {/* section three */}
 
-      <div className="sectoin3 flex flex-col  gap-[50px] lg:gap-[70px] py-[40px] lg:py-[100px] pad">
+      <div className="sectoin3 flex flex-col bg-gray-100  gap-[50px] lg:gap-[70px] py-[40px] lg:py-[100px] pad">
 
         <div className="section31 flex flex-col gap-[10px]">
           <div className="text-[28px] lg:w-[60%] font-semibold"><h2>Our Businesses <div className="und"></div> </h2></div>
@@ -173,7 +173,7 @@ const Landing = () => {
           {businessList.map((items, index) => {
 
             return (
-              <div key={index} className="mappedbusinesslist cursor-pointer bg-white  w-[85vw] lg:w-[24vw] flex flex-col items-center gap-[20px]">
+              <div key={index} className="mappedbusinesslist rr shadow-xl cursor-pointer bg-white  w-[85vw] lg:w-[24vw] flex flex-col items-center gap-[20px]">
                 <div className="topbusines relative h-[260px] overflow-hidden lg:h-[33vh] rr w-full bg-gray-300">
                   <Image className="h-full ease-in-out transition duration-200 hover:scale-[110%] w-full object-cover hover:" height={1000} width={1000} priority src={items.image} alt="" />
                   <div className="businessabsolute absolute shadow-xl bottom-[0px] w-[66%] left-[17%] bg-primary1 hover:bg-sec1 hover:bg-opacity-[80%]  bg-opacity-[80%] text-center py-[10px] rr text-[18px] font-semibold text-white">
@@ -181,7 +181,7 @@ const Landing = () => {
                   </div>
 
                 </div>
-                <div className="bottombusines flex flex-col pb-[20px] px-[10px] gap-[15px]">
+                <div className="bottombusines bg-white flex flex-col pb-[20px] px-[10px] gap-[15px]">
                   <div className="text-[15px] text-stone-600"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum explicabo officia voluptatem ducimus sint aspernatur necessitatibus! Voluptas recusandae tenetur necessitatibus omnis cum. Ab est recusandae, rerum a rem eos?</p></div>
                   {/* <div className="border-b-[2px] border-gray-100"></div> */}
                   <div className="font-semibold cursor-pointer text-left hover:underline"><p>See more <FontAwesomeIcon className="text-orange-500" icon={faArrowRight} /></p></div>
@@ -193,15 +193,7 @@ const Landing = () => {
 
       </div>
 
-      {/* section four  */}
-
-
-
-
-      {/* section five  */}
-      <div className="sectionfive">
-
-      </div>
+  
 
 
       {/* section six  */}
@@ -287,7 +279,7 @@ const Landing = () => {
 
       <Image className="h-full w-full object-cover filter brightness-[54%]" priority height={1500} width={1500} src="/images/home/land.jpg" alt="" />
 
-        <div className="h-full w-[98vw] absolute inset-0 flex gap-[30px] flex-col lg:flex-row lg:items-center justify-center pad text-white">
+        <div className="h-full w-[98vw] absolute lg:mt-[30px] inset-0 flex gap-[30px] flex-col lg:flex-row lg:items-center justify-center pad text-white">
             <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[50%] lg:h-[300px]">
 
               <div className="text-[14px] font-semibold"><h3>Sustainability</h3></div>
@@ -300,10 +292,21 @@ const Landing = () => {
             <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[50%] lg:h-[300px]">
                 <div className="uppercase font-semibold text-[14px]"><p>7 Sustainability Pillars</p></div>
                 <div className="flex flex-wrap justify-between lg:justify-start gap-[20px]">
-                  {sustainabiltyList.map((items,index)=>{
+                  {sustainabiltyList.filter((items,index)=>index<4).map((items,index)=>{
 
                     return(
-                      <div className="mappedsustainability flex flex-col w-[65px] lg:w-[70px] gap-[5px]">
+                      <div key={index} className="mappedsustainability flex flex-col w-[65px] lg:w-[70px] gap-[5px]">
+                        <div className="flex items-center justify-center border rr h-[50px] w-[60px]"><FontAwesomeIcon icon={items.icon}/></div>
+                        <div className="uppercase font-semibold text-center text-[10px]"><p>{items.title}</p></div>
+                      </div>
+                    )
+                  })}
+                </div>
+                <div className="flex flex-wrap justify-between lg:justify-start gap-[20px]">
+                  {sustainabiltyList.filter((items,index)=>index>=4).map((items,index)=>{
+
+                    return(
+                      <div key={index} className="mappedsustainability flex flex-col w-[65px] lg:w-[70px] gap-[5px]">
                         <div className="flex items-center justify-center border rr h-[50px] w-[60px]"><FontAwesomeIcon icon={items.icon}/></div>
                         <div className="uppercase font-semibold text-center text-[10px]"><p>{items.title}</p></div>
                       </div>

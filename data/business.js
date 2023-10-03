@@ -32,4 +32,12 @@ export const businessList =  [
         name: "National Airways",
         image:pic6
     },
+    {
+        name: "Waliya Tours and Travel",
+        image:pic6
+    },
+    {
+        name: "Tollo Cash",
+        image:pic6
+    },
 ]

@@ -8,6 +8,8 @@ import Image from "next/image";
 import { industries } from "<nig>/data/industries";
 import ContactPrompt from "./commons/ContactPrompt";
 import pic from "../public/images/New/glass.jpg"
+import Link from "next/link";
+import { getLink } from "<nig>/data/getLink";
 
 
 const BusinessesComp = () => {
@@ -22,8 +24,10 @@ const BusinessesComp = () => {
                 <div className="section32 lg:w-[80%] py-[40px] lg:py-[100px] px-[5%] lg:pl-[10%] lg:pr-[3%] flex flex-wrap justify-center lg:justify-between gap-[35px] lg:gap-[20px]">
                     {businessList.map((items, index) => {
 
+                        const address = "/businesses/" + getLink(items.name)
+
                         return (
-                            <div key={index} className="mappedbusinesslist rr shadow-xl cursor-pointer bg-white w-[85vw] lg:w-[21vw] flex flex-col items-center gap-[30px]">
+                          <Link href={address} key={index}>  <div  className="mappedbusinesslist rr shadow-xl cursor-pointer bg-white w-[85vw] lg:w-[21vw] flex flex-col items-center gap-[30px]">
                                 <div className="topbusines relative h-[260px] overflow-hidden lg:h-[33vh] rr w-full bg-gray-300">
                                     <Image className="h-full ease-in-out transition duration-200 hover:scale-[110%] w-full object-cover hover:" height={1000} width={1000} priority src={items.image} alt="" />
                                     <div className="businessabsolute absolute shadow-xl bottom-[0px] w-[66%] left-[17%] bg-primary1 hover:bg-sec1 hover:bg-opacity-[80%]  bg-opacity-[80%] text-center py-[10px] rr text-[18px] font-semibold text-white">
@@ -36,7 +40,7 @@ const BusinessesComp = () => {
                                     {/* <div className="border-b-[2px] border-gray-100"></div> */}
                                     <div className="font-semibold cursor-pointer text-left hover:underline"><p>See more <FontAwesomeIcon className="text-orange-500" icon={faArrowRight} /></p></div>
                                 </div>
-                            </div>
+                            </div> </Link>
                         )
                     })}
                 </div>

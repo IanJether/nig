@@ -6,11 +6,8 @@ import Navbar from "<nig>/components/Navbar";
  const businesses = () =>{ 
        return( 
           <div className='businesses'>
-            <BusinessesComp/>
-
-
-
             
+            <BusinessesComp/>
 
           </div> 
 )

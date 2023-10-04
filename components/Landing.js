@@ -21,29 +21,37 @@ import Image from "next/image";
 import { faFacebook, faLinkedin, faTwitch, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { sustainabiltyList } from "<nig>/data/sustainable";
 import { getLink } from "<nig>/data/getLink";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import { Autoplay, Pagination } from 'swiper/modules';
+import { aboutSliderList } from "<nig>/data/aboutSlider";
+import { socialLinks } from "<nig>/data/socialsLink";
+
+
 
 const Landing = () => {
 
-  const [activeSlide,setActiveSlide] = useState(0)
+  const [activeSlide, setActiveSlide] = useState(0)
   const [isManualSlideChange, setIsManualSlideChange] = useState(false);
 
   console.log(activeSlide)
 
   console.log('Comp rendered')
-  
+
 
   const handleActiveSlide = (index) => {
 
     setIsManualSlideChange(true);
-      setActiveSlide(index);
+    setActiveSlide(index);
 
-      setTimeout(() => {
-        setIsManualSlideChange(false);
-      }, manualChangeDelay);
-    
+    setTimeout(() => {
+      setIsManualSlideChange(false);
+    }, manualChangeDelay);
+
   };
 
-  const activeCard = businessList.find((items,index)=>index==activeSlide)
+  const activeCard = businessList.find((items, index) => index == activeSlide)
 
   const intervalTime = 2000; // 2 seconds
   const manualChangeDelay = 2000; // 3 seconds
@@ -66,7 +74,7 @@ const Landing = () => {
 
   // },[activeSlide])
 
-  
+
 
 
 
@@ -78,7 +86,7 @@ const Landing = () => {
 
         {/* <Image className="h-full w-full object-cover filter brightness-[54%]" priority height={1500} width={1500} src="/images/home/home.jpg" alt="" /> */}
 
-        <div className="section1 lg:w-[56%] absolute inset-0 h-full lg:mt-[20px] flex flex-col justify-center gap-[30px] pad text-white">
+        <div className="section1 lg:w-[56%] absolute inset-0 h-full lg:mt-[20px] flex flex-col justify-center gap-[20px] pad text-white">
 
           <div className="section11 flex gap-[10px]">
             <div className="border-t-[4px] border-orange-500 w-[40px] mt-[16px]"></div>
@@ -87,11 +95,11 @@ const Landing = () => {
             </div>
           </div>
 
-          <div data-aos='fade-right' data-aos-duration="300" className="section12 text-[32px] lg:text-[44px] leading-[36px] lg:leading-[48px] font-semibold ">
+          <div data-aos='fade-right' data-aos-duration="300" className="section12 text-[32px] lg:text-[32px] leading-[36px] lg:leading-[48px] font-semibold ">
             <h1> Transformation in Key Sectors Across Industries</h1>
           </div>
 
-          <div data-aos='fade-right' data-aos-duration="400" className="section12 lg:w-[80%] font-semibold text-[16px]">
+          <div data-aos='fade-right' data-aos-duration="400" className="section12 lg:w-[80%] font-semibold text-[16px] ">
             <h2>
               The top investment group in Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.
             </h2>
@@ -99,13 +107,13 @@ const Landing = () => {
 
           <div className="section14 flex gap-[10px]">
             <div>
-              <button data-aos='fade-right' data-aos-duration="500" className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr">
+              <button data-aos='fade-right' data-aos-duration="500" className="h-[54px] mt-[6px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr">
                 Learn more
               </button>
             </div>
 
             <div>
-              <button data-aos='fade-right' data-aos-duration="600" className="h-[54px] bg-transparent font-semibold">
+              <button data-aos='fade-right' data-aos-duration="600" className="h-[54px] bg-transparent font-semibold hover:underline">
                 Our Businesses{" "}
                 <span className="ml-[3px] text-orange-500">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -120,12 +128,28 @@ const Landing = () => {
         </div>
 
         <div className="absolute right-[4%] top-[0px] h-[100%] flex items-center">
-          <div className="sosholanding hidden lg:flex text-white h-[350px] flex flex-col justify-between">
-            <div data-aos='fade-up' data-aos-duration="400" className="hover:text-green-500"><FontAwesomeIcon icon={faPhone} /></div>
+          <div className="sosholanding hidden lg:flex text-white h-[350px] flex flex-col items-end justify-between">
+
+            {socialLinks.map((items, index) => {
+
+              return (
+      
+                  <div key={index} data-aos='fade-up'
+                    data-aos-duration={`${index == 0 ? "400" : index == 1 ? "600" : index == 2 ? '800' : index == 3 ? "1000" : "1200 "}`}
+                    className="hover:text-red-500">
+                     <span className="text-neutral-800 textsociallinks text-[13px] hover:text-primary1 hover:underline font-semibold"> {items.text} </span>
+                     &nbsp;&nbsp; <FontAwesomeIcon icon={items.icon} />
+                    
+                  </div>
+             
+              )
+            })}
+
+            {/* <div data-aos='fade-up' data-aos-duration="400" className="hover:text-green-500"><FontAwesomeIcon icon={faPhone} /></div>
             <div data-aos='fade-up' data-aos-duration="600" className="hover:text-yellow-500"><FontAwesomeIcon icon={faEnvelope} /></div>
             <div data-aos='fade-up' data-aos-duration="800" className="hover:text-green-500"><FontAwesomeIcon icon={faWhatsapp} /></div>
             <div data-aos='fade-up' data-aos-duration="1000" className="hover:text-blue-700"><FontAwesomeIcon icon={faLinkedin} /></div>
-            <div data-aos='fade-up' data-aos-duration="1200" className="hover:text-red-500"><FontAwesomeIcon icon={faLocationPin} /></div>
+            <div data-aos='fade-up' data-aos-duration="1200" className="hover:text-red-500"><FontAwesomeIcon icon={faLocationPin} /></div> */}
           </div>
         </div>
 
@@ -138,8 +162,28 @@ const Landing = () => {
       <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row lg:items-center gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
 
         <div className="section11 bg-gray-500 shadow-md h-[300px] lg:h-[70vh] relative rr lg:w-[50%]">
-          <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" />
-          <div className="11abs absolute p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[170px] right-[0px] bottom-[0px] shadow-xl">
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView={1}
+            autoplay={{
+              delay: 1200,
+              disableOnInteraction: false,
+            }}
+            loop
+            className="swiper h-full w-full z-0"
+          >
+            {aboutSliderList.map((items, index) => {
+
+              return (
+                <SwiperSlide key={index}>
+                  <Image className="h-full w-full object-cover" height={1000} width={1000} priority src={items.image} alt="kim" />
+                </SwiperSlide>
+              )
+            })}
+
+          </Swiper>
+          {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" /> */}
+          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[170px] right-[0px] bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline font-semibold"><p>Cpt Moha Juma</p></div>
@@ -240,9 +284,9 @@ const Landing = () => {
 
       </div> */}
 
-      <div className="section3 flex flex-col justify-center gap-[35px] lg:h-screen bg-gray-100 pad">
+      <div className="section3 flex flex-col justify-center gap-[35px] lg:h-screen bg-gray-100 pad py-[45px] lg:py-[0]">
 
-        <div className="text-[28px] mt-[-50px] font-semibold">
+        <div className="text-[28px] lg:w-[50%] lg:mt-[-50px] font-semibold">
           <h2>Our Businesses <div className="und"></div></h2>
         </div>
 
@@ -256,7 +300,7 @@ const Landing = () => {
               const address = "/businesses/" + getLink(items.name)
 
               return (
-                <div onClick={()=>handleActiveSlide(index)} key={index} className={`mappedbusineslist cursor-pointer flex flex-col justify-center gap-[7px]
+                <div onClick={() => handleActiveSlide(index)} key={index} className={`mappedbusineslist cursor-pointer flex flex-col justify-center gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
                                                 ${activeSlide === index ? 'bg-primary1 text-white' : ' bg-white '}`}>
                   <div className="text-[15px] font-semibold"><h2>{items.name}</h2></div>
@@ -269,7 +313,7 @@ const Landing = () => {
           </div>
 
           <div className="lg:w-[30%] rr overflow-hidden bg-gray-300 h-[482px] transition ease-in-out duration-300">
-            <Image className="h-full w-full object-cover" alt="kim" height={1000} width={1000} priority src={activeCard.image}/>
+            <Image className="h-full w-full object-cover" alt="kim" height={1000} width={1000} priority src={activeCard.image} />
 
           </div>
 
@@ -279,12 +323,12 @@ const Landing = () => {
               const address = "/businesses/" + getLink(items.name)
 
               return (
-                <div onClick={()=>handleActiveSlide(index+4)} key={index} className={`mappedbusineslist cursor-pointer flex flex-col justify-center gap-[7px]
+                <div onClick={() => handleActiveSlide(index + 4)} key={index} className={`mappedbusineslist cursor-pointer flex flex-col justify-center gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
-                                                ${activeSlide === index+4 ? 'bg-primary1 text-white' : ' bg-white '}`}>
+                                                ${activeSlide === index + 4 ? 'bg-primary1 text-white' : ' bg-white '}`}>
                   <div className="text-[15px] font-semibold"><h2>{items.name}</h2></div>
-                  <div className={`text-[14px] font-light text-neutral-700 ${activeSlide === index+4 ? 'text-white' : ''}`}><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p></div>
-                  <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index+4 ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
+                  <div className={`text-[14px] font-light text-neutral-700 ${activeSlide === index + 4 ? 'text-white' : ''}`}><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p></div>
+                  <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index + 4 ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
                 </div>
               )
             })}
@@ -292,6 +336,45 @@ const Landing = () => {
           </div>
 
 
+
+        </div>
+
+        {/* the mobile screen  */}
+
+        <div className="pb-[40px] lg:hidden">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            slidesPerView={1}
+            spaceBetween={10}
+            autoplay={{
+              delay: 1200,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            loop
+          >
+            {businessList.map((items, index) => {
+
+              const address = "/businesses/" + getLink(items.name)
+
+              return (
+                <SwiperSlide key={index} className="mappedmobilebusiness">
+                  <div className="flex flex-col gap-[17px]">
+                    <div className="flex flex-col gap-[5px] h-[68px]">
+                      <div className="text-[17px] leading-[25px] font-semibold"><h2>{items.name}</h2></div>
+                      <div className="font-light text-[14px]"><h3>"Lorem ipsum karaan kipsum error"</h3></div>
+                      {/* <div className="text-[12px] text-primary1"><Link href={address}>VIEW MORE</Link></div> */}
+                    </div>
+                    <div className="h-[600px] shadow-xl">
+                      <Image className="h-full rr shadow-md w-full object-cover" height={1000} width={1000} src={items.image} alt="kim" priority />
+                    </div>
+                    <div><Link href={address}><button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">View more</button></Link></div>
+                  </div>
+
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
 
         </div>
 

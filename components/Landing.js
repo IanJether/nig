@@ -38,6 +38,8 @@ const Landing = () => {
     }
   };
 
+
+
   const activeCard = businessList.find((items,index)=>index==activeSlide)
 
   const handleAutoSlider = () =>{
@@ -48,8 +50,10 @@ const Landing = () => {
     }
   }
 
+
+
   useEffect(()=>{
-    // const interval = setInterval(handleAutoSlider, 2000)
+    const interval = setInterval(handleAutoSlider, 2000)
 
   },[activeSlide])
 
@@ -125,7 +129,7 @@ const Landing = () => {
       <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row lg:items-center gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
 
         <div className="section11 bg-gray-500 shadow-md h-[300px] lg:h-[70vh] relative rr lg:w-[50%]">
-          <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="" />
+          <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" />
           <div className="11abs absolute p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[170px] right-[0px] bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
@@ -168,7 +172,7 @@ const Landing = () => {
 
       <div className="sectionfour relative h-[600px] lg:h-screen  ">
 
-        <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/slide.png" />
+        <Image className="h-full w-full object-cover" alt="kim" height={1000} width={1000} priority src="/images/home/slide.png" />
 
         <div className="section41 flex flex-col justify-center gap-[40px] lg:gap-[100px] absolute inset-0 bg-primary1 bg-opacity-[94%] h-[100%] w-[100%] top-[0px] text-white pad py-[40px]">
           <div className="41above flex flex-col lg:justify-between lg:flex-row gap-[20px]">
@@ -180,7 +184,7 @@ const Landing = () => {
             {statsList.map((items, index) => {
 
               return (
-                <div className="mappedstatslist text-center font-light w-[37vw] lg:w-[9vw]">
+                <div key={index} className="mappedstatslist text-center font-light w-[37vw] lg:w-[9vw]">
                   <div className="text-[55px] lg:text-[80px]"><h3>{items.number}+</h3></div>
                   <div className="text-stone-300"><p>{items.name}</p></div>
                 </div>
@@ -256,7 +260,7 @@ const Landing = () => {
           </div>
 
           <div className="lg:w-[30%] rr overflow-hidden bg-gray-300 h-[482px] transition ease-in-out duration-300">
-            <Image className="h-full w-full object-cover" height={1000} width={1000} priority src={activeCard.image}/>
+            <Image className="h-full w-full object-cover" alt="kim" height={1000} width={1000} priority src={activeCard.image}/>
 
           </div>
 
@@ -283,8 +287,6 @@ const Landing = () => {
         </div>
 
       </div>
-
-
 
 
 

@@ -25,6 +25,7 @@ import { getLink } from "<nig>/data/getLink";
 const Landing = () => {
 
   const [activeSlide,setActiveSlide] = useState(0)
+  const [isManualSlideChange, setIsManualSlideChange] = useState(false);
 
   console.log(activeSlide)
 
@@ -32,30 +33,38 @@ const Landing = () => {
   
 
   const handleActiveSlide = (index) => {
-  
-    if (activeSlide !== index) {
+
+    setIsManualSlideChange(true);
       setActiveSlide(index);
-    }
+
+      setTimeout(() => {
+        setIsManualSlideChange(false);
+      }, manualChangeDelay);
+    
   };
-
-
 
   const activeCard = businessList.find((items,index)=>index==activeSlide)
 
-  const handleAutoSlider = () =>{
-    if(activeSlide < 7){
-    setActiveSlide(activeSlide+1)
-    }else{
-      setActiveSlide(0)
-    }
-  }
+  const intervalTime = 2000; // 2 seconds
+  const manualChangeDelay = 2000; // 3 seconds
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isManualSlideChange) {
+        setActiveSlide((prevSlide) => (prevSlide + 1) % businessList.length);
+      }
+    }, intervalTime);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isManualSlideChange]);
 
 
+  // useEffect(()=>{
+  //   const interval = setInterval(handleAutoSlider, 2000)
 
-  useEffect(()=>{
-    const interval = setInterval(handleAutoSlider, 2000)
-
-  },[activeSlide])
+  // },[activeSlide])
 
   
 

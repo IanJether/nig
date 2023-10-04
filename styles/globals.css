@@ -6,6 +6,10 @@
   @apply px-[5%] lg:px-[10%]
 }
 
+body{
+  font-family: 'Roboto Flex', sans-serif;
+}
+
 .rr {
   @apply rounded-[2px]
 }

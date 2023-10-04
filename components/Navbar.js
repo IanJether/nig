@@ -76,7 +76,7 @@ const Navbar = () => {
 
             {/* the mobile nav  */}
 
-            <div className="mobilenav lg:hidden pad flex justify-between fixed top-[0px] w-[100vw]  py-[20px]">
+            <div className="mobilenav lg:hidden pad flex justify-between fixed top-[0px] w-[100vw]  py-[20px]  z-10">
                 <div className="logonav text-white font-bold text-[20px] h-[40px] w-[200px]">
 
                   <Link href="/">  <Image priority className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" /> </Link>
@@ -114,37 +114,18 @@ const Navbar = () => {
 
             {/* the desktop nav  */}
 
-            <div className="desktopnav hidden lg:block fixed top-[0px] w-[100vw]  text-white">
+            <div className="desktopnav hidden lg:block fixed top-[0px] w-[100vw]  text-white z-10">
 
-                <div className="topnav hidden flex justify-between py-[14px] bg-opacity-[85%] pad">
-                    <div className="nvlogo">
-                        <h2>LOGO</h2>
-                    </div>
-                    <div className="nvcontact flex gap-[40px] text-[14px] font-semibold">
-                        <div className="nvloc flex gap-[10px]">
-                            <div className="text-orange-500"><FontAwesomeIcon icon={faLocationPin} /></div>
-                            <div><p>Addis Ababa, Ethiopia ,Megnagna POSSEA Building 3rd floor</p></div>
-                        </div>
-                        <div className="nvmail flex gap-[10px]">
-                            <div className="text-orange-500"><FontAwesomeIcon icon={faEnvelope} /></div>
-                            <div><p>info@niginternational.com</p></div>
-                        </div>
-                        <div className="nvphone flex gap-[10px] ">
-                            <div className="text-orange-500"><FontAwesomeIcon icon={faPhone} /></div>
-                            <div><p>+254-7-123-456-789</p></div>
-                        </div>
-                    </div>
-
-                </div>
+              
 
                 <div className="bottomnav flex flex-row-reverse justify-between items-center h-[67px] pad">
                     <div className="nvlinks w-[55%]">
-                        <ul className="flex justify-between items-center font-semibold text-white text-[14px] mt-[4px]">
+                        <ul className="flex justify-between items-center text-white text-[17px] mt-[4px]">
                             {NavbarList.map((items, index) => {
 
                                 return (
                                     <Link href={items.link}>
-                                        <li className="relative group uppercase " key={index}>
+                                        <li className="relative group  " key={index}>
                                             {items.title}
                                             <span
                                                 className="absolute inset-x-0 bottom-0 h-[2px] bg-orange-500 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"

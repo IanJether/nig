@@ -8,6 +8,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faArrowRight, faFile } from "@fortawesome/free-solid-svg-icons";
 import ContactComp from "./Contact";
 import ContactPrompt from "./commons/ContactPrompt";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 
 
 
@@ -28,17 +32,17 @@ const Businessdetails = ({ name }) => {
                     {/* section one  */}
 
                     <div className="sectioneonedetails h-[700px] lg:h-screen relative w-full">
-                        <Image className="h-full w-full object-cover filter brightness-[43%]" height={2000} width={2000} src={businessDetails.image} />
+                        <Image className="h-full w-full object-cover filter brightness-[43%]" height={2000} width={2000} src={businessDetails.image[0].image} />
 
                         <div className="detailsabsolute absolute h-full w-full top-[0px] flex flex-col lg:flex-row pad items-center justify-center gap-[20px]">
 
-                            <div className="lg:h-[15vw] lg:w-[15vw] h-[160px] w-[160px] bg-gray-200 bg-opacity-[70%] rr overflow-hidden">
+                            <div className="lg:h-[8vw] lg:w-[8vw] absolute bottom-[0px] right-[0px] h-[160px] w-[160px]  rr overflow-hidden">
                                 <Image className="h-full w-full object-contain opacity-[70%]" height={1500} width={1500} src="/images/logo/niglogo.jpg" />
                             </div>
 
                             <div className="text-white flex text-center flex-col gap-[15px] lg:w-[36vw]">
-                                <div className="text-[43px] lg:text-[50px] font-light leading-[43px] lg:leading-[50px]"><h1>{businessDetails.name}</h1></div>
-                                <div className="text-[20px]"><p>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p></div>
+                                <div className="text-[43px] lg:text-[60px] font-light leading-[43px] lg:leading-[50px]"><h1>{businessDetails.name}</h1></div>
+                                <div className="text-[20px]"><p>"{businessDetails.description}"</p></div>
                             </div>
 
                         </div>
@@ -72,10 +76,16 @@ const Businessdetails = ({ name }) => {
 
                         <div className="sectiontwodetails pad flex flex-col  lg:flex-row gap-[40px] lg:gap-[30px]">
 
-                            <div className="detailstext lg:w-[68%] flex flex-col gap-[20px] text-[15px] text-neutral-900">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore id repudiandae minus molestias. Id voluptatibus molestiae sit at quam debitis rerum nesciunt molestias temporibus, tempora maxime maiores, amet nisi dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ut voluptatem at possimus modi beatae voluptates provident cumque iste dolorem, delectus eum earum, labore reprehenderit ab commodi rem atque id! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quaerat, nobis, asperiores iure culpa quibusdam esse numquam architecto, nesciunt cupiditate voluptatum voluptate dignissimos veritatis fuga deserunt voluptatem molestias fugit voluptas?</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita a. Commodi distinctio consequatur soluta, impedit autem, quia cupiditate nisi consectetur delectus consequuntur voluptatum obcaecati, nobis expedita dolores eaque! Reiciendis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odit esse sed, unde quae impedit, vitae facilis maxime incidunt deserunt obcaecati quo doloribus natus? Veniam nisi sequi saepe quas doloribus.</p>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, ad maxime nisi a possimus animi nesciunt dolorem harum recusandae ullam soluta autem reiciendis perferendis quia, itaque, omnis eum aspernatur deleniti!</p>
+                            <div className="detailstext lg:w-[68%] flex flex-col gap-[20px] text-[15px] lg:text-[17px] text-neutral-900">
+
+                                {businessDetails.text.map((itemss, index) => {
+
+                                    return (
+                                        <div key={index} className="mappedtextDetails">
+                                            <p>{itemss.text}</p>
+                                        </div>
+                                    )
+                                })}
 
                             </div>
 
@@ -84,7 +94,7 @@ const Businessdetails = ({ name }) => {
 
 
                                 <div className="h-[70px] w-full bg-servback text-gray-800 px-[10px] flex items-center font-semibold rr hover:border-l-4 hover:border-orange-500 cursor-pointer">
-                                    <p>Aviation</p>
+                                    <p>{businessDetails.industry}</p>
                                 </div>
                                 <div className="h-[70px] hover:bg-sec1 w-full bg-orange-500 text-white px-[10px] flex items-center font-semibold rr  cursor-pointer">
                                     <p> <FontAwesomeIcon className="mr-[5px] text-[19px]" icon={faFile} /> Company Profile</p>
@@ -106,17 +116,61 @@ const Businessdetails = ({ name }) => {
                             <h2>Gallery <div className="und"></div></h2>
                         </div>
 
-                        <div className="flex flex-wrap gap-[10px]">
+                        <div className="flex flex-wrap gap-[10px] lg:hidden">
+
+                            <Swiper
+                                modules={[Autoplay]}
+                                slidesPerView={2}
+                                spaceBetween={10}
+                                autoplay={{
+                                    delay: 1200,
+                                    disableOnInteraction: false,
+                                }}
+                                loop
+                                className="swiper h-full w-full z-0"
+                            >
 
 
-                            {businessList.map((items, index) => {
+                                {businessDetails.image.map((items, index) => {
 
-                                return (
-                                    <div key={index} className="mappedgallery h-[170px] lg:h-[12vw] w-[48%] lg:w-[12vw] bg-gray-200">
+                                    return (
+                                        <SwiperSlide key={index}>
+                                            <div key={index} className="mappedgallery h-[190px] lg:h-[12vw] bg-gray-200">
+                                                <Image className="h-full w-full object-cover " height={2000} width={2000} src={items.image} />
+                                            </div>
+                                        </SwiperSlide>
+                                    )
+                                })}
+                            </Swiper>
 
-                                    </div>
-                                )
-                            })}
+                        </div>
+
+                        <div className="flex flex-wrap gap-[10px] lg:flex hidden ">
+
+                            <Swiper
+                                modules={[Autoplay, Pagination]}
+                                slidesPerView={3}
+                                autoplay={{
+                                    delay: 1200,
+                                    disableOnInteraction: false,
+                                }}
+
+                                loop
+                                className="swiper h-full w-full z-0"
+                            >
+
+
+                                {businessDetails.image.map((items, index) => {
+
+                                    return (
+                                        <SwiperSlide key={index}>
+                                            <div key={index} className="mappedgallery h-[60vh] w-[25vw] bg-gray-200">
+                                            <Image className="h-full w-full object-cover " height={2000} width={2000} src={items.image} />
+                                            </div>
+                                        </SwiperSlide>
+                                    )
+                                })}
+                            </Swiper>
 
                         </div>
 

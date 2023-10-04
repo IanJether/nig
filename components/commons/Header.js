@@ -11,7 +11,7 @@ const Header = ({ page, pageDescription, image }) => {
             <Image className="h-full w-full object-cover filter brightness-[35%]" height={1500} width={1600}  src={image} priority />
 
             <div className="h-full w-full absolute top-[0px]  pad flex items-center lg:justify-start">
-                <h2 className="capitalize text-white mt-[40px] lg:mt-[10px] font-light text-[47px] lg:text-[60px] leading-[50px] lg:w-[60%] lg:leading-[75px]"><span className="text-primary1">{page}</span> {pageDescription} </h2>
+                <h2 className="capitalize text-white mt-[40px] lg:mt-[10px] text-[47px] lg:text-[60px] leading-[50px] lg:w-[60%] lg:leading-[75px]"><span className="text-primary1">{page}</span> {pageDescription} </h2>
             </div>
 
         </div>

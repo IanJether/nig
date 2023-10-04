@@ -84,22 +84,26 @@ const Landing = () => {
 
       <div className="section1 relative h-[700px] lg:h-[100vh] bg-primary1">
 
-        {/* <Image className="h-full w-full object-cover filter brightness-[54%]" priority height={1500} width={1500} src="/images/home/home.jpg" alt="" /> */}
+        {/* <Image className="h-full w-full object-cover filter " priority height={1500} width={1500} src="/images/home" alt="" /> */}
+
+        <div className="absolute hidden lg:block h-[55vh] top-[27%] right-[15%]">
+          <Image className="h-full w-full object-contain" height={1000} width={1000} src="/images/sdg2.png"/>
+        </div>
 
         <div className="section1 lg:w-[56%] absolute inset-0 h-full lg:mt-[20px] flex flex-col justify-center gap-[20px] pad text-white">
 
           <div className="section11 flex gap-[10px]">
             <div className="border-t-[4px] border-orange-500 w-[40px] mt-[16px]"></div>
-            <div data-aos='fade-right' data-aos-duration="200" className="text-white font-semibold text-[20px]">
-              <h3>Building Ethiopia</h3>
+            <div data-aos='fade-right' data-aos-duration="200" className="text-white text-[20px]">
+              <h3>Building The Nation</h3>
             </div>
           </div>
 
-          <div data-aos='fade-right' data-aos-duration="300" className="section12 text-[32px] lg:text-[32px] leading-[36px] lg:leading-[48px] font-semibold ">
+          <div data-aos='fade-right' data-aos-duration="300" className="section12 text-[32px] lg:text-[32px] leading-[36px] lg:leading-[48px] font-bold ">
             <h1> Transformation in Key Sectors Across Industries</h1>
           </div>
 
-          <div data-aos='fade-right' data-aos-duration="400" className="section12 lg:w-[80%] font-semibold text-[16px] ">
+          <div data-aos='fade-right' data-aos-duration="400" className="section12 lg:w-[80%]  text-[16px] ">
             <h2>
               The top investment group in Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.
             </h2>
@@ -107,13 +111,13 @@ const Landing = () => {
 
           <div className="section14 flex gap-[10px]">
             <div>
-              <button data-aos='fade-right' data-aos-duration="500" className="h-[54px] mt-[6px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr">
+              <button data-aos='fade-right' data-aos-duration="500" className="h-[54px] mt-[6px] bg-orange-500 hover:bg-sec2 px-[20px] rr">
                 Learn more
               </button>
             </div>
 
             <div>
-              <button data-aos='fade-right' data-aos-duration="600" className="h-[54px] bg-transparent font-semibold hover:underline">
+              <button data-aos='fade-right' data-aos-duration="600" className="h-[54px] bg-transparent  hover:underline">
                 Our Businesses{" "}
                 <span className="ml-[3px] text-orange-500">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -133,15 +137,15 @@ const Landing = () => {
             {socialLinks.map((items, index) => {
 
               return (
-      
-                  <div key={index} data-aos='fade-up'
-                    data-aos-duration={`${index == 0 ? "400" : index == 1 ? "600" : index == 2 ? '800' : index == 3 ? "1000" : "1200 "}`}
-                    className="hover:text-red-500">
-                     <span className="text-neutral-800 mr-[15px] mt-[4px] textsociallinks text-[13px] hover:text-primary1 hover:underline font-semibold"> {items.text} </span>
-                      <FontAwesomeIcon icon={items.icon} />
-                    
-                  </div>
-             
+
+                <div key={index} data-aos='fade-up'
+                  data-aos-duration={`${index == 0 ? "400" : index == 1 ? "600" : index == 2 ? '800' : index == 3 ? "1000" : "1200 "}`}
+                  className="hover:text-red-500">
+                  <span className="text-neutral-800 mr-[15px] mt-[4px] textsociallinks text-[13px] hover:text-primary1 hover:underline font-semibold"> {items.text} </span>
+                  <FontAwesomeIcon icon={items.icon} />
+
+                </div>
+
               )
             })}
 
@@ -161,12 +165,12 @@ const Landing = () => {
 
       <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row lg:items-center gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
 
-        <div className="section11 bg-gray-500 shadow-md h-[300px] lg:h-[70vh] relative rr lg:w-[50%]">
+        <div className="section11 h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
           <Swiper
             modules={[Autoplay]}
             slidesPerView={1}
             autoplay={{
-              delay: 1200,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             loop
@@ -183,10 +187,10 @@ const Landing = () => {
 
           </Swiper>
           {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" /> */}
-          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[170px] right-[0px] bottom-[0px] shadow-xl">
+          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[180px] right-[0px] bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
-              <div className="text-orange-500 underline font-semibold"><p>Cpt Moha Juma</p></div>
+              <div className="text-orange-500 underline font-semibold"><p>Cpt Abera Lemi</p></div>
             </div>
             <div className="font-semibold"><p>We push the limits of whats possible in investment</p></div>
 
@@ -205,9 +209,14 @@ const Landing = () => {
               National Investment Group (NIG) is a prominent conglomerate in Ethiopia playing a major role towards nation building.
             </h3>
           </div>
-          <div className="12text text-[14px] text-stone-600">
+          <div className="12text text-[15px] text-stone-600">
             <p>
-              Led by its founder and owner, Captain Abera Lemi – a former Ethiopian Airlines Captain, NIG was incorporated as an umbrella company comprising of ten sister companies (business units) which operate across various sectors such as Aviation & Tourism, Technologies, Higher Education, Agro-Solutions, logistics & transportation, and General Trading.
+              Led by its founder and owner, Captain Abera Lemi – a former Ethiopian Airlines Captain, NIG was incorporated as an umbrella company comprising of ten sister companies (business units). NIG's key strengths lies in its commitment to fostering innovation and embracing cutting-edge technologies. 
+            </p>
+          </div>
+          <div className="12text text-[15px] text-stone-600">
+            <p>
+            Our dedication to staying at the forefront of technological advancements has not only enabled NIG to remain competitive but has also allowed the company to set new industry standards. NIG is recognized as an industry pioneer, continually introducing innovative solutions and practices that redefine the landscape.
             </p>
           </div>
           <div className="12link">
@@ -251,38 +260,6 @@ const Landing = () => {
       </div>
 
 
-      {/* section three */}
-
-      {/* <div className="sectoin3 flex flex-col bg-gray-100  gap-[50px] lg:gap-[70px] py-[40px] lg:py-[100px] pad">
-
-        <div className="section31 flex flex-col gap-[10px]">
-          <div className="text-[28px] lg:w-[60%] font-semibold"><h2>Our Businesses <div className="und"></div> </h2></div>
-          <div className="text-stone-600 lg:w-[60%]"><p> NIG's vision is being the top investment group in key sectors of Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.</p></div>
-        </div>
-
-        <div className="section32 flex flex-wrap justify-center lg:justify-between gap-[40px]">
-          {businessList.map((items, index) => {
-
-            return (
-              <div key={index} className="mappedbusinesslist rr shadow-xl cursor-pointer bg-white  w-[85vw] lg:w-[24vw] flex flex-col items-center gap-[30px]">
-                <div className="topbusines relative h-[260px] overflow-hidden lg:h-[33vh] rr w-full bg-gray-300">
-                  <Image className="h-full ease-in-out transition duration-200 hover:scale-[110%] w-full object-cover hover:" height={1000} width={1000} priority src={items.image} alt="" />
-                  <div className="businessabsolute absolute shadow-xl bottom-[0px] w-[66%] left-[17%] bg-primary1 hover:bg-sec1 hover:bg-opacity-[80%]  bg-opacity-[80%] text-center py-[10px] rr text-[18px] font-semibold text-white">
-                    <p>{items.name}</p>
-                  </div>
-
-                </div>
-                <div className="bottombusines bg-white flex flex-col pb-[30px] px-[10px] gap-[15px]">
-                  <div className="text-[15px] text-stone-600"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum explicabo officia voluptatem ducimus sint aspernatur necessitatibus! Voluptas recusandae tenetur necessitatibus omnis cum. Ab est recusandae, rerum a rem eos?</p></div>
-                  <div className="border-b-[2px] border-gray-100"></div>
-                  <div className="font-semibold cursor-pointer text-left hover:underline"><p>See more <FontAwesomeIcon className="text-orange-500" icon={faArrowRight} /></p></div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-
-      </div> */}
 
       <div className="section3 flex flex-col justify-center gap-[35px] lg:h-screen bg-gray-100 pad py-[45px] lg:py-[0]">
 
@@ -303,8 +280,8 @@ const Landing = () => {
                 <div onClick={() => handleActiveSlide(index)} key={index} className={`mappedbusineslist cursor-pointer flex flex-col justify-center gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
                                                 ${activeSlide === index ? 'bg-primary1 text-white' : ' bg-white '}`}>
-                  <div className="text-[15px] font-semibold"><h2>{items.name}</h2></div>
-                  <div className={`text-[14px] font-light text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p></div>
+                  <div className="text-[16px] font-semibold"><h2>{items.name}</h2></div>
+                  <div className={`text-[15px] text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
                   <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
                 </div>
               )
@@ -313,7 +290,7 @@ const Landing = () => {
           </div>
 
           <div className="lg:w-[30%] rr overflow-hidden bg-gray-300 h-[482px] transition ease-in-out duration-300">
-            <Image className="h-full w-full object-cover" alt="kim" height={1000} width={1000} priority src={activeCard.image} />
+            <Image className="h-full w-full object-cover" alt="kim" height={1000} width={1000} priority src={activeCard.image[0].image} />
 
           </div>
 
@@ -327,7 +304,7 @@ const Landing = () => {
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
                                                 ${activeSlide === index + 4 ? 'bg-primary1 text-white' : ' bg-white '}`}>
                   <div className="text-[15px] font-semibold"><h2>{items.name}</h2></div>
-                  <div className={`text-[14px] font-light text-neutral-700 ${activeSlide === index + 4 ? 'text-white' : ''}`}><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  </p></div>
+                  <div className={`text-[14px] text-neutral-700 ${activeSlide === index + 4 ? 'text-white' : ''}`}><p>"{items.description}"</p></div>
                   <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index + 4 ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
                 </div>
               )
@@ -362,10 +339,10 @@ const Landing = () => {
                   <div className="flex flex-col gap-[17px]">
                     <div className="flex flex-col gap-[5px] h-[68px]">
                       <div className="text-[17px] leading-[25px] font-semibold"><h2>{items.name}</h2></div>
-                      <div className="font-light text-[14px]"><h3>"Lorem ipsum karaan kipsum error"</h3></div>
+                      <div className="font-light text-[14px]"><h3>"{items.description}"</h3></div>
                       {/* <div className="text-[12px] text-primary1"><Link href={address}>VIEW MORE</Link></div> */}
                     </div>
-                    <div className="h-[600px] shadow-xl">
+                    <div className="h-[300px] shadow-xl">
                       <Image className="h-full rr shadow-md w-full object-cover" height={1000} width={1000} src={items.image} alt="kim" priority />
                     </div>
                     <div><Link href={address}><button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">View more</button></Link></div>
@@ -393,7 +370,7 @@ const Landing = () => {
 
             <div className="text-[14px] font-semibold"><h3>Sustainability</h3></div>
             <div className="text-[32px] font-bold leading-[35px]"><h2>Building prosperity & self-sufficiency</h2></div>
-            <div className="text-[16px] font-semibold leading-[22px]"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptate, maiores rem eaque voluptatum, amet tempora repellendus sapiente magni neque ipsa accusantium? Eveniet debitis error libero assumenda nihil repellat odit.</p></div>
+            <div className="text-[16px] f leading-[22px]"><p>At NIG, our commitment to sustainability extends beyond mere adherence to regulatory requirements. Our motivation is rooted in a strong determination to make meaningful contributions and create a positive influence on the growth and well-being of our host communities and society as a whole.</p></div>
             <div className="font-light"> <p>Read More <span className="text-orange-500"><FontAwesomeIcon icon={faArrowRight} /></span></p> </div>
 
           </div>

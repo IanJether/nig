@@ -19,18 +19,17 @@ const About = () => {
 
       {/* section one  */}
 
-      <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row-reverse gap-[40px] py-[40px] lg:py-[100px]">
+      <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row-reverse lg:items-center gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
 
-        <div className="section11 bg-gray-500 shadow-md h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
-          <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="" />
-          {/* <div className="11abs absolute rr bg-white h-[70px] w-[70px] lg:w-[100px] left-[2px] top-[20%] shadow-md"></div> */}
-          {/* <div className="11abs absolute rr bg-white h-[70px] w-[70px] lg:w-[100px] right-[10%] top-[1%] shadow-md"></div> */}
-          <div className="11abs absolute p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[170px] right-[0px] bottom-[0px] shadow-xl">
+        <div className="section11 h-[300px] lg:h-[55vh] relative rr lg:w-[50%]">
+
+          <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" />
+          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[180px] right-[0px] bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline font-semibold"><p>Cpt Abera Lemi</p></div>
             </div>
-            <div className="font-semibold"><p>Building our nation, Ethiopia,  one Industry at a time</p></div>
+            <div className="font-semibold"><p>Building Ethiopia, one industry at a time</p></div>
 
           </div>
         </div>
@@ -38,23 +37,23 @@ const About = () => {
         <div className="section12 leading-[26px] flex flex-col lg:justify-center gap-[20px] lg:gap-[30px] lg:w-[50%]">
           <div className="12title">
             <div className="font-semibold text-[28px]">
-              <h2>Who we are</h2>
+              <h2>Who We Are</h2>
               <div className="und "></div>
             </div>
           </div>
           <div className="12head font-semibold text-[17px]">
             <h3>
-              National Investment Group (NIG) is a prominent conglomerate in Ethiopia playing a major role towards nation building.
+              National Investment Group (NIG) is a prominent Ethiopian conglomerate, actively contributing to the nation's development.
             </h3>
           </div>
           <div className="12text text-[15px] text-stone-600">
             <p>
-              Led by its founder and owner, Captain Abera Lemi – a former Ethiopian Airlines Captain, NIG was incorporated as an umbrella company comprising of ten sister companies (business units) which operate across various sectors such as Aviation & Tourism, Technologies, Higher Education, Agro-Solutions, logistics & transportation, and General Trading.
+              Led by its founder and owner, Captain Abera Lemi – a former Ethiopian Airlines Captain, NIG was incorporated as an umbrella company comprising of ten sister companies (business units). NIG's key strengths lies in its commitment to fostering innovation and embracing cutting-edge technologies.
             </p>
           </div>
           <div className="12text text-[15px] text-stone-600">
             <p>
-              Led by its founder and owner, Captain Abera Lemi – a former Ethiopian Airlines Captain, NIG was incorporated as an umbrella company comprising of ten sister companies (business units) which operate across various sectors such as Aviation & Tourism, Technologies, Higher Education, Agro-Solutions, logistics & transportation, and General Trading.
+              Our dedication to staying at the forefront of technological advancements has not only enabled NIG to remain competitive but has also allowed the company to set new industry standards. NIG is recognized as an industry pioneer, continually introducing innovative solutions and practices that redefine the landscape.
             </p>
           </div>
           {/* <div className="12link">
@@ -70,7 +69,7 @@ const About = () => {
 
       {/* section two  */}
 
-      <div className="sectionfour relative h-[750px] lg:h-[800px]  ">
+      <div className="sectionfour relative h-[750px] lg:h-screen  ">
 
         <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/slide.png" />
 
@@ -101,7 +100,7 @@ const About = () => {
 
       </div>
 
-      {/* section three - Team */}
+      {/* section three - Team
 
       <div className="sectionthree pad py-[40px] lg:py-[100px] flex flex-col gap-[40px]">
 
@@ -136,17 +135,44 @@ const About = () => {
         </div>
 
 
+      </div> */}
+
+      {/* section five - message from the ceo  */}
+
+
+      <div className="sectionfiveabout flex flex-col gap-[40px] py-[40px] lg:py-[120px] pad">
+
+        <div className="text-[28px] font-semibold">
+          <h2>Message from the CEO <div className="und"></div></h2>
+        </div>
+
+        <div className="ceo w-full rr overflow-hidden h-[400px] lg:h-[60vh] mb-[40px] relative">
+          <Image className="h-full rr w-full object-cover filter brightness-[100%]" height={1500} width={1500} src="/images/New/ceo2.jpg" priority />
+
+          <div className="ceotext text-white px-[10px] rr flex flex-col gap-[25px] items-center justify-center text-center absolute bg-black bg-opacity-[60%] top-[10%] left-[10%] lg:left-[6%] h-[80%] w-[80%] lg:w-[30%] ">
+            <div className="text-[20px] font-semibold"><p>"
+              Inspired to pioneer excellence and innovation, we're shaping a brighter future through unwavering dedication to growth and transformation."</p></div>
+            <div className="text-[25px] font-light">
+              <div>  <h2>Cpt Abera Lemi</h2></div>
+              <div className="text-primary2 text-[14px] font-semibold">Founder and CEO</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
       {/* section four - partners  */}
 
-      <div className="sectionfourpartners relative h-[500px] lg:h-[80vh] ">
+      <div className="sectionfourpartners relative h-[500px] lg:h-screen ">
         <Image className="h-full w-full object-cover filter brightness-[65%]" height={1000} width={1000} src="/images/home/home.jpg" priority />
 
         <div className="pad flex flex-col justify-center gap-[45px] absolute top-[0px] w-full h-full inset-0 text-white py-[40px]">
           <div className="flex flex-col gap-[20px]">
             <div className="text-[28px] font-semibold"><h3>Our Partners <div className="und"></div></h3></div>
-            <div className="lg:w-[60%]"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi saepe numquam, placeat, sunt adipisci facilis eaque ducimus incidunt illum!</p></div>
+            <div className="lg:w-[60%]"><p>We're proud to partner with key organizations, offering sustainable solutions and representing Ethiopia in leading investments.</p></div>
           </div>
           <div className="lg:hidden ">
             {partnersList.filter((items, index) => index == 0).map((items, index) => {
@@ -173,31 +199,7 @@ const About = () => {
 
       </div>
 
-      {/* section five - message from the ceo  */}
 
-
-      <div className="sectionfiveabout flex flex-col gap-[40px] py-[40px] lg:py-[100px] pad">
-
-        <div className="text-[28px] font-semibold">
-          <h2>Message from the CEO <div className="und"></div></h2>
-        </div>
-
-        <div className="ceo w-full rr overflow-hidden h-[400px] lg:h-[60vh] mb-[40px] relative">
-          <Image className="h-full rr w-full object-cover filter brightness-[100%]" height={1500} width={1500} src="/images/New/ceo2.jpg" priority />
-
-          <div className="ceotext text-white px-[10px] rr flex flex-col gap-[25px] items-center justify-center text-center absolute bg-black bg-opacity-[60%] top-[10%] left-[10%] lg:left-[6%] h-[80%] w-[80%] lg:w-[30%] ">
-            <div className="text-[20px] font-semibold"><p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, officiis minima sed ea numquam !"</p></div>
-            <div className="text-[25px] font-light">
-              <div>  <h2>Cpt Abera Lemi</h2></div>
-              <div className="text-primary2 text-[14px] font-semibold">Founder and CEO</div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
 
 
 

@@ -59,7 +59,7 @@ body{
 }
 
 .soshobox div {
-  @apply hover:text-primary1 cursor-pointer;
+  @apply hover:text-sec1 cursor-pointer;
 }
 
 .sosholanding div {

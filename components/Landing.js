@@ -111,18 +111,18 @@ const Landing = () => {
 
           <div className="section14 flex gap-[10px]">
             <div>
-              <button data-aos='fade-right' data-aos-duration="500" className="h-[54px] mt-[6px] bg-orange-500 hover:bg-sec2 px-[20px] rr">
+             <Link href="/about"> <button data-aos='fade-right' data-aos-duration="500" className="h-[54px] mt-[6px] bg-orange-500 hover:bg-sec2 px-[20px] rr">
                 Learn more
-              </button>
+              </button> </Link>
             </div>
 
             <div>
-              <button data-aos='fade-right' data-aos-duration="600" className="h-[54px] bg-transparent  hover:underline">
+             <Link href="/businesses"> <button data-aos='fade-right' data-aos-duration="600" className="h-[54px] bg-transparent  hover:underline">
                 Our Businesses{" "}
                 <span className="ml-[3px] text-orange-500">
                   <FontAwesomeIcon icon={faArrowRight} />
                 </span>{" "}
-              </button>
+              </button> </Link>
             </div>
 
 
@@ -187,13 +187,13 @@ const Landing = () => {
 
           </Swiper>
           {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" /> */}
-          <div  className="11abs rr absolute z-10 p-[10px] bg-white flex flex-col gap-[5px] justify-center items-center h-[95px] w-[70%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[190px] right-[15%] lg:right-[0px] bottom-[-40px] lg:bottom-[0px] shadow-xl">
+          <div  className="11abs rr absolute z-10 p-[10px] bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[95px] w-[70%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[190px] left-[3px] lg:right-[0px] bottom-[-40px] lg:bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center hidden lg:flex justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline font-semibold"><p>Capt. Abera Lemi</p></div>
             </div>
-            <div className=" text-black text-center"><p>"We push the limits of what is possible in investment"</p></div>
-            <div className="text-orange-500 lg:hidden"><p>- Capt. Lemi</p></div>
+            <div className=" text-black text-left"><p>"We push the limits of what is possible in investment"</p></div>
+            <div className="text-orange-500 lg:hidden"><p>Capt. Abera Lemi</p></div>
 
           </div>
         </div>
@@ -221,12 +221,12 @@ const Landing = () => {
             </p>
           </div>
           <div className="12link">
-            <p className="font-semibold hover:underline cursor-pointer">
+           <Link href="/about"> <p className="font-semibold hover:underline cursor-pointer">
               Read more{" "}
               <span className="ml-[5px] text-orange-500">
                 <FontAwesomeIcon icon={faArrowRight} />
               </span>
-            </p>
+            </p> </Link>
           </div>
         </div>
       </div>
@@ -384,7 +384,7 @@ const Landing = () => {
             <div className="text-[14px] font-semibold"><h3>Sustainability</h3></div>
             <div className="text-[32px] font-bold leading-[35px]"><h2>Building prosperity & self-sufficiency</h2></div>
             <div className="text-[16px] f leading-[22px]"><p>At NIG, our commitment to sustainability extends beyond mere adherence to regulatory requirements. Our motivation is rooted in a strong determination to make meaningful contributions and create a positive influence on the growth and well-being of our host communities and society as a whole.</p></div>
-            <div className="font-semibold text-[14px]"> <p>Read More <span className="text-orange-500"><FontAwesomeIcon icon={faArrowRight} /></span></p> </div>
+            <div className="font-semibold hover:underline hover:text-orange-500 text-[14px]"> <Link href="/sustainability"><p>Read More <span className="text-orange-500"><FontAwesomeIcon icon={faArrowRight} /></span></p></Link> </div>
 
           </div>
           <div className="hidden lg:block"></div>

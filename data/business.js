@@ -83,7 +83,7 @@ export const businessList =  [
         ]
     },
     {
-        name: "National Agro Solutions",
+        name: "NAS Import and Export",
         image: [
             {
                 image: agro1

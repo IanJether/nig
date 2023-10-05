@@ -384,7 +384,7 @@ const Landing = () => {
             <div className="text-[14px] font-semibold"><h3>Sustainability</h3></div>
             <div className="text-[32px] font-bold leading-[35px]"><h2>Building prosperity & self-sufficiency</h2></div>
             <div className="text-[16px] f leading-[22px]"><p>At NIG, our commitment to sustainability extends beyond mere adherence to regulatory requirements. Our motivation is rooted in a strong determination to make meaningful contributions and create a positive influence on the growth and well-being of our host communities and society as a whole.</p></div>
-            <div className="font-light"> <p>Read More <span className="text-orange-500"><FontAwesomeIcon icon={faArrowRight} /></span></p> </div>
+            <div className="font-semibold text-[14px]"> <p>Read More <span className="text-orange-500"><FontAwesomeIcon icon={faArrowRight} /></span></p> </div>
 
           </div>
           <div className="hidden lg:block"></div>
@@ -394,7 +394,7 @@ const Landing = () => {
               {sustainabiltyList.filter((items, index) => index < 4).map((items, index) => {
 
                 return (
-                  <div key={index} className="mappedsustainability flex flex-col w-[65px] lg:w-[70px] gap-[5px]">
+                  <div key={index} className="mappedsustainability flex flex-col w-[60px] lg:w-[70px] gap-[5px]">
                     <div className="flex items-center justify-center border rr h-[50px] w-[60px]"><FontAwesomeIcon icon={items.icon} /></div>
                     <div className="uppercase font-semibold text-center text-[10px]"><p>{items.title}</p></div>
                   </div>
@@ -405,7 +405,7 @@ const Landing = () => {
               {sustainabiltyList.filter((items, index) => index >= 4).map((items, index) => {
 
                 return (
-                  <div key={index} className="mappedsustainability flex flex-col w-[65px] lg:w-[70px] gap-[5px]">
+                  <div key={index} className="mappedsustainability flex flex-col w-[60px] lg:w-[70px] gap-[5px]">
                     <div className="flex items-center justify-center border rr h-[50px] w-[60px]"><FontAwesomeIcon icon={items.icon} /></div>
                     <div className="uppercase font-semibold text-center text-[10px]"><p>{items.title}</p></div>
                   </div>

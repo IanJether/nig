@@ -5,7 +5,7 @@ import ceo from "../public/images/management/ceo.jpeg"
 export const managementList = [
     {
         image: ceo,
-        name: "Cpt Abera Lemi",
+        name: "Capt. Abera Lemi",
         position: "Founder & CEO"
     }
 ]

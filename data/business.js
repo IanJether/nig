@@ -4,7 +4,7 @@ import air3 from "../public/images/business/air/air1.jpg";
 import air4 from "../public/images/business/air/air2.jpg";
 import air5 from "../public/images/business/air/air5.jpg";
 import air6 from "../public/images/business/air/air6.png";
-import air7 from "../public/images/business/air/air7.jpeg";
+import air8 from "../public/images/business/air/air8.jpeg";
 import res1 from "../public/images/business/research/res1.jpg";
 import res2 from "../public/images/business/research/res2.jpg";
 import agro1 from "../public/images/business/agro/agro1.jpg";
@@ -17,6 +17,7 @@ import tel2 from "../public/images/business/tel/tel2.png";
 import tel3 from "../public/images/business/tel/tel3.jpg";
 import tour1 from "../public/images/business/tours/tour1.jpg";
 import tour2 from "../public/images/business/tours/tour2.jpg";
+import tour3 from "../public/images/business/tours/tour3.jpg";
 import tollo1 from "../public/images/business/tollo/tollo1.jpg";
 import tollo2 from "../public/images/business/tollo/tollo2.jpg";
 import college1 from "../public/images/business/college/college1.jpg";
@@ -164,10 +165,10 @@ export const businessList =  [
         name: "National Airways",
         image:[
             {
-                image: air1
+                image: air8
             },
             {
-                image: air7
+                image: air1
             },
             {
                 image: air3
@@ -204,6 +205,9 @@ export const businessList =  [
             },
             {
                 image: tour2
+            },
+            {
+                image: tour3
             },
         ],
         description: "Unforgettable Escape",

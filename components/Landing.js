@@ -53,8 +53,8 @@ const Landing = () => {
 
   const activeCard = businessList.find((items, index) => index == activeSlide)
 
-  const intervalTime = 2000; // 2 seconds
-  const manualChangeDelay = 2000; // 3 seconds
+  const intervalTime = 3000; // 2 seconds
+  const manualChangeDelay = 4000; // 3 seconds
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -163,7 +163,7 @@ const Landing = () => {
 
       {/* section two  */}
 
-      <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row lg:items-center gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
+      <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row lg:items-center gap-[60px] py-[40px] lg:h-screen lg:py-[100px]">
 
         <div className="section11 h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
           <Swiper
@@ -187,12 +187,13 @@ const Landing = () => {
 
           </Swiper>
           {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" /> */}
-          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[90px] w-[70%] bg-opacity-[50%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[180px] right-[0px] bottom-[0px] shadow-xl">
-            <div className="flex gap-[10px] items-center justify-center">
+          <div  className="11abs rr absolute z-10 p-[10px] bg-white flex flex-col gap-[5px] justify-center items-center h-[95px] w-[70%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[190px] right-[15%] lg:right-[0px] bottom-[-40px] lg:bottom-[0px] shadow-xl">
+            <div className="flex gap-[10px] items-center hidden lg:flex justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
-              <div className="text-orange-500 underline font-semibold"><p>Cpt Abera Lemi</p></div>
+              <div className="text-orange-500 underline font-semibold"><p>Capt. Abera Lemi</p></div>
             </div>
-            <div className="font-semibold"><p>We push the limits of whats possible in investment</p></div>
+            <div className=" text-black text-center"><p>"We push the limits of what is possible in investment"</p></div>
+            <div className="text-orange-500 lg:hidden"><p>- Capt. Lemi</p></div>
 
           </div>
         </div>
@@ -234,9 +235,9 @@ const Landing = () => {
 
       <div className="sectionfour relative h-[600px] lg:h-screen  ">
 
-        <Image className="h-full w-full object-cover" alt="kim" height={1000} width={1000} priority src="/images/home/slide.png" />
+        <Image className="h-full w-full object-cover" alt="kim" height={2000} width={2000} priority src="/images/banner3.jpg" />
 
-        <div className="section41 flex flex-col justify-center gap-[40px] lg:gap-[100px] absolute inset-0 bg-primary1 bg-opacity-[94%] h-[100%] w-[100%] top-[0px] text-white pad py-[40px]">
+        <div className="section41 flex flex-col justify-center gap-[40px] lg:gap-[100px] absolute inset-0 h-[100%] w-[100%] top-[0px] text-white pad py-[40px]">
           <div className="41above flex flex-col lg:justify-between lg:flex-row gap-[20px]">
             <div className="text-[28px] lg:text-[60px] font-light lg:w-[30%]"><h2>Our Vision <div className="und"></div> </h2></div>
             <div className="lg:w-[50%] lg:text-[25px] lg:font-light"><p>Being the top investment group in key sectors of Aviation and Tourism, Technologies, Higher Education, Agro Solutions and Logistics.</p></div>
@@ -378,7 +379,7 @@ const Landing = () => {
         <Image className="h-full w-full object-cover filter brightness-[54%]" priority height={1500} width={1500} src="/images/home/land.jpg" alt="" />
 
         <div className="h-full w-[98vw] absolute lg:mt-[30px] inset-0 flex gap-[30px] flex-col lg:flex-row lg:items-center justify-center pad text-white">
-          <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[50%] lg:h-[300px]">
+          <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[40%] lg:h-[300px]">
 
             <div className="text-[14px] font-semibold"><h3>Sustainability</h3></div>
             <div className="text-[32px] font-bold leading-[35px]"><h2>Building prosperity & self-sufficiency</h2></div>
@@ -387,7 +388,7 @@ const Landing = () => {
 
           </div>
           <div className="hidden lg:block"></div>
-          <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[50%] lg:h-[300px]">
+          <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[30%] lg:h-[300px]">
             <div className="uppercase font-semibold text-[14px]"><p>7 Sustainability Pillars</p></div>
             <div className="flex flex-wrap justify-between lg:justify-start gap-[20px]">
               {sustainabiltyList.filter((items, index) => index < 4).map((items, index) => {

@@ -19,18 +19,14 @@ const SustainabilityComp = () => {
       <div className="sectionone h-[800px] lg:h-[100vh] relative">
 
         <Image className="h-full w-full filter brightness-[55%] object-cover" height={1500} width={1500} src="/images/home/land.jpg" priority />
-        <div className="sustainabilitytext absolute inset-0 top-0 h-full w-full flex flex-col gap-[20px] lg:gap-[30px] justify-center pad items-center text-white text-center">
+        <div className="sustainabilitytext absolute inset-0 top-0 h-full w-full flex flex-col gap-[20px] mt-[-50px] lg:gap-[30px] justify-center pad items-center text-white text-center">
           <div className="text-[16px] font-semibold"><h3>Sustainability</h3></div>
           <div className="text-[45px] lg:text-[55px] font-light leading-[50px]"><h2>Building prosperity & self-sufficiency</h2></div>
           <div className="text-[16px] lg:text-[17px] font leading-[23px] lg:w-[60%]"><p>At NIG, our commitment to sustainability extends beyond mere adherence to regulatory requirements. Our motivation is rooted in a strong determination to make meaningful contributions and create a positive influence on the growth and well-being of our host communities and society as a whole</p></div>
 
         </div>
-      </div>
 
-      {/* .section two  */}
-
-      <div className="sectiontwosust bg-gradient-to-r from-warm-jungle-green to-sunset-orange py-[40px] lg:py-[100px] pad">
-        <div className="flex flex-wrap justify-center lg:justify-between gap-[20px]">
+          <div className="flex flex-wrap absolute w-full pad bottom-[50px] justify-center lg:justify-between gap-[20px]">
           {sustainabiltyList.filter((items, index) => index < 7).map((items, index) => {
 
             return (
@@ -42,6 +38,10 @@ const SustainabilityComp = () => {
           })}
         </div>
       </div>
+
+      {/* .section two  */}
+
+    
 
       {/* section three  */}
 

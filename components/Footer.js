@@ -1,10 +1,12 @@
 import { businessList } from "<nig>/data/business";
+import { getLink } from "<nig>/data/getLink";
 import { NavbarList } from "<nig>/data/navList";
 import { socialLinks } from "<nig>/data/socialsLink";
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faLocation, faLocationPin, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Footer = () => {
@@ -47,7 +49,7 @@ const Footer = () => {
 
                                 return (
                                     <div key={index} className="mappedfooter">
-                                        <li>{items.title}</li>
+                                       <Link href={items.link}> <li>{items.title}</li> </Link>
                                     </div>
                                 )
                             })}
@@ -62,9 +64,11 @@ const Footer = () => {
                         <ul className="inline-flex flex-col gap-[10px] lg:gap-[15px] text-stone-200">
                             {businessList.map((items, index) => {
 
+                                const address = "/businesses/" + getLink(items.name)
+
                                 return (
                                     <div key={index} className="mappedfooter">
-                                        <li>{items.name}</li>
+                                       <Link href={address}> <li>{items.name}</li> </Link>
                                     </div>
                                 )
                             })}

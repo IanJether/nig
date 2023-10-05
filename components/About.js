@@ -14,6 +14,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
+import Link from "next/link";
 
 
 const About = () => {
@@ -116,7 +117,7 @@ const About = () => {
             <div className="font-semibold text-[28px]"><h2>Meet Our Top Executives <div className="und"></div> </h2></div>
           </div>
           <div>
-            <button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">View Team</button>
+           <Link href="/contact"> <button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">Contact Us</button> </Link>
           </div>
 
         </div>

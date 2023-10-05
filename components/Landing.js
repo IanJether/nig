@@ -87,10 +87,10 @@ const Landing = () => {
         {/* <Image className="h-full w-full object-cover filter " priority height={1500} width={1500} src="/images/home" alt="" /> */}
 
         <div className="absolute hidden lg:block h-[55vh] top-[27%] right-[15%]">
-          <Image className="h-full w-full object-contain" height={1000} width={1000} src="/images/sdg2.png"/>
+          <Image className="h-full w-full object-contain" height={1000} width={1000} src="/images/banner2.svg" />
         </div>
 
-        <div className="section1 lg:w-[56%] absolute inset-0 h-full lg:mt-[20px] flex flex-col justify-center gap-[20px] pad text-white">
+        <div className="section1 lg:w-[56%] absolute inset-0 h-full lg:mt-[20px] flex flex-col justify-center gap-[20px] lg:gap-[25px] pad text-white">
 
           <div className="section11 flex gap-[10px]">
             <div className="border-t-[4px] border-orange-500 w-[40px] mt-[16px]"></div>
@@ -211,12 +211,12 @@ const Landing = () => {
           </div>
           <div className="12text text-[15px] text-stone-600">
             <p>
-              Led by its founder and owner, Captain Abera Lemi – a former Ethiopian Airlines Captain, NIG was incorporated as an umbrella company comprising of ten sister companies (business units). NIG's key strengths lies in its commitment to fostering innovation and embracing cutting-edge technologies. 
+              Led by its founder and owner, Captain Abera Lemi – a former Ethiopian Airlines Captain, NIG was incorporated as an umbrella company comprising of ten sister companies (business units). NIG's key strengths lies in its commitment to fostering innovation and embracing cutting-edge technologies.
             </p>
           </div>
           <div className="12text text-[15px] text-stone-600">
             <p>
-            Our dedication to staying at the forefront of technological advancements has not only enabled NIG to remain competitive but has also allowed the company to set new industry standards. NIG is recognized as an industry pioneer, continually introducing innovative solutions and practices that redefine the landscape.
+              Our dedication to staying at the forefront of technological advancements has not only enabled NIG to remain competitive but has also allowed the company to set new industry standards. NIG is recognized as an industry pioneer, continually introducing innovative solutions and practices that redefine the landscape.
             </p>
           </div>
           <div className="12link">
@@ -277,12 +277,18 @@ const Landing = () => {
               const address = "/businesses/" + getLink(items.name)
 
               return (
-                <div onClick={() => handleActiveSlide(index)} key={index} className={`mappedbusineslist cursor-pointer flex flex-col justify-center gap-[7px]
+                <div onClick={() => handleActiveSlide(index)} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
                                                 ${activeSlide === index ? 'bg-primary1 text-white' : ' bg-white '}`}>
-                  <div className="text-[16px] font-semibold"><h2>{items.name}</h2></div>
-                  <div className={`text-[15px] text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
-                  <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
+                  <div className="w-[30%]">
+                    <Image className="h-full w-full object-contain" height={500} width={500} src="/images/logo/niglogo.jpg" priority />
+                  </div>
+                  <div className="flex flex-col justify-center w-[70%]">
+
+                    <div className="text-[16px] font-semibold"><h2>{items.name}</h2></div>
+                    <div className={`text-[15px] text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
+                    <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
+                  </div>
                 </div>
               )
             })}
@@ -300,12 +306,18 @@ const Landing = () => {
               const address = "/businesses/" + getLink(items.name)
 
               return (
-                <div onClick={() => handleActiveSlide(index + 4)} key={index} className={`mappedbusineslist cursor-pointer flex flex-col justify-center gap-[7px]
+                <div onClick={() => handleActiveSlide(index+4)} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
-                                                ${activeSlide === index + 4 ? 'bg-primary1 text-white' : ' bg-white '}`}>
-                  <div className="text-[15px] font-semibold"><h2>{items.name}</h2></div>
-                  <div className={`text-[14px] text-neutral-700 ${activeSlide === index + 4 ? 'text-white' : ''}`}><p>"{items.description}"</p></div>
-                  <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index + 4 ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
+                                                ${activeSlide === index+4 ? 'bg-primary1 text-white' : ' bg-white '}`}>
+                  <div className="w-[30%]">
+                    <Image className="h-full w-full object-contain" height={500} width={500} src="/images/logo/niglogo.jpg" priority />
+                  </div>
+                  <div className="flex flex-col justify-center w-[70%]">
+
+                    <div className="text-[16px] font-semibold"><h2>{items.name}</h2></div>
+                    <div className={`text-[15px] text-neutral-700 ${activeSlide === index+4 ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
+                    <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index+4 ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
+                  </div>
                 </div>
               )
             })}
@@ -343,7 +355,7 @@ const Landing = () => {
                       {/* <div className="text-[12px] text-primary1"><Link href={address}>VIEW MORE</Link></div> */}
                     </div>
                     <div className="h-[300px] shadow-xl">
-                      <Image className="h-full rr shadow-md w-full object-cover" height={1000} width={1000} src={items.image} alt="kim" priority />
+                      <Image className="h-full rr shadow-md w-full object-cover" height={1000} width={1000}  src={activeCard.image[0].image} alt="kim" priority />
                     </div>
                     <div><Link href={address}><button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">View more</button></Link></div>
                   </div>

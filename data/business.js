@@ -4,6 +4,7 @@ import air3 from "../public/images/business/air/air1.jpg";
 import air4 from "../public/images/business/air/air2.jpg";
 import air5 from "../public/images/business/air/air5.jpg";
 import air6 from "../public/images/business/air/air6.png";
+import air7 from "../public/images/business/air/air7.jpeg";
 import res1 from "../public/images/business/research/res1.jpg";
 import res2 from "../public/images/business/research/res2.jpg";
 import agro1 from "../public/images/business/agro/agro1.jpg";
@@ -166,7 +167,7 @@ export const businessList =  [
                 image: air1
             },
             {
-                image: air2
+                image: air7
             },
             {
                 image: air3

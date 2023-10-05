@@ -31,7 +31,7 @@ const Businessdetails = ({ name }) => {
 
                     {/* section one  */}
 
-                    <div className="sectioneonedetails h-[700px] lg:h-screen relative w-full">
+                    <div className="sectioneonedetails h-[600px] lg:h-screen relative w-full">
                         <Image className="h-full w-full object-cover filter brightness-[43%]" height={2000} width={2000} src={businessDetails.image[0].image} />
 
                         <div className="detailsabsolute absolute h-full w-full top-[0px] flex flex-col lg:flex-row pad items-center justify-center gap-[20px]">

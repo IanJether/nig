@@ -1,5 +1,6 @@
 import { businessList } from "<nig>/data/business";
 import { NavbarList } from "<nig>/data/navList";
+import { socialLinks } from "<nig>/data/socialsLink";
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faLocation, faLocationPin, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,11 +12,20 @@ const Footer = () => {
         <div className='Footer flex flex-col gap-[10px] pt-[40px] lg:pt-[100px] bg-neutral-800 text-white'>
             <div className="footertop pad flex flex-col lg:flex-row gap-[30px] pb-[30px] lg:pb-[80px]">
 
-                <div className="footer1 cursor-pointer flex flex-col gap-[10px] lg:gap-[15px] lg:w-[25%]">
+                <div className="footer1 overflow-hidden cursor-pointer flex flex-col gap-[10px] lg:gap-[15px] lg:w-[30%]">
                     <div className="div mb-[15px] lg:mb-[5px] bg-teal-5 font-semibold text-orange-500">
                         <Image className="h-[60px] w-[250px]" height={500} width={500} src="/images/logo/logoc.png" />
                     </div>
-                    <div className="flex gap-[10px] ">
+                    {socialLinks.filter((items,index)=>index<3).map((items, index) => {
+
+                        return (
+                            <div className="mappedsociallinks flex gap-[10px]">
+                                <div className="w-[20px] text-orange-500"><FontAwesomeIcon icon={items.icon} /></div>
+                                <div className="hover:text-primary1 hover:underline"><p>{items.text}</p></div>
+                            </div>
+                        )
+                    })}
+                    {/* <div className="flex gap-[10px] ">
                         <div className="w-[20px] text-orange-500"><FontAwesomeIcon icon={faPhone} /></div>
                         <div className="hover:text-primary1 hover:underline"><p>+252-911-201-722</p></div>
                     </div>
@@ -26,7 +36,7 @@ const Footer = () => {
                     <div className="flex gap-[10px]">
                         <div className="w-[24px] text-orange-500"><FontAwesomeIcon icon={faLocationPin} /></div>
                         <div className="hover:text-primary1 hover:underline"><p>Addis Ababa, Ethiopia ,Megnagna POSSEA Building 3rd floor</p></div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="footer2 flex flex-col gap-[20px] lg:w-[20%]">
@@ -63,7 +73,7 @@ const Footer = () => {
 
                 </div>
 
-                <div className="footer4 flex flex-col gap-[10px] lg:w-[25%]">
+                <div className="footer4 flex flex-col gap-[10px] lg:w-[20%]">
                     <div className="text-[20px] font-semibold"><h3>Get The Latest News</h3></div>
                     <div className="flex soshobox gap-[20px] lg:gap-[30px] text-[25px] text-orange-500">
                         <div><FontAwesomeIcon icon={faEnvelope} /></div>

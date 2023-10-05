@@ -28,7 +28,7 @@ const ContactComp = () => {
 
 
           <div className="contactform flex flex-col lg:w-[50%] gap-[20px]   px-[15px] py-[30px]">
-            <h2 className="text-[28px] font-semibold">Contact Form <div className="und"></div></h2>
+            <h2 className="text-[28px] font-semibol">Contact Form <div className="und"></div></h2>
 
             <div className="flex flex-col gap-[20px]">
 
@@ -59,18 +59,18 @@ const ContactComp = () => {
           <div className="h-[380px] lg:h-[608px] lg:full lg:w-[50%] relative overflow-hidden">
             {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/contact/possea.jpg" /> */}
             <div className="ccmapped  h-full w-full absolute px-[20px] text-white flex flex-col gap-[25px] text-[16px] justify-center lg:justify-start top-[0px] inset-0 bg-primary1">
-              <div className="text-[24px] font-semibold lg:mt-[37px]"><h2>Contact Details <div className="und"></div> </h2></div>
+              <div className="text-[24px] lg:mt-[37px]"><h2>Contact Details <div className="und"></div> </h2></div>
               <div className="flex gap-[10px] lg:mt-[20px]">
                 <div className="w-[20px] text-[18px] text-orange-500"><FontAwesomeIcon icon={faPhone} /></div>
-                <div className="hover:text-black hover:underline font-semibold"><p>+252-911-201-722</p></div>
+                <div className="hover:text-black hover:underline "><p>+252-911-201-722</p></div>
               </div>
               <div className="flex gap-[10px] z-10">
                 <div className="w-[25px] text-[18px] text-orange-500"><FontAwesomeIcon icon={faEnvelope} /></div>
-                <div className="hover:text-black hover:underline font-semibold"><p>info@nationalinvestmentgoup.com</p></div>
+                <div className="hover:text-black hover:underline "><p>info@nationalinvestmentgoup.com</p></div>
               </div>
               <div className="flex z-10 gap-[10px]">
                 <div className="w-[24px] text-[18px] text-orange-500"><FontAwesomeIcon icon={faLocationPin} /></div>
-                <div className="hover:text-black hover:underline font-semibold"><p>Addis Ababa, Ethiopia ,Megnagna POSSEA Building 3rd floor</p></div>
+                <div className="hover:text-black hover:underline"><p>Addis Ababa, Ethiopia ,Megnagna POSSEA Building 3rd floor</p></div>
               </div>
               <div className="flex z-10 justify-self-end soshobox gap-[20px] lg:gap-[30px] text-[28px] text-white">
                 <div><FontAwesomeIcon icon={faFacebook} /></div>

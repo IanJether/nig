@@ -374,12 +374,12 @@ const Landing = () => {
 
       {/* section six  */}
 
-      <div className="sectionsix h-[740px] lg:h-[100vh] relative">
+      <div className="sectionsix h-[770px] lg:h-[100vh] relative">
 
         <Image className="h-full w-full object-cover filter brightness-[54%]" priority height={1500} width={1500} src="/images/home/land.jpg" alt="" />
 
         <div className="h-full w-[98vw] absolute lg:mt-[30px] inset-0 flex gap-[30px] flex-col lg:flex-row lg:items-center justify-center pad text-white">
-          <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[40%] lg:h-[300px]">
+          <div className="flex flex-col gap-[23px] lg:gap-[35px] lg:w-[40%] lg:h-[300px]">
 
             <div className="text-[14px] font-semibold"><h3>Sustainability</h3></div>
             <div className="text-[32px] font-bold leading-[35px]"><h2>Building prosperity & self-sufficiency</h2></div>
@@ -394,7 +394,7 @@ const Landing = () => {
               {sustainabiltyList.filter((items, index) => index < 4).map((items, index) => {
 
                 return (
-                  <div key={index} className="mappedsustainability flex flex-col w-[60px] lg:w-[70px] gap-[5px]">
+                  <div key={index} className="mappedsustainability flex flex-col w-[55px] lg:w-[70px] gap-[5px]">
                     <div className="flex items-center justify-center border rr h-[50px] w-[60px]"><FontAwesomeIcon icon={items.icon} /></div>
                     <div className="uppercase font-semibold text-center text-[10px]"><p>{items.title}</p></div>
                   </div>
@@ -405,7 +405,7 @@ const Landing = () => {
               {sustainabiltyList.filter((items, index) => index >= 4).map((items, index) => {
 
                 return (
-                  <div key={index} className="mappedsustainability flex flex-col w-[60px] lg:w-[70px] gap-[5px]">
+                  <div key={index} className="mappedsustainability flex flex-col w-[55px] lg:w-[70px] gap-[5px]">
                     <div className="flex items-center justify-center border rr h-[50px] w-[60px]"><FontAwesomeIcon icon={items.icon} /></div>
                     <div className="uppercase font-semibold text-center text-[10px]"><p>{items.title}</p></div>
                   </div>

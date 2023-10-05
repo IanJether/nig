@@ -204,10 +204,10 @@ export const businessList =  [
                 image: tour1
             },
             {
-                image: tour2
+                image: tour3
             },
             {
-                image: tour3
+                image: tour2
             },
         ],
         description: "Unforgettable Escape",

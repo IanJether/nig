@@ -38,6 +38,8 @@ const Navbar = () => {
 
         // const navbottom = document.querySelector(".bottomnav")
 
+  
+
 
 
 
@@ -87,13 +89,13 @@ const Navbar = () => {
                 </div>
 
                 <div className="absolute animate__fadeInDown animate__animated animate__faster transition ease-in-out duration-200 navbarcontent hidden w-[100vw] bg-tet1 top-[70px] py-[30px] pad left-[0px]">
-                    <ul className="inline-flex flex-col gap-[20px] text-primary2 font-semibold">
+                    <ul className="inline-flex flex-col gap-[20px] text-primary2 ">
 
                         {NavbarList.map((items, index) => {
 
                             return (
                                 <Link href={items.link}>
-                                    <li className="mappednavbarlist">
+                                    <li onClick={menucl} className="mappednavbarlist">
                                         {items.title}
                                     </li></Link>
                             )
@@ -119,7 +121,7 @@ const Navbar = () => {
               
 
                 <div className="bottomnav flex flex-row-reverse justify-between items-center h-[67px] pad">
-                    <div className="nvlinks w-[55%]">
+                    <div className="nvlinks w-[60%]">
                         <ul className="flex justify-between items-center text-white text-[17px] mt-[4px]">
                             {NavbarList.map((items, index) => {
 

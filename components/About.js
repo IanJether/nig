@@ -30,12 +30,12 @@ const About = () => {
         <div className="section11 h-[300px] lg:h-[55vh] relative rr lg:w-[50%]">
 
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" />
-          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[90px] w-[70%] bg-opacity-[50%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[180px] right-[0px] bottom-[0px] shadow-xl">
+          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[90px] w-[70%] bg-opacity-[80%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[180px] right-[0px] bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
-              <div className="text-orange-500 underline font-semibold"><p>Capt. Abera Lemi</p></div>
+              <div className="text-orange-500 underline "><p>Capt. Abera Lemi</p></div>
             </div>
-            <div className="font-semibold"><p>Building Ethiopia, one industry at a time</p></div>
+            <div className=""><p>Building Ethiopia, one industry at a time</p></div>
 
           </div>
         </div>
@@ -94,7 +94,7 @@ const About = () => {
 
               return (
                 <div className="mappedstatslist text-center font-light w-[37vw] lg:w-[9vw]">
-                  <div className="text-[60px] lg:text-[80px]"><h3>{items.number}+</h3></div>
+                  <div className="text-[55px] lg:text-[80px]"><h3>{items.number}+</h3></div>
                   <div className="text-stone-300"><p>{items.name}</p></div>
                 </div>
               )
@@ -224,11 +224,11 @@ const About = () => {
           <h2>Message from the CEO <div className="und"></div></h2>
         </div>
 
-        <div className="ceo w-full rr overflow-hidden h-[400px] lg:h-[60vh] mb-[40px] relative">
+        <div className="ceo w-full rr overflow-hidden h-[450px] lg:h-[60vh] mb-[40px] relative">
           <Image className="h-full rr w-full object-cover filter brightness-[100%]" height={1500} width={1500} src="/images/New/ceo2.jpg" priority />
 
           <div className="ceotext text-white px-[10px] rr flex flex-col gap-[25px] items-center justify-center text-center absolute bg-black bg-opacity-[60%] top-[10%] left-[10%] lg:left-[6%] h-[80%] w-[80%] lg:w-[30%] ">
-            <div className="text-[20px] font-semibold"><p>"
+            <div className="text-[19px] "><p>"
               Inspired to pioneer excellence and innovation, we're shaping a brighter future through unwavering dedication to growth and transformation."</p></div>
             <div className="text-[25px] font-light">
               <div>  <h2>Capt. Abera Lemi</h2></div>

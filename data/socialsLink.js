@@ -14,6 +14,11 @@ export const socialLinks = [
         link: ""
     },
     {
+        icon: faLocationPin,
+        text: "Addis Ababa, POSSEA Building, 3rd Floor",
+        link: ""
+    },
+    {
         icon: faWhatsapp,
         text: "+252911201722",
         link: ""
@@ -23,9 +28,5 @@ export const socialLinks = [
         text: "National investment group",
         link: ""
     },
-    {
-        icon: faLocationPin,
-        text: "Addis Ababa, POSSEA Building, 3rd Floor",
-        link: ""
-    },
+ 
 ]

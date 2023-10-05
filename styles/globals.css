@@ -27,7 +27,7 @@ body{
 }
 
 .contactform label{
-  @apply font-semibold text-neutral-700;
+  @apply  text-neutral-700;
 }
 
 

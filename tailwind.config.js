@@ -17,7 +17,9 @@ module.exports = {
         'tet1': '#2D2E2E',
         'tet2': '#8A8B8B',
         'tet3': '#D0D1D1',
-        'servback' : '#f2f2f2'
+        'servback' : '#f2f2f2',
+        'warm-jungle-green': '#2E3A23', 
+        'sunset-orange': '#FF8C42', 
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

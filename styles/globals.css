@@ -81,3 +81,7 @@ body{
   box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.1), -6px -6px 10px -1px rgba(255,255,255,0.1);
   border: 1px solid rgba(0,0,0,0.01);
 }
+
+.sus{
+  @apply h-[300px] w-full bg-gray-200;
+}

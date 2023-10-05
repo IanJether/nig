@@ -118,7 +118,7 @@ export const businessList =  [
                 image: cargo2
             },
         ],
-        description: "Empowering Businesses with Comprehensive Logistics Solutions",
+        description: "Empowering Businesses wit Logistics Solutions",
         industry: "Logistics",
         text:[
             {

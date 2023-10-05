@@ -13,6 +13,11 @@ import { getLink } from "<nig>/data/getLink";
 
 
 const BusinessesComp = () => {
+
+
+
+console.log(businessList.map((items)=>items.name))
+
     return (
         <div className='BusinessesComp bg-gray-100'>
             <Header image={pic} page="Our businesses" pageDescription="across diverse industries" />
@@ -23,6 +28,7 @@ const BusinessesComp = () => {
             {businessList.map((items, index) => {
 
                 const address = "/businesses/" + getLink(items.name)
+
 
                 const isOddIndex = index % 2 !== 0;
                 const lgFlexClass = isOddIndex ? "lg:flex-row-reverse" : "lg:flex-row";

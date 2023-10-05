@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
                     <div className="flex gap-[10px]">
                         <div className="w-[20px] text-orange-500"><FontAwesomeIcon icon={faEnvelope} /></div>
-                        <div className="hover:text-primary1 hover:underline"><p>info@nationalinvestmentgoup.net</p></div>
+                        <div className="hover:text-primary1 hover:underline"><p>info@nationalinvestmentgoup.com</p></div>
                     </div>
                     <div className="flex gap-[10px]">
                         <div className="w-[24px] text-orange-500"><FontAwesomeIcon icon={faLocationPin} /></div>

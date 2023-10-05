@@ -17,10 +17,10 @@ export const NavbarList = [
         title: "Sustainability",
         link: "/sustainability"
     },
-    // {
-    //     title: "News",
-    //     link: "/news"
-    // },
+    {
+        title: "News",
+        link: "/news"
+    },
     {
         title: "Contact",
         link: "/contact"

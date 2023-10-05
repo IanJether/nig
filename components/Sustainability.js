@@ -6,6 +6,7 @@ import Image from "next/image";
 import { sustainabiltyList } from "<nig>/data/sustainable";
 import { partnersList } from "<nig>/data/partners";
 import ContactPrompt from "./commons/ContactPrompt";
+import { businessList } from "<nig>/data/business";
 
 
 
@@ -21,20 +22,20 @@ const SustainabilityComp = () => {
         <div className="sustainabilitytext absolute inset-0 top-0 h-full w-full flex flex-col gap-[20px] lg:gap-[30px] justify-center pad items-center text-white text-center">
           <div className="text-[16px] font-semibold"><h3>Sustainability</h3></div>
           <div className="text-[45px] lg:text-[55px] font-light leading-[50px]"><h2>Building prosperity & self-sufficiency</h2></div>
-          <div className="text-[16px] lg:text-[17px] font leading-[23px] lg:w-[60%]"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptate, maiores rem eaque voluptatum, amet tempora repellendus sapiente magni neque ipsa accusantium? Eveniet debitis error libero assumenda nihil repellat odit.</p></div>
+          <div className="text-[16px] lg:text-[17px] font leading-[23px] lg:w-[60%]"><p>At NIG, our commitment to sustainability extends beyond mere adherence to regulatory requirements. Our motivation is rooted in a strong determination to make meaningful contributions and create a positive influence on the growth and well-being of our host communities and society as a whole</p></div>
 
         </div>
       </div>
 
       {/* .section two  */}
 
-      <div className="sectiontwosust bg-gray-100 py-[40px] lg:py-[100px] pad">
+      <div className="sectiontwosust bg-gradient-to-r from-warm-jungle-green to-sunset-orange py-[40px] lg:py-[100px] pad">
         <div className="flex flex-wrap justify-center lg:justify-between gap-[20px]">
           {sustainabiltyList.filter((items, index) => index < 7).map((items, index) => {
 
             return (
-              <div key={index} className="mappedsustainability flex flex-col w-[65px] lg:w-[120px] gap-[5px]">
-                <div className="flex items-center justify-center border border-gray-400 rr h-[50px] w-[60px] lg:h-[75px] lg:w-[130px]"><FontAwesomeIcon icon={items.icon} /></div>
+              <div key={index} className="mappedsustainability flex flex-col text-white w-[65px] lg:w-[120px] gap-[5px]">
+                <div className="flex items-center justify-center border border-gray-400 rr h-[50px] w-[60px] lg:h-[80px] lg:w-[140px]"><FontAwesomeIcon icon={items.icon} /></div>
                 <div className="uppercase font-semibold text-center text-[10px]"><p>{items.title}</p></div>
               </div>
             )
@@ -44,51 +45,106 @@ const SustainabilityComp = () => {
 
       {/* section three  */}
 
-      {sustainabiltyList.filter((items,index)=>index<7).map((items, index) => {
+      <div className="sustaibalitysdgs flex flex-col gap-[16px] lg:gap-[30px] pad py-[40px] lg:py-[100px]">
 
-        const isOddIndex = index % 2 !== 0;
-        const lgFlexClass = isOddIndex ? "lg:flex-row-reverse" : "lg:flex-row";
+        <div className="onesdgs  flex flex-col lg:flex-row lg:h-[650px] gap-[10px]">
 
-        return (
-          <div key={index} className="mappedsustianDet">
-
-
-
-            <div data-aos="fade-up" data-aos-duration="400" className={`section2 pad flex flex-col ${lgFlexClass} gap-[40px] py-[40px] lg:py-[100px]`}>
-
-              <div className="section11 text-[170px] lg:text-[290px] flex items-center justify-center text-green-500 h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
-                <FontAwesomeIcon icon={items.icon}/>
-                {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/about.jpg" alt="" /> */}
+          <div className="sus lg:h-[102%] lg:w-[50%] relative">
+            <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[0].image[1].image} alt="kim" />
+            <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
+              <p>SDG #4</p>
+            </div>
+            <div className="absolute bottom-[15px] text-white w-full text-center">
+              <h3 className="font-semibold text-[18px]">National Aviation College</h3>
+              <p className="text-[18px]">Promoting sustainable Tourism</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-[13px] lg:w-[50%] ">
+            <div className="sus lg:h-[50%] relative">
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[1].image[1].image} alt="kim" />
+              <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
+                <p>SDG #9</p>
               </div>
+              <div className="absolute bottom-[15px] text-white w-full text-center">
+                <h3 className="font-semibold text-[18px]">National Research and Consultancy Institute:</h3>
+                <p>Helping organizations adopt more sustainable and innovative practices.</p>
+              </div></div>
+            <div className="sus lg:h-[50%] relative">
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[2].image[1].image} alt="kim" />
+              <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
+                <p>SDG #2</p>
+              </div>
+              <div className="absolute bottom-[15px] text-white w-full text-center">
+                <h3 className="font-semibold text-[18px]">National Agro Solutions</h3>
+                <p>Improving food security and promoting sustainable agriculture practices</p>
+              </div></div>
+          </div>
 
-              <div className="section12 leading-[26px] flex flex-col lg:justify-center gap-[20px] lg:gap-[30px] lg:w-[50%]">
-                <div className="12title">
-                  <div className="font-semibold capitalize text-[28px]">
-                    <h2>{items.title}</h2>
-                    <div className="und "></div>
-                  </div>
-                </div>
-                <div className="12head font-semibold text-[17px]">
-                  <h3>
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit delectus obcaecati beatae! 
-                  </h3>
-                </div>
-                <div className="12text text-[15px] text-stone-600">
-                  <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, eveniet in! Quos provident placeat cum voluptates molestias eius autem, ab nesciunt, maxime, neque tempore temporibus. Harum ipsum labore quas vel.
-                  </p>
-                </div>
+        </div>
 
+        <div className="twosdgs flex flex-col lg:flex-row gap-[10px]">
+
+          <div className="flex flex-col gap-[10px] lg:w-[30%]">
+            <div className="sus relative">
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[3].image[1].image} alt="kim" />
+              <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
+                <p>SDG #9</p>
+              </div>
+              <div className="absolute bottom-[15px] text-white w-full text-center">
+                <h3 className="font-semibold text-[18px]">National Cargo and Logistics Service</h3>
+                <p>Enhancing logistics and transportation infrastructure</p>
+              </div></div>
+            <div className="sus relative">
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[4].image[1].image} alt="kim" />
+              <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
+                <p>SDG #9</p>
+              </div>
+              <div className="absolute bottom-[15px] text-white w-full text-center">
+                <h3 className="font-semibold text-[18px]">National Telecom Solutions</h3>
+                <p>Enabling access to information and education in remote areas.</p>
+              </div></div>
+
+          </div>
+          <div className="sus lg:h-[610px] lg:w-[40%] relative">
+            <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[5].image[1].image} alt="kim" />
+            <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
+              <p>SDG #13</p>
+            </div>
+            <div className="absolute bottom-[15px] text-white w-full text-center">
+              <h3 className="font-semibold text-[18px]">National Airways</h3>
+              <p>Adopted sustainable aviation practices to mitigate the impact of air travel on climate change.</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-[10px] lg:w-[30%]">
+            <div className="sus relative">
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[6].image[1].image} alt="kim" />
+              <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
+                <p>SDG #8</p>
+              </div>
+              <div className="absolute bottom-[15px] text-white w-full text-center">
+                <h3 className="font-semibold text-[18px]">Waliya Tours & Travel</h3>
+                <p>Promoting sustainable Tourism</p>
+              </div></div>
+            <div className="sus relative">
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[7].image[1].image} alt="kim" />
+              <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
+                <p>SDG #1</p>
+              </div>
+              <div className="absolute bottom-[15px] text-white w-full text-center">
+                <h3 className="font-semibold text-[18px]">Tollo Cash</h3>
+                <p>Promoting financial inclusion and reducing economic disparities.</p>
               </div>
             </div>
 
           </div>
-        )
-      })}
 
-{/* section four  */}
+        </div>
 
-<ContactPrompt/>
+      </div>
+
+      {/* section four  */}
+
+      <ContactPrompt />
 
 
 

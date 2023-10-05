@@ -8,6 +8,12 @@ import { statsList } from "<nig>/data/stats";
 import { teamList } from "<nig>/data/team";
 import { partnersList } from "<nig>/data/partners";
 import pic1 from "../public/images/New/build.jpg";
+import { managementList } from "<nig>/data/management";
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
+import { Autoplay, Pagination } from "swiper/modules";
+import { SwiperSlide, Swiper } from "swiper/react";
 
 
 const About = () => {
@@ -24,7 +30,7 @@ const About = () => {
         <div className="section11 h-[300px] lg:h-[55vh] relative rr lg:w-[50%]">
 
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" />
-          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[180px] right-[0px] bottom-[0px] shadow-xl">
+          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[90px] w-[70%] bg-opacity-[50%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[180px] right-[0px] bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline font-semibold"><p>Cpt Abera Lemi</p></div>
@@ -100,7 +106,7 @@ const About = () => {
 
       </div>
 
-      {/* section three - Team
+      {/* section three - Team */}
 
       <div className="sectionthree pad py-[40px] lg:py-[100px] flex flex-col gap-[40px]">
 
@@ -116,16 +122,16 @@ const About = () => {
         </div>
 
         <div className="flex flex-wrap gap-[30px] justify-center lg:justify-between">
-          {teamList.map((items, index) => {
+          {managementList.map((items, index) => {
 
             return (
-              <div className="mappedteamlist h-[350px] lg:h-[50vh] rr w-[75vw] lg:w-[17vw] relative">
+              <div key={index} className="mappedteamlist h-[350px] lg:h-[50vh] rr w-[75vw] lg:w-[17vw] relative">
                 <div className="h-full w-full overflow-hidden bg-gray-600">
-
+                  <Image className="h-full w-full object-cover" height={600} width={600} src={items.image} alt="kim" />
                 </div>
                 <div className="absolute rr flex flex-col items-center justify-center bottom-[0px] h-[100px] w-[90%] left-[5%] bg-primary1 text-white bg-opacity-[70%]">
-                  <div className="text-[30px] font-light"><h2>Ian John </h2></div>
-                  <div className="text-[14px]"><h4>Chief Executive Officer</h4></div>
+                  <div className="text-[30px] font-light"><h2>{items.name} </h2></div>
+                  <div className="text-[14px]"><h4>{items.position}</h4></div>
                 </div>
 
               </div>
@@ -135,7 +141,79 @@ const About = () => {
         </div>
 
 
-      </div> */}
+      </div>
+
+
+
+      {/* section four - partners  */}
+
+      <div className="sectionfourpartners relative h-[500px] lg:h-screen ">
+        <Image className="h-full w-full object-cover filter brightness-[65%]" height={1000} width={1000} src="/images/home/home.jpg" priority />
+
+        <div className="pad flex flex-col justify-center gap-[45px] absolute top-[0px] w-full h-full inset-0 text-white py-[40px]">
+          <div className="flex flex-col gap-[20px]">
+            <div className="text-[28px] font-semibold"><h3>Our Partners <div className="und"></div></h3></div>
+            <div className="lg:w-[60%]"><p>We're proud to partner with key organizations, offering sustainable solutions and representing Ethiopia in leading investments.</p></div>
+          </div>
+          <div className="lg:hidden ">
+            <Swiper
+              modules={[Autoplay,Pagination]}
+              pagination
+              slidesPerView={1}
+              spaceBetween={10}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop
+              className="swiper h-full w-full z-0 mb-[40px]"
+            >
+
+              {partnersList.map((items, index) => {
+
+                return (
+                  <SwiperSlide>
+                    <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[66%] rr h-[150px] flex items-center justify-center">
+                      <Image className="h-full w-full object-contain" height={400} width={400} priority src={items.logo} />
+                    </div>
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
+
+          </div>
+          <div className="hidden lg:flex justify-between gap-[10px]">
+
+          <Swiper
+              modules={[Autoplay,Pagination]}
+              pagination
+              slidesPerView={5}
+              spaceBetween={10}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop
+              className="swiper h-full w-full z-0 mb-[40px]"
+            >
+
+              {partnersList.map((items, index) => {
+
+                return (
+                  <SwiperSlide>
+                   <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[70%] px-[6px] rr h-[140px] w-[14vw] flex items-center justify-center">
+                  <Image className="h-full w-full object-contain" height={400} width={400} priority src={items.logo} />
+                </div>
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
+            
+          </div>
+
+        </div>
+
+      </div>
 
       {/* section five - message from the ceo  */}
 
@@ -158,41 +236,6 @@ const About = () => {
 
             </div>
 
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* section four - partners  */}
-
-      <div className="sectionfourpartners relative h-[500px] lg:h-screen ">
-        <Image className="h-full w-full object-cover filter brightness-[65%]" height={1000} width={1000} src="/images/home/home.jpg" priority />
-
-        <div className="pad flex flex-col justify-center gap-[45px] absolute top-[0px] w-full h-full inset-0 text-white py-[40px]">
-          <div className="flex flex-col gap-[20px]">
-            <div className="text-[28px] font-semibold"><h3>Our Partners <div className="und"></div></h3></div>
-            <div className="lg:w-[60%]"><p>We're proud to partner with key organizations, offering sustainable solutions and representing Ethiopia in leading investments.</p></div>
-          </div>
-          <div className="lg:hidden ">
-            {partnersList.filter((items, index) => index == 0).map((items, index) => {
-
-              return (
-                <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[66%] rr h-[150px] flex items-center justify-center">
-                  <Image className="h-full w-full object-contain" height={400} width={400} priority src={items.logo} />
-                </div>
-              )
-            })}
-          </div>
-          <div className="hidden lg:flex justify-between gap-[10px]">
-            {partnersList.map((items, index) => {
-
-              return (
-                <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[70%] px-[6px] rr h-[140px] w-[14vw] flex items-center justify-center">
-                  <Image className="h-full w-full object-contain" height={400} width={400} priority src={items.logo} />
-                </div>
-              )
-            })}
           </div>
 
         </div>

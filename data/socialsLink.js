@@ -10,7 +10,7 @@ export const socialLinks = [
     },
     {
         icon: faEnvelope,
-        text: "info@nationalinvestmentgoup.net",
+        text: "info@nationalinvestmentgoup.com",
         link: ""
     },
     {
@@ -25,7 +25,7 @@ export const socialLinks = [
     },
     {
         icon: faLocationPin,
-        text: "POSSEA Building 3rd Floor",
+        text: "Addis Ababa, POSSEA Building, 3rd Floor",
         link: ""
     },
 ]

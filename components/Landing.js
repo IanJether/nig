@@ -84,7 +84,7 @@ const Landing = () => {
 
       <div className="section1 relative h-[700px] lg:h-[100vh] bg-primary1">
 
-        {/* <Image className="h-full w-full object-cover filter " priority height={1500} width={1500} src="/images/home" alt="" /> */}
+        {/* <Image className="h-full w-full object-cover filter brightness-[50%]" priority height={1500} width={1500} src="/images/home/home.jpg" alt="" />/ */}
 
         <div className="absolute hidden lg:block h-[55vh] top-[27%] right-[15%]">
           <Image className="h-full w-full object-contain" height={1000} width={1000} src="/images/banner2.svg" />
@@ -187,7 +187,7 @@ const Landing = () => {
 
           </Swiper>
           {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" /> */}
-          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[170px] w-[180px] right-[0px] bottom-[0px] shadow-xl">
+          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[90px] w-[70%] bg-opacity-[50%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[180px] right-[0px] bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline font-semibold"><p>Cpt Abera Lemi</p></div>
@@ -283,7 +283,7 @@ const Landing = () => {
                   <div className="w-[30%]">
                     <Image className="h-full w-full object-contain" height={500} width={500} src="/images/logo/niglogo.jpg" priority />
                   </div>
-                  <div className="flex flex-col justify-center w-[70%]">
+                  <div className="flex flex-col justify-center gap-[6px] w-[70%]">
 
                     <div className="text-[16px] font-semibold"><h2>{items.name}</h2></div>
                     <div className={`text-[15px] text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
@@ -312,7 +312,7 @@ const Landing = () => {
                   <div className="w-[30%]">
                     <Image className="h-full w-full object-contain" height={500} width={500} src="/images/logo/niglogo.jpg" priority />
                   </div>
-                  <div className="flex flex-col justify-center w-[70%]">
+                  <div className="flex flex-col justify-center gap-[6px] w-[70%]">
 
                     <div className="text-[16px] font-semibold"><h2>{items.name}</h2></div>
                     <div className={`text-[15px] text-neutral-700 ${activeSlide === index+4 ? 'text-white' : ''}`}><p>"{items.description}" </p></div>

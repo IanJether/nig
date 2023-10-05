@@ -99,7 +99,7 @@ const ContactComp = () => {
                 <div className="hover:text-black hover:underline font-semibold"><p>+252-911-201-722</p></div>
               </div>
               <div className="flex gap-[10px]">
-                <div className="w-[20px] text-[18px] text-orange-500"><FontAwesomeIcon icon={faEnvelope} /></div>
+                <div className="w-[25px] text-[18px] text-orange-500"><FontAwesomeIcon icon={faEnvelope} /></div>
                 <div className="hover:text-black hover:underline font-semibold"><p>info@nationalinvestmentgoup.com</p></div>
               </div>
               <div className="flex gap-[10px]">

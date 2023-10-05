@@ -33,7 +33,7 @@ const About = () => {
           <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center items-center h-[90px] w-[70%] bg-opacity-[50%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[180px] right-[0px] bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
-              <div className="text-orange-500 underline font-semibold"><p>Cpt Abera Lemi</p></div>
+              <div className="text-orange-500 underline font-semibold"><p>Capt. Abera Lemi</p></div>
             </div>
             <div className="font-semibold"><p>Building Ethiopia, one industry at a time</p></div>
 
@@ -130,7 +130,7 @@ const About = () => {
                   <Image className="h-full w-full object-cover" height={600} width={600} src={items.image} alt="kim" />
                 </div>
                 <div className="absolute rr flex flex-col items-center justify-center bottom-[0px] h-[100px] w-[90%] left-[5%] bg-primary1 text-white bg-opacity-[70%]">
-                  <div className="text-[30px] font-light"><h2>{items.name} </h2></div>
+                  <div className="text-[26px] font-light"><h2>{items.name} </h2></div>
                   <div className="text-[14px]"><h4>{items.position}</h4></div>
                 </div>
 
@@ -231,7 +231,7 @@ const About = () => {
             <div className="text-[20px] font-semibold"><p>"
               Inspired to pioneer excellence and innovation, we're shaping a brighter future through unwavering dedication to growth and transformation."</p></div>
             <div className="text-[25px] font-light">
-              <div>  <h2>Cpt Abera Lemi</h2></div>
+              <div>  <h2>Capt. Abera Lemi</h2></div>
               <div className="text-primary2 text-[14px] font-semibold">Founder and CEO</div>
 
             </div>

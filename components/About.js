@@ -26,12 +26,12 @@ const About = () => {
 
       {/* section one  */}
 
-      <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row-reverse lg:items-center gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
+      <div data-aos="fade-u" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row-reverse lg:items-center gap-[60px] lg:gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
 
-        <div className="section11 h-[300px] lg:h-[55vh] relative rr lg:w-[50%]">
+        <div className="section11 h-[250px] lg:h-[50vh] relative rr lg:w-[50%]">
 
-          <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" />
-          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[90px] w-[70%] bg-opacity-[80%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[180px] right-[0px] bottom-[0px] shadow-xl">
+          <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/banner4.jpg" alt="kim" />
+          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[90px] w-[70%] bg-opacity-[95%] lg:bg-opacity-[90%] lg:h-[70px] lg:w-[70%] right-[10px] bottom-[-33px] shadow-2xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline "><p>Capt. Abera Lemi</p></div>

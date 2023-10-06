@@ -25,7 +25,7 @@ import college2 from "../public/images/business/college/college2.jpg";
 import college3 from "../public/images/business/college/college3.jpg";
 
 import air from "../public/images/clogos/air.png";
-import cargo from "../public/images/clogos/nascargo.png";
+import cargo from "../public/images/clogos/nasCargo.png";
 import tollo from "../public/images/clogos/tolloCash.png";
 import agro from "../public/images/clogos/agro.png";
 import college from "../public/images/clogos/college.png";

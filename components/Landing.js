@@ -286,7 +286,7 @@ const Landing = () => {
                   </div>
                   <div className="flex flex-col justify-center gap-[6px] w-[70%]">
 
-                    <div className="text-[16px] font-semibold"><h2>{items.name}</h2></div>
+                    <div className="text-[16px] capitalize font-semibold"><h2>{items.name}</h2></div>
                     <div className={`text-[15px] text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
                     <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
                   </div>
@@ -315,7 +315,7 @@ const Landing = () => {
                   </div>
                   <div className="flex flex-col justify-center gap-[6px] w-[70%]">
 
-                    <div className="text-[16px] font-semibold"><h2>{items.name}</h2></div>
+                    <div className="text-[16px] capitalize font-semibold"><h2>{items.name}</h2></div>
                     <div className={`text-[15px] text-neutral-700 ${activeSlide === index+4 ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
                     <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index+4 ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
                   </div>
@@ -352,7 +352,7 @@ const Landing = () => {
                   <div className="flex flex-col gap-[17px]">
                     <div className="flex flex-col gap-[5px] h-[115px]">
                       <div className="h-[50px] w-[50%]"><Image className="h-full w-full object-contain" height={500} width={500} src={items.logo} /></div>
-                      <div className="text-[17px] leading-[25px] font-semibold"><h2>{items.name}</h2></div>
+                      <div className="text-[17px] leading-[25px] capitalize font-semibold"><h2>{items.name}</h2></div>
                       <div className="font-light text-[14px]"><h3>"{items.description}"</h3></div>
                       {/* <div className="text-[12px] text-primary1"><Link href={address}>VIEW MORE</Link></div> */}
                     </div>

@@ -31,7 +31,7 @@ const About = () => {
         <div className="section11 h-[250px] lg:h-[50vh] relative rr lg:w-[50%]">
 
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/banner4.jpg" alt="kim" />
-          <div className="11abs absolute z-10 p-[10px] rr bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[90px] w-[70%] bg-opacity-[95%] lg:bg-opacity-[90%] lg:h-[70px] lg:w-[70%] right-[10px] bottom-[-33px] shadow-2xl">
+          <div className="11abs absolute z-10 p-[10px] hidden rr bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[90px] w-[70%] bg-opacity-[95%] lg:bg-opacity-[90%] lg:h-[70px] lg:w-[70%] right-[10px] bottom-[-33px] shadow-2xl">
             <div className="flex gap-[10px] items-center justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline "><p>Capt. Abera Lemi</p></div>

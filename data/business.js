@@ -23,6 +23,8 @@ import tollo2 from "../public/images/business/tollo/tollo2.jpg";
 import college1 from "../public/images/business/college/college1.jpg";
 import college2 from "../public/images/business/college/college2.jpg";
 import college3 from "../public/images/business/college/college3.jpg";
+import college4 from "../public/images/business/college/college4.jpeg";
+import college5 from "../public/images/business/college/college5.jpeg";
 
 import air from "../public/images/clogos/air.png";
 import cargo from "../public/images/clogos/nasCargo.png";
@@ -82,13 +84,19 @@ export const businessList =  [
         logo: college,
         image: [
             {
-                image: college1
+                image: college4
             },
             {
                 image: college2
             },
             {
                 image: college3
+            },
+            {
+                image: college1
+            },
+            {
+                image: college5
             },
             
         ],

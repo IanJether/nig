@@ -34,6 +34,7 @@ import college from "../public/images/clogos/college.png";
 import nrci from "../public/images/clogos/nrci.png";
 import tel from "../public/images/clogos/telecom.png";
 import waliya from "../public/images/clogos/waliya.png";
+import ex from "../public/images/clogos/export.png";
 
 
 
@@ -41,6 +42,8 @@ import waliya from "../public/images/clogos/waliya.png";
 
 
 export const businessList =  [
+
+
     {
         name: "National Airways",
         logo: air,
@@ -281,5 +284,32 @@ export const businessList =  [
         ]
     },
     // waliya 
+    {
+        name: "NAS import and export",
+        logo: ex,
+        image:[
+            {
+                image: agro1
+            },
+            {
+                image: agro1
+            },
+           
+        ],
+        description: "",
+        industry: "Import & export",
+        text:[
+            {
+                text: "We are actively engaged in the trading of goods in Ethiopia, specializing in the import and export business. Our operations center around facilitating the exchange of various commodities between Ethiopia and international markets. As a landlocked nation in the Horn of Africa, Ethiopia offers strategic advantages as a gateway to the African market. "
+            },
+            {
+                text: ""
+            },
+            {
+                text: ""
+            },
+        ]
+    },
+    // import
     
 ]

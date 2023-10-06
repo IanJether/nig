@@ -343,7 +343,7 @@ const Landing = () => {
           </div>
 
           <div data-aos='fade-up' data-aos-duration="400" className="lg:w-[30%] flex flex-col shadow-md gap-[1px]">
-            {businessList.filter((items, index) => index >= 4).map((items, index) => {
+            {businessList.filter((items, index) => index >= 4 && index !== 8 ).map((items, index) => {
 
               const address = "/businesses/" + getLink(items.name)
 

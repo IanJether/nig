@@ -56,7 +56,7 @@ console.log(businessList.map((items)=>items.name))
 
                         <div className="section12 leading-[26px] flex flex-col lg:justify-center gap-[20px] lg:gap-[30px] lg:w-[50%]">
                             <div className="12title">
-                                <div className="font-semibold hover:text-primary1 text-[28px]">
+                                <div className="font-semibold capitalize hover:text-primary1 text-[28px]">
                                    <Link href={address}> <h2>{items.name}</h2> </Link>
                                     <div className="und "></div>
                                 </div>

@@ -32,7 +32,7 @@ const NewsComp = () => {
                                 </div>
                                 <div className="p-[18px] flex flex-col gap-[10px]">
                                     <div className="text-[15px] font-bold text-stone-600"><p>29 Septmeber 2023</p></div>
-                                    <div className="text-[16px] font-semibold text-primary1"><h3>Appointment of captain Al Majeed as CEO and President of NIG</h3></div>
+                                    <div className="text-[16px] font-semibold text-primary1"><h3>NIG moves to new offices at POSSEA</h3></div>
                                     <div className="text-[15px]"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis dolorem sequi tenetur culpa vitae saepe non, dolore cum iure magnam modi corporis tempora possimus doloremque </p></div>
                                     <div><p className="text-[15px] font-semibold text-orange-500 hover:underline">Read More <span><FontAwesomeIcon icon={faArrowRight} /></span></p></div>
                                 </div>

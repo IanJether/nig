@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "./Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -68,12 +68,53 @@ const Landing = () => {
     };
   }, [isManualSlideChange]);
 
+  const countUpRefs = useRef([]);
+  
+  useEffect(() => {
+    const options = {
+      root: null, 
+      rootMargin: '0px', 
+      threshold: 0.5, 
+    };
 
-  // useEffect(()=>{
-  //   const interval = setInterval(handleAutoSlider, 2000)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+         
+          const index = countUpRefs.current.findIndex((el) => el === entry.target);
+          if (index !== -1) {
+            const finalNumber = statsList[index].number;
+            const duration = 400; 
+            startCounting(entry.target, finalNumber, duration);
+          }
+        
+          // observer.unobserve(entry.target);
+        }
+      });
+    }, options);
 
-  // },[activeSlide])
+    
+    countUpRefs.current.forEach((ref) => {
+      observer.observe(ref);
+    });
 
+    
+    const startCounting = (element, finalNumber, duration) => {
+      let start = 0;
+      const increment = finalNumber / (duration / 16); 
+
+      const updateCount = () => {
+        start += increment;
+        element.textContent = Math.round(start);
+        
+        if (start < finalNumber) {
+          requestAnimationFrame(updateCount);
+        }
+      };
+
+      updateCount();
+    };
+  }, [statsList]);
 
 
 
@@ -248,7 +289,7 @@ const Landing = () => {
 
               return (
                 <div key={index} className="mappedstatslist text-center font-light w-[37vw] lg:w-[9vw]">
-                  <div className="text-[55px] lg:text-[80px]"><h3>{items.number}+</h3></div>
+                  <div className="text-[50px] flex justify-center lg:text-[70px]"><h3 ref={(el) => (countUpRefs.current[index] = el)}>0</h3><h3>+</h3> </div>
                   <div className="text-stone-300"><p>{items.name}</p></div>
                 </div>
               )

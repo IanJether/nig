@@ -15,9 +15,59 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 
 const About = () => {
+
+  const countUpRefs = useRef([]);
+  
+  useEffect(() => {
+    const options = {
+      root: null, 
+      rootMargin: '0px', 
+      threshold: 0.5, 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+         
+          const index = countUpRefs.current.findIndex((el) => el === entry.target);
+          if (index !== -1) {
+            const finalNumber = statsList[index].number;
+            const duration = 400; 
+            startCounting(entry.target, finalNumber, duration);
+          }
+        
+          // observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    
+    countUpRefs.current.forEach((ref) => {
+      observer.observe(ref);
+    });
+
+    
+    const startCounting = (element, finalNumber, duration) => {
+      let start = 0;
+      const increment = finalNumber / (duration / 16); 
+
+      const updateCount = () => {
+        start += increment;
+        element.textContent = Math.round(start);
+        
+        if (start < finalNumber) {
+          requestAnimationFrame(updateCount);
+        }
+      };
+
+      updateCount();
+    };
+  }, [statsList]);
+
   return (
     <div className='About'>
 
@@ -95,7 +145,7 @@ const About = () => {
 
               return (
                 <div className="mappedstatslist text-center font-light w-[37vw] lg:w-[9vw]">
-                  <div className="text-[55px] lg:text-[80px]"><h3>{items.number}+</h3></div>
+                  <div className="text-[55px] flex justify-center lg:text-[80px]"><h3 ref={(el) => (countUpRefs.current[index] = el)}>0</h3><h3>+</h3></div>
                   <div className="text-stone-300"><p>{items.name}</p></div>
                 </div>
               )

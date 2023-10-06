@@ -197,7 +197,7 @@ export const businessList =  [
     },
     // nrci 
     {
-        name: "NAS Import and Export",
+        name: "NAS Agro Solutions",
         logo: agro,
         image: [
             {

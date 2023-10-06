@@ -37,7 +37,7 @@ const Businessdetails = ({ name }) => {
                         <div className="detailsabsolute absolute h-full w-full top-[0px] flex flex-col lg:flex-row pad items-center justify-center gap-[20px]">
 
                             <div className="lg:h-[8vw] lg:w-[8vw] absolute bottom-[0px] right-[0px] h-[160px] w-[160px]  rr overflow-hidden">
-                                <Image className="h-full w-full object-contain opacity-[70%]" height={1500} width={1500} src="/images/logo/niglogo.jpg" />
+                                <Image className="h-full w-full object-contain opacity-[70%]" height={1500} width={1500} src={businessDetails.logo} />
                             </div>
 
                             <div className="text-white flex text-center flex-col gap-[15px] lg:w-[36vw]">

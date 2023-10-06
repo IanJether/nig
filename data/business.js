@@ -24,6 +24,15 @@ import college1 from "../public/images/business/college/college1.jpg";
 import college2 from "../public/images/business/college/college2.jpg";
 import college3 from "../public/images/business/college/college3.jpg";
 
+import air from "../public/images/clogos/air.png";
+import cargo from "../public/images/clogos/nascargo.png";
+import tollo from "../public/images/clogos/tolloCash.png";
+import agro from "../public/images/clogos/agro.png";
+import college from "../public/images/clogos/college.png";
+import nrci from "../public/images/clogos/nrci.png";
+import tel from "../public/images/clogos/telecom.png";
+import waliya from "../public/images/clogos/waliya.png";
+
 
 
 
@@ -31,138 +40,8 @@ import college3 from "../public/images/business/college/college3.jpg";
 
 export const businessList =  [
     {
-        name: "National Aviation College",
-        image: [
-            {
-                image: college1
-            },
-            {
-                image: college2
-            },
-            {
-                image: college3
-            },
-            
-        ],
-        description: "Where Your Career Takes Off",
-        industry: "Education",
-        text:[
-            {
-                text: "The ﬁrst ever authorized private higher education institution that is engaged in the provision of aviation related college programs. The college has secured a training organization (ATO) status recognition from Ethiopian Civil Aviation Authority (ECA). Moreover, NAC is an authorized training center for the International Air Transport Association (IATA), which is based in Montreal, Canada, and the Institute of Commercial Management (ICM) based in Hampshire, England."
-            },
-            {
-                text: "With the authorizations secured from ECA, IATA and ICM, National Aviation College has been producing outstanding aviation, tourism, and hospitality young professionals. "
-            },
-            {
-                text: "The college is also accredited and recognized as a higher education institution by the Ethiopian Ministry of Education (MoE). Through the Higher Education Relevance and Quality Agency (HERQA) accreditation, the college is permitted to provide different undergraduate, postgraduate and distance learning programs: Eight Postgraduate, Four Regular Undergraduate and Seven Undergraduate distance learning programs."
-            },
-        ]
-    },
-    {
-        name: "National research and consultancy institute",
-        image: [
-            {
-                image: res2
-            },
-            {
-                image: res1
-            },
-        ],
-        description: "Creating Best Practice Solutions",
-        industry: "Research",
-        text:[
-            {
-                text: "National Research and Consultancy Institute (NRCI) is an incorporated company in Ethiopia and Sister Company to National Airways and National Aviation College, offers capacity building training, consultancy and research service to help clients keep pace with ever –changing and challenging business environments."
-            },
-            {
-                text: "NRCI is the ﬁrm under which numbers of dedicated leading experts and professionals throughout the globe collaborated to provide training, research and consultancy services. Moreover, NRCI is supported by an experienced, highly skilled and dedicated technical specialist and administrative team."
-            },
-            {
-                text: ""
-            },
-        ]
-    },
-    {
-        name: "NAS Import and Export",
-        image: [
-            {
-                image: agro1
-            },
-            {
-                image: agro2
-            },
-            {
-                image: agro3
-            },
-        ],
-        description: "Sustainable Solutions for Modern Agriculture",
-        industry: "Agro-Solution",
-        text:[
-            {
-                text: "The company specializes in aerial and crop spraying operations using tiger moth aircraft, leveraging over three years of experience in this field. This expertise is complemented by close collaborations with government agencies, landowners, and the farming community to ensure effective and environmentally responsible outcomes.In the realm of commodity procurement, the company stands out with a team of experts who boast an average of over 10 years of industry experience. This seasoned team streamlines "
-            },
-            {
-                text: "he acquisition process, guaranteeing access to the highest quality fertilizers. This commitment to sourcing top-notch fertilizers is aimed at helping farmers achieve optimal agricultural results. Moreover, the company recognizes the unique soil conditions in Ethiopia, with 28% of the land covered with acidic soil, including strongly acidic and moderately acidic types. Armed with this knowledge, the company works closely with farmers to conduct soil analysis and recommend the most suitable fertilizers. "
-            },
-            {
-                text: "This collaborative approach aims to enhance productivity and crop yields, contributing significantly to agricultural prosperity in the region."
-            },
-        ]
-    },
-    {
-        name: "National cargo and Logistics Service (NAS)",
-        image: [
-            {
-                image: cargo1
-            },
-            {
-                image: cargo2
-            },
-        ],
-        description: "Empowering Businesses wit Logistics Solutions",
-        industry: "Logistics",
-        text:[
-            {
-                text: "NAS cargo and logistics ser vices was established with an objective to positively contribute towards alleviating the challenges that businesses are facing in areas of freight forwarding, custom clearance, logistic & transport , warehousing , and freight inspection services."
-            },
-            {
-                text: "NAS cargo and logistics services provides baskets of cargo and logistics services such as contracting, custom clearing, transportation (air, sea, rail, and road transportation), shipment tracking, inspection and warehousing for clients engaged both in the export and import business. NAS cargo and logistic services excels mainly on its air freight service provision as it accesses aircrafts of its sister company, National Airways Ethiopia."
-            },
-            {
-                text: ""
-            },
-        ]
-
-    },
-    {
-        name: "National Telecom Solutions",
-        image: [
-            {
-                image: tel1
-            },
-            {
-                image: tel2
-            },
-            {
-                image: tel3
-            },
-        ],
-        description: "Building the Future of Telecommunications",
-        industry: "Technology",
-        text:[
-            {
-                text: "At National Telecom we understand that one of the key parameters to keep the customer loyal to a network is to have a very good network availability that creates effective usage which in return is converted into value both on ﬁnancial and brand perspective for the operator. Output of all National Telecom, thus must be centered towards providing the following to Operators."
-            },
-            {
-                text: "National Telecommunications Services is one of the companies under the National Investment Group with experienced, innovative and quality professionals. It can deliver up to 100 sites per month for each of its operators with its range of service that include: turnkey solutions for telecommunication networks, encompassing site civil survey, tower erection, and equipment installation and commissioning."
-            },
-            {
-                text: ""
-            },
-        ]
-    },
-    {
         name: "National Airways",
+        logo: air,
         image:[
             {
                 image: air8
@@ -197,8 +76,177 @@ export const businessList =  [
             },
         ]
     },
+    // air 
+    {
+        name: "National Aviation College",
+        logo: college,
+        image: [
+            {
+                image: college1
+            },
+            {
+                image: college2
+            },
+            {
+                image: college3
+            },
+            
+        ],
+        description: "Where Your Career Takes Off",
+        industry: "Education",
+        text:[
+            {
+                text: "The ﬁrst ever authorized private higher education institution that is engaged in the provision of aviation related college programs. The college has secured a training organization (ATO) status recognition from Ethiopian Civil Aviation Authority (ECA). Moreover, NAC is an authorized training center for the International Air Transport Association (IATA), which is based in Montreal, Canada, and the Institute of Commercial Management (ICM) based in Hampshire, England."
+            },
+            {
+                text: "With the authorizations secured from ECA, IATA and ICM, National Aviation College has been producing outstanding aviation, tourism, and hospitality young professionals. "
+            },
+            {
+                text: "The college is also accredited and recognized as a higher education institution by the Ethiopian Ministry of Education (MoE). Through the Higher Education Relevance and Quality Agency (HERQA) accreditation, the college is permitted to provide different undergraduate, postgraduate and distance learning programs: Eight Postgraduate, Four Regular Undergraduate and Seven Undergraduate distance learning programs."
+            },
+        ]
+    },
+    // aviation
+    {
+        name: "National Telecom Solutions",
+        logo: tel,
+        image: [
+            {
+                image: tel1
+            },
+            {
+                image: tel2
+            },
+            {
+                image: tel3
+            },
+        ],
+        description: "Building the Future of Telecommunications",
+        industry: "Technology",
+        text:[
+            {
+                text: "At National Telecom we understand that one of the key parameters to keep the customer loyal to a network is to have a very good network availability that creates effective usage which in return is converted into value both on ﬁnancial and brand perspective for the operator. Output of all National Telecom, thus must be centered towards providing the following to Operators."
+            },
+            {
+                text: "National Telecommunications Services is one of the companies under the National Investment Group with experienced, innovative and quality professionals. It can deliver up to 100 sites per month for each of its operators with its range of service that include: turnkey solutions for telecommunication networks, encompassing site civil survey, tower erection, and equipment installation and commissioning."
+            },
+            {
+                text: ""
+            },
+        ]
+    },
+    // telecom 
+    {
+        name: "Tollo Cash",
+        logo: tollo,
+        image:[
+            {
+                image: tollo1
+            },
+            {
+                image: tollo2
+            },
+        ],
+        description: "Transforming Mobile Services with Tollo Cash Innovations",
+        industry: "Mobile Money",
+        text:[
+            {
+                text: "TOLLO CASH is positioning itself as a technology solutions provider that is seeking to fulﬁll the market’s demands primarily in mobile services. Our services encompass mobile money transfers, including domestic and international P2P transfers, mobile banking, bill payments, and money deposit and withdrawal."
+            },
+            {
+                text: ""
+            },
+            {
+                text: ""
+            },
+        ]
+    },
+    // tollocash 
+    {
+        name: "National research and consultancy institute",
+        logo: nrci,
+        image: [
+            {
+                image: res2
+            },
+            {
+                image: res1
+            },
+        ],
+        description: "Creating Best Practice Solutions",
+        industry: "Research",
+        text:[
+            {
+                text: "National Research and Consultancy Institute (NRCI) is an incorporated company in Ethiopia and Sister Company to National Airways and National Aviation College, offers capacity building training, consultancy and research service to help clients keep pace with ever –changing and challenging business environments."
+            },
+            {
+                text: "NRCI is the ﬁrm under which numbers of dedicated leading experts and professionals throughout the globe collaborated to provide training, research and consultancy services. Moreover, NRCI is supported by an experienced, highly skilled and dedicated technical specialist and administrative team."
+            },
+            {
+                text: ""
+            },
+        ]
+    },
+    // nrci 
+    {
+        name: "NAS Import and Export",
+        logo: agro,
+        image: [
+            {
+                image: agro1
+            },
+            {
+                image: agro2
+            },
+            {
+                image: agro3
+            },
+        ],
+        description: "Sustainable Solutions for Modern Agriculture",
+        industry: "Agro-Solution",
+        text:[
+            {
+                text: "The company specializes in aerial and crop spraying operations using tiger moth aircraft, leveraging over three years of experience in this field. This expertise is complemented by close collaborations with government agencies, landowners, and the farming community to ensure effective and environmentally responsible outcomes.In the realm of commodity procurement, the company stands out with a team of experts who boast an average of over 10 years of industry experience. This seasoned team streamlines "
+            },
+            {
+                text: "he acquisition process, guaranteeing access to the highest quality fertilizers. This commitment to sourcing top-notch fertilizers is aimed at helping farmers achieve optimal agricultural results. Moreover, the company recognizes the unique soil conditions in Ethiopia, with 28% of the land covered with acidic soil, including strongly acidic and moderately acidic types. Armed with this knowledge, the company works closely with farmers to conduct soil analysis and recommend the most suitable fertilizers. "
+            },
+            {
+                text: "This collaborative approach aims to enhance productivity and crop yields, contributing significantly to agricultural prosperity in the region."
+            },
+        ]
+    },
+    // import 
+    {
+        name: "National cargo and Logistics Service (NAS)",
+        logo: cargo,
+        image: [
+            {
+                image: cargo1
+            },
+            {
+                image: cargo2
+            },
+        ],
+        description: "Empowering Businesses wit Logistics Solutions",
+        industry: "Logistics",
+        text:[
+            {
+                text: "NAS cargo and logistics ser vices was established with an objective to positively contribute towards alleviating the challenges that businesses are facing in areas of freight forwarding, custom clearance, logistic & transport , warehousing , and freight inspection services."
+            },
+            {
+                text: "NAS cargo and logistics services provides baskets of cargo and logistics services such as contracting, custom clearing, transportation (air, sea, rail, and road transportation), shipment tracking, inspection and warehousing for clients engaged both in the export and import business. NAS cargo and logistic services excels mainly on its air freight service provision as it accesses aircrafts of its sister company, National Airways Ethiopia."
+            },
+            {
+                text: ""
+            },
+        ]
+
+    },
+    // cargo 
     {
         name: "Waliya Tours and Travel",
+        logo: waliya,
         image:[
             {
                 image: tour1
@@ -224,28 +272,6 @@ export const businessList =  [
             },
         ]
     },
-    {
-        name: "Tollo Cash",
-        image:[
-            {
-                image: tollo1
-            },
-            {
-                image: tollo2
-            },
-        ],
-        description: "Transforming Mobile Services with Tollo Cash Innovations",
-        industry: "Mobile Money",
-        text:[
-            {
-                text: "TOLLO CASH is positioning itself as a technology solutions provider that is seeking to fulﬁll the market’s demands primarily in mobile services. Our services encompass mobile money transfers, including domestic and international P2P transfers, mobile banking, bill payments, and money deposit and withdrawal."
-            },
-            {
-                text: ""
-            },
-            {
-                text: ""
-            },
-        ]
-    },
+    // waliya 
+    
 ]

@@ -187,7 +187,7 @@ const Landing = () => {
 
           </Swiper>
           {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" /> */}
-          <div  className="11abs rr absolute z-10 p-[10px] bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[95px] w-[70%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[190px] left-[3px] lg:right-[0px] bottom-[-40px] lg:bottom-[0px] shadow-xl">
+          <div  className="11abs rr absolute z-10 p-[10px] bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[95px] w-[70%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[190px] left-[3px] lg:left-[68%] bottom-[-40px] lg:bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center hidden lg:flex justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline font-semibold"><p>Capt. Abera Lemi</p></div>
@@ -281,8 +281,8 @@ const Landing = () => {
                 <div onClick={() => handleActiveSlide(index)} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
                                                 ${activeSlide === index ? 'bg-primary1 text-white' : ' bg-white '}`}>
-                  <div className="w-[30%]">
-                    <Image className="h-full w-full object-contain" height={500} width={500} src="/images/logo/niglogo.jpg" priority />
+                  <div className="w-[30%] p-[15px]">
+                    <Image className="h-full w-full object-contain" height={500} width={500} src={items.logo} priority />
                   </div>
                   <div className="flex flex-col justify-center gap-[6px] w-[70%]">
 
@@ -310,8 +310,8 @@ const Landing = () => {
                 <div onClick={() => handleActiveSlide(index+4)} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
                                                 ${activeSlide === index+4 ? 'bg-primary1 text-white' : ' bg-white '}`}>
-                  <div className="w-[30%]">
-                    <Image className="h-full w-full object-contain" height={500} width={500} src="/images/logo/niglogo.jpg" priority />
+                  <div className="w-[30%]  p-[15px]">
+                    <Image className="h-full w-full object-contain" height={500} width={500}  src={items.logo} priority />
                   </div>
                   <div className="flex flex-col justify-center gap-[6px] w-[70%]">
 
@@ -350,7 +350,8 @@ const Landing = () => {
               return (
                 <SwiperSlide key={index} className="mappedmobilebusiness">
                   <div className="flex flex-col gap-[17px]">
-                    <div className="flex flex-col gap-[5px] h-[68px]">
+                    <div className="flex flex-col gap-[5px] h-[115px]">
+                      <div className="h-[50px] w-[50%]"><Image className="h-full w-full object-contain" height={500} width={500} src={items.logo} /></div>
                       <div className="text-[17px] leading-[25px] font-semibold"><h2>{items.name}</h2></div>
                       <div className="font-light text-[14px]"><h3>"{items.description}"</h3></div>
                       {/* <div className="text-[12px] text-primary1"><Link href={address}>VIEW MORE</Link></div> */}

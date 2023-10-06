@@ -47,7 +47,7 @@ console.log(businessList.map((items)=>items.name))
                             </div>
 
                             <div className="absolute w-[27%] top-[0px] right-[0px]">
-                                <Image className="h-full rr w-full object-contain " height={500} width={500} priority src="/images/logo/logoc.png" />
+                                <Image className="h-full rr w-full object-contain " height={500} width={500} priority src={items.logo} />
 
                             </div>
 

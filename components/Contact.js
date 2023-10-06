@@ -23,11 +23,11 @@ const ContactComp = () => {
 
       <div className="sectiontwocontact flex flex-col lg:flex-row gap-[40px] py-[40px] lg:py-[100px] pad ">
 
-        <div className="flex flex-col-reverse bg-white lg:flex-row-reverse lg:w-[79vw] gap-[20px] shadow-xl">
+        <div className="flex flex-col-reverse lg:flex-row-reverse shadow-xl lg:w-[79vw]  lg:gap-[0px]">
 
 
 
-          <div className="contactform flex flex-col lg:w-[50%] gap-[20px]   px-[15px] py-[30px]">
+          <div data-aos="fade-left" data-aos-duration="300" className="contactform bg-white  flex flex-col lg:w-[50%] gap-[20px] lg:px-[25px]  px-[15px] py-[30px]">
             <h2 className="text-[28px] font-semibol">Contact Form <div className="und"></div></h2>
 
             <div className="flex flex-col gap-[20px]">
@@ -56,7 +56,7 @@ const ContactComp = () => {
 
 
 
-          <div className="h-[380px] lg:h-[608px] lg:full lg:w-[50%] relative overflow-hidden">
+          <div data-aos="fade-right" data-aos-duration="300" className="h-[380px] lg:h-[608px] lg:full lg:w-[50%] relative overflow-hidden">
             {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/contact/possea.jpg" /> */}
             <div className="ccmapped  h-full w-full absolute px-[20px] text-white flex flex-col gap-[25px] text-[16px] justify-center lg:justify-start top-[0px] inset-0 bg-primary1">
               <div className="text-[24px] lg:mt-[37px]"><h2>Contact Details <div className="und"></div> </h2></div>
@@ -96,7 +96,7 @@ const ContactComp = () => {
       </div>
 
 
-      <div className="h-[550px] lg:h-[700px] pad shadow-xl pb-[40px] lg:pb-[100px] overflow-hidden">
+      <div data-aos="fade-up" data-aos-duration="300" className="h-[550px] lg:h-[700px] pad shadow-xl pb-[40px] lg:pb-[100px] overflow-hidden">
           <iframe className="w-full h-full" 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.503167514216!2d38.79848387420257!3d9.01777948916619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b859eaf6a53a5%3A0x7717d41abd5534ec!2sPrivate%20Organizations%20Employees&#39;%20Social%20Security%20Administration%20Caf%C3%A9!5e0!3m2!1sen!2ske!4v1696280932547!5m2!1sen!2ske" 
           width="300" 

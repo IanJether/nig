@@ -76,9 +76,9 @@ const About = () => {
 
       {/* section one  */}
 
-      <div data-aos="fade-u" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row-reverse lg:items-center gap-[60px] lg:gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
+      <div className="section2 pad flex flex-col lg:flex-row-reverse lg:items-center gap-[60px] lg:gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
 
-        <div className="section11 h-[250px] lg:h-[50vh] relative rr lg:w-[50%]">
+        <div  data-aos="fade-left" data-aos-duration="300" className="section11 h-[250px] lg:h-[50vh] relative rr lg:w-[50%]">
 
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/banner4.jpg" alt="kim" />
           <div className="11abs absolute z-10 p-[10px] hidden rr bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[90px] w-[70%] bg-opacity-[95%] lg:bg-opacity-[90%] lg:h-[70px] lg:w-[70%] right-[10px] bottom-[-33px] shadow-2xl">
@@ -91,7 +91,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="section12 leading-[26px] flex flex-col lg:justify-center gap-[20px] lg:gap-[30px] lg:w-[50%]">
+        <div data-aos="fade-right" data-aos-duration="300" className="section12 leading-[26px] flex flex-col lg:justify-center gap-[20px] lg:gap-[30px] lg:w-[50%]">
           <div className="12title">
             <div className="font-semibold text-[28px]">
               <h2>Who We Are</h2>
@@ -201,7 +201,7 @@ const About = () => {
       <div className="sectionfourpartners relative h-[500px] lg:h-screen ">
         <Image className="h-full w-full object-cover filter brightness-[65%]" height={1000} width={1000} src="/images/home/home.jpg" priority />
 
-        <div className="pad flex flex-col justify-center gap-[45px] absolute top-[0px] w-full h-full inset-0 text-white py-[40px]">
+        <div data-aos="fade-up" data-aos-duration="400" className="pad flex flex-col justify-center gap-[45px] absolute top-[0px] w-full h-full inset-0 text-white py-[40px]">
           <div className="flex flex-col gap-[20px]">
             <div className="text-[28px] font-semibold"><h3>Our Partners <div className="und"></div></h3></div>
             <div className="lg:w-[60%]"><p>We're proud to partner with key organizations, offering sustainable solutions and representing Ethiopia in leading investments.</p></div>
@@ -278,7 +278,7 @@ const About = () => {
         <div className="ceo w-full rr overflow-hidden h-[450px] lg:h-[60vh] mb-[40px] relative">
           <Image className="h-full rr w-full object-cover filter brightness-[100%]" height={1500} width={1500} src="/images/New/ceo2.jpg" priority />
 
-          <div className="ceotext text-white px-[10px] rr flex flex-col gap-[25px] items-center justify-center text-center absolute bg-black bg-opacity-[60%] top-[10%] left-[10%] lg:left-[6%] h-[80%] w-[80%] lg:w-[30%] ">
+          <div data-aos="fade-right" data-aos-duration="200" className="ceotext text-white px-[10px] rr flex flex-col gap-[25px] items-center justify-center text-center absolute bg-black bg-opacity-[60%] top-[10%] left-[10%] lg:left-[6%] h-[80%] w-[80%] lg:w-[30%] ">
             <div className="text-[19px] "><p>"
               Inspired to pioneer excellence and innovation, we're shaping a brighter future through unwavering dedication to growth and transformation."</p></div>
             <div className="text-[25px] font-light">

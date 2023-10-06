@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
 // console.log(Roboto)
 
   return(
-    <div className="main noSelect">
+    <div className="main noSelect overflow-hidden">
       <Component {...pageProps} />
     </div>
   ) 

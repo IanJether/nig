@@ -128,7 +128,7 @@ const Landing = () => {
         {/* <Image className="h-full w-full object-cover filter brightness-[50%]" priority height={1500} width={1500} src="/images/home/home.jpg" alt="" />/ */}
 
         <div className="absolute hidden lg:block h-[55vh] top-[27%] right-[15%]">
-          <Image className="h-full w-full object-contain" height={1000} width={1000} src="/images/banner2.svg" />
+          <Image className="h-full w-full object-contain" height={1000} width={1000} src="/images/banner06.svg" />
         </div>
 
         <div className="section1 lg:w-[56%] absolute inset-0 h-full lg:mt-[20px] flex flex-col justify-center gap-[20px] lg:gap-[25px] pad text-white">
@@ -204,7 +204,7 @@ const Landing = () => {
 
       {/* section two  */}
 
-      <div data-aos="fade-up" data-aos-duration="400" className="section2 pad flex flex-col lg:flex-row lg:items-center gap-[60px] py-[40px] lg:h-screen lg:py-[100px]">
+      <div data-aos="fade-up" data-aos-duration="300" className="section2 pad flex flex-col lg:flex-row lg:items-center gap-[60px] py-[40px] lg:h-screen lg:py-[100px]">
 
         <div className="section11 h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
           <Swiper
@@ -228,7 +228,7 @@ const Landing = () => {
 
           </Swiper>
           {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" /> */}
-          <div  className="11abs rr absolute z-10 p-[10px] bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[95px] w-[70%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[190px] left-[3px] lg:left-[68%] bottom-[-40px] lg:bottom-[0px] shadow-xl">
+          <div data-aos='fade-up' data-aos-duration="600" className="11abs rr absolute z-10 p-[10px] bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[95px] w-[70%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[190px] left-[3px] lg:left-[68%] bottom-[-40px] lg:bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center hidden lg:flex justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline font-semibold"><p>Capt. Abera Lemi</p></div>
@@ -313,7 +313,7 @@ const Landing = () => {
 
         <div className=" lg:flex justify-between w-full hidden">
 
-          <div className="lg:w-[30%] flex flex-col shadow-md gap-[1px]">
+          <div data-aos='fade-up' data-aos-duration="200" className="lg:w-[30%] flex flex-col shadow-md gap-[1px]">
             {businessList.filter((items, index) => index < 4).map((items, index) => {
 
               const address = "/businesses/" + getLink(items.name)
@@ -337,12 +337,12 @@ const Landing = () => {
 
           </div>
 
-          <div className="lg:w-[30%] rr overflow-hidden bg-gray-300 h-[482px] transition ease-in-out duration-300">
+          <div data-aos='fade-up' data-aos-duration="300" className="lg:w-[30%] rr overflow-hidden bg-gray-300 h-[482px] transition ease-in-out duration-300">
             <Image className="h-full w-full object-cover" alt="kim" height={1000} width={1000} priority src={activeCard.image[0].image} />
 
           </div>
 
-          <div className="lg:w-[30%] flex flex-col shadow-md gap-[1px]">
+          <div data-aos='fade-up' data-aos-duration="400" className="lg:w-[30%] flex flex-col shadow-md gap-[1px]">
             {businessList.filter((items, index) => index >= 4).map((items, index) => {
 
               const address = "/businesses/" + getLink(items.name)
@@ -372,7 +372,7 @@ const Landing = () => {
 
         {/* the mobile screen  */}
 
-        <div className="pb-[40px] lg:hidden">
+        <div data-aos='fade-up' data-aos-duration="200" className="pb-[40px] lg:hidden">
           <Swiper
             modules={[Autoplay, Pagination]}
             slidesPerView={1}
@@ -421,7 +421,8 @@ const Landing = () => {
         <Image className="h-full w-full object-cover filter brightness-[54%]" priority height={1500} width={1500} src="/images/home/land.jpg" alt="" />
 
         <div className="h-full w-[98vw] absolute lg:mt-[30px] inset-0 flex gap-[30px] flex-col lg:flex-row lg:items-center justify-center pad text-white">
-          <div className="flex flex-col gap-[23px] lg:gap-[35px] lg:w-[40%] lg:h-[300px]">
+
+          <div data-aos='fade-right' data-aos-duration="300" className="flex flex-col gap-[23px] lg:gap-[35px] lg:w-[40%] lg:h-[300px]">
 
             <div className="text-[14px] font-semibold"><h3>Sustainability</h3></div>
             <div className="text-[32px] font-bold leading-[35px]"><h2>Building prosperity & self-sufficiency</h2></div>
@@ -429,8 +430,10 @@ const Landing = () => {
             <div className="font-semibold hover:underline hover:text-orange-500 text-[14px]"> <Link href="/sustainability"><p>Read More <span className="text-orange-500"><FontAwesomeIcon icon={faArrowRight} /></span></p></Link> </div>
 
           </div>
+
           <div className="hidden lg:block"></div>
-          <div className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[30%] lg:h-[300px]">
+
+          <div data-aos='fade-left' data-aos-duration="300" className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[30%] lg:h-[300px]">
             <div className="uppercase font-semibold text-[14px]"><p>7 Sustainability Pillars</p></div>
             <div className="flex flex-wrap justify-between lg:justify-start gap-[20px]">
               {sustainabiltyList.filter((items, index) => index < 4).map((items, index) => {

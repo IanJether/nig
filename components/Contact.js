@@ -72,7 +72,7 @@ const ContactComp = () => {
                 <div className="w-[24px] text-[18px] text-orange-500"><FontAwesomeIcon icon={faLocationPin} /></div>
                 <div className="hover:text-black hover:underline"><p>Addis Ababa, Ethiopia ,Megnagna POSSEA Building 3rd floor</p></div>
               </div>
-              <div className="flex z-10 justify-self-end soshobox gap-[20px] lg:gap-[30px] text-[28px] text-white">
+              <div className="flex lg:absolute lg:bottom-[15px] z-10 justify-self-end soshobox gap-[20px] lg:gap-[30px] text-[28px] text-white">
                 <div><FontAwesomeIcon icon={faFacebook} /></div>
                 <div><FontAwesomeIcon icon={faInstagram} /></div>
                 <div><FontAwesomeIcon icon={faTwitter} /></div>
@@ -96,7 +96,7 @@ const ContactComp = () => {
       </div>
 
 
-      <div className="h-[550px] pad shadow-xl pb-[40px] lg:pb-[100px] overflow-hidden">
+      <div className="h-[550px] lg:h-[700px] pad shadow-xl pb-[40px] lg:pb-[100px] overflow-hidden">
           <iframe className="w-full h-full" 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.503167514216!2d38.79848387420257!3d9.01777948916619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b859eaf6a53a5%3A0x7717d41abd5534ec!2sPrivate%20Organizations%20Employees&#39;%20Social%20Security%20Administration%20Caf%C3%A9!5e0!3m2!1sen!2ske!4v1696280932547!5m2!1sen!2ske" 
           width="300" 

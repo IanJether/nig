@@ -50,7 +50,7 @@ const SustainabilityComp = () => {
         <div className="onesdgs  flex flex-col lg:flex-row lg:h-[650px] gap-[10px]">
 
           <div className="sus lg:h-[102%] lg:w-[50%] relative">
-            <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[0].image[1].image} alt="kim" />
+            <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[1].image[1].image} alt="kim" />
             <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
               <p>SDG #4</p>
             </div>
@@ -61,7 +61,7 @@ const SustainabilityComp = () => {
           </div>
           <div className="flex flex-col gap-[13px] lg:w-[50%] ">
             <div className="sus lg:h-[50%] relative">
-              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[1].image[1].image} alt="kim" />
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[4].image[1].image} alt="kim" />
               <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
                 <p>SDG #9</p>
               </div>
@@ -70,7 +70,7 @@ const SustainabilityComp = () => {
                 <p>Helping organizations adopt more sustainable and innovative practices.</p>
               </div></div>
             <div className="sus lg:h-[50%] relative">
-              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[2].image[1].image} alt="kim" />
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[5].image[1].image} alt="kim" />
               <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
                 <p>SDG #2</p>
               </div>
@@ -86,7 +86,7 @@ const SustainabilityComp = () => {
 
           <div className="flex flex-col gap-[10px] lg:w-[30%]">
             <div className="sus relative">
-              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[3].image[1].image} alt="kim" />
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[6].image[1].image} alt="kim" />
               <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
                 <p>SDG #9</p>
               </div>
@@ -95,7 +95,7 @@ const SustainabilityComp = () => {
                 <p>Enhancing logistics and transportation infrastructure</p>
               </div></div>
             <div className="sus relative">
-              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[4].image[1].image} alt="kim" />
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[2].image[1].image} alt="kim" />
               <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
                 <p>SDG #9</p>
               </div>
@@ -106,7 +106,7 @@ const SustainabilityComp = () => {
 
           </div>
           <div className="sus lg:h-[610px] lg:w-[40%] relative">
-            <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[5].image[1].image} alt="kim" />
+            <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[0].image[1].image} alt="kim" />
             <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
               <p>SDG #13</p>
             </div>
@@ -117,7 +117,7 @@ const SustainabilityComp = () => {
           </div>
           <div className="flex flex-col gap-[10px] lg:w-[30%]">
             <div className="sus relative">
-              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[6].image[1].image} alt="kim" />
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[7].image[1].image} alt="kim" />
               <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
                 <p>SDG #8</p>
               </div>
@@ -126,7 +126,7 @@ const SustainabilityComp = () => {
                 <p>Promoting sustainable Tourism</p>
               </div></div>
             <div className="sus relative">
-              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[7].image[1].image} alt="kim" />
+              <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[3].image[1].image} alt="kim" />
               <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
                 <p>SDG #1</p>
               </div>

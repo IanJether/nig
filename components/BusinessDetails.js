@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { useRouter } from "next/router";
+import "styled-jsx/style"
 
 
 

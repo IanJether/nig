@@ -1,3 +1,5 @@
+
+
 import NewsComp from "<nig>/components/News";
 
  const news = () =>{ 

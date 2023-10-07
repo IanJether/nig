@@ -48,9 +48,9 @@ const Footer = () => {
                             {NavbarList.map((items, index) => {
 
                                 return (
-                                    <div key={index} className="mappedfooter">
-                                       <Link href={items.link}> <li>{items.title}</li> </Link>
-                                    </div>
+                                    
+                                       <Link key={index} href={items.link}> <li>{items.title}</li> </Link>
+                                
                                 )
                             })}
                         </ul>
@@ -67,9 +67,9 @@ const Footer = () => {
                                 const address = "/businesses/" + getLink(items.name)
 
                                 return (
-                                    <div key={index} className="mappedfooter">
-                                       <Link href={address}> <li>{items.name}</li> </Link>
-                                    </div>
+                                   
+                                       <Link key={index} href={address}> <li>{items.name}</li> </Link>
+                                 
                                 )
                             })}
                         </ul>

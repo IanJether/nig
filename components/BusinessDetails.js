@@ -18,9 +18,15 @@ import 'swiper/css/autoplay';
 const Businessdetails = ({ name }) => {
 
 
+
+    
     const businessDetails = businessList.find((items, index) => getLink(items.name) == name)
 
     console.log(businessDetails)
+
+    if(!name){
+        return <div>Loading...</div>
+    }
 
     return (
         <div className='Businessdetails'>

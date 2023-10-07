@@ -20,7 +20,7 @@ import Footer from "./Footer";
 import Image from "next/image";
 import { faFacebook, faLinkedin, faTwitch, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { sustainabiltyList } from "<nig>/data/sustainable";
-import { getLink } from "<nig>/data/getLink";
+import { getLink, handleIndex } from "<nig>/data/getLink";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -374,23 +374,23 @@ const Landing = () => {
             >
 
 
-              {businessList.map((items, index) => {
+              {businessList.reverse().map((items, index) => {
 
                 const address = "/businesses/" + getLink(items.name)
 
                 return (
                   <SwiperSlide>
-                    <div onClick={() => {handleActiveSlide(index);console.log(index)}} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
+                    <div onClick={() => {handleActiveSlide(handleIndex(index));console.log(handleIndex(index))}} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
-                                                ${activeSlide === index ? 'bg-primary1 text-white' : ' bg-white '}`}>
+                                                ${activeSlide === handleIndex(index) ? 'bg-primary1 text-white' : ' bg-white '}`}>
                       <div className="w-[30%] p-[15px]">
                         <Image className="h-full w-full object-contain" height={500} width={500} src={items.logo} priority />
                       </div>
                       <div className="flex flex-col justify-center gap-[6px] w-[70%]">
 
                         <div className="text-[16px] capitalize font-semibold"><h2>{items.name}</h2></div>
-                        <div className={`text-[15px] text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
-                        <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
+                        <div className={`text-[15px] text-neutral-700 ${activeSlide === handleIndex(index) ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
+                        <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === handleIndex(index) ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
                       </div>
                     </div>
                   </SwiperSlide>

@@ -373,7 +373,7 @@ const Landing = () => {
             >
 
 
-              {businessList.reverse().map((items, index) => {
+              {businessList.slice(0).reverse().map((items, index) => {
 
                 const address = "/businesses/" + getLink(items.name)
 

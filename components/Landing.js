@@ -24,6 +24,7 @@ import { getLink } from "<nig>/data/getLink";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { aboutSliderList } from "<nig>/data/aboutSlider";
 import { socialLinks } from "<nig>/data/socialsLink";
@@ -35,9 +36,7 @@ const Landing = () => {
   const [activeSlide, setActiveSlide] = useState(0)
   const [isManualSlideChange, setIsManualSlideChange] = useState(false);
 
-  console.log(activeSlide)
-
-  console.log('Comp rendered')
+ 
 
 
   const handleActiveSlide = (index) => {
@@ -69,44 +68,44 @@ const Landing = () => {
   }, [isManualSlideChange]);
 
   const countUpRefs = useRef([]);
-  
+
   useEffect(() => {
     const options = {
-      root: null, 
-      rootMargin: '0px', 
-      threshold: 0.5, 
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-         
+
           const index = countUpRefs.current.findIndex((el) => el === entry.target);
           if (index !== -1) {
             const finalNumber = statsList[index].number;
-            const duration = 400; 
+            const duration = 400;
             startCounting(entry.target, finalNumber, duration);
           }
-        
+
           // observer.unobserve(entry.target);
         }
       });
     }, options);
 
-    
+
     countUpRefs.current.forEach((ref) => {
       observer.observe(ref);
     });
 
-    
+
     const startCounting = (element, finalNumber, duration) => {
       let start = 0;
-      const increment = finalNumber / (duration / 16); 
+      const increment = finalNumber / (duration / 16);
 
       const updateCount = () => {
         start += increment;
         element.textContent = Math.round(start);
-        
+
         if (start < finalNumber) {
           requestAnimationFrame(updateCount);
         }
@@ -152,13 +151,13 @@ const Landing = () => {
 
           <div className="section14 flex gap-[10px]">
             <div>
-             <Link href="/about"> <button data-aos='fade-right' data-aos-duration="500" className="h-[54px] mt-[6px] bg-orange-500 hover:bg-sec2 px-[20px] rr">
+              <Link href="/about"> <button data-aos='fade-right' data-aos-duration="500" className="h-[54px] mt-[6px] bg-orange-500 hover:bg-sec2 px-[20px] rr">
                 Learn more
               </button> </Link>
             </div>
 
             <div>
-             <Link href="/businesses"> <button data-aos='fade-right' data-aos-duration="600" className="h-[54px] bg-transparent  hover:underline">
+              <Link href="/businesses"> <button data-aos='fade-right' data-aos-duration="600" className="h-[54px] bg-transparent  hover:underline">
                 Our Businesses{" "}
                 <span className="ml-[3px] text-orange-500">
                   <FontAwesomeIcon icon={faArrowRight} />
@@ -262,7 +261,7 @@ const Landing = () => {
             </p>
           </div>
           <div className="12link">
-           <Link href="/about"> <p className="font-semibold hover:underline cursor-pointer">
+            <Link href="/about"> <p className="font-semibold hover:underline cursor-pointer">
               Read more{" "}
               <span className="ml-[5px] text-orange-500">
                 <FontAwesomeIcon icon={faArrowRight} />
@@ -311,29 +310,47 @@ const Landing = () => {
 
         {/* the desktop screen  */}
 
-        <div className=" lg:flex justify-between w-full hidden">
+        <div className=" lg:flex justify-between h-[483px] w-full hidden">
 
           <div data-aos='fade-up' data-aos-duration="200" className="lg:w-[30%] flex flex-col shadow-md gap-[1px]">
-            {businessList.filter((items, index) => index < 4).map((items, index) => {
+            <Swiper
+              modules={[Autoplay,Pagination]}
+              slidesPerView={4}
+              direction={'vertical'}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+         
+              loop
+              className="swiper h-full w-full z-0"
+            >
 
-              const address = "/businesses/" + getLink(items.name)
 
-              return (
-                <div onClick={() => handleActiveSlide(index)} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
+              {businessList.map((items, index) => {
+
+                const address = "/businesses/" + getLink(items.name)
+
+                return (
+                  <SwiperSlide>
+                    <div onClick={() => {handleActiveSlide(index);console.log(index)}} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
                                                 ${activeSlide === index ? 'bg-primary1 text-white' : ' bg-white '}`}>
-                  <div className="w-[30%] p-[15px]">
-                    <Image className="h-full w-full object-contain" height={500} width={500} src={items.logo} priority />
-                  </div>
-                  <div className="flex flex-col justify-center gap-[6px] w-[70%]">
+                      <div className="w-[30%] p-[15px]">
+                        <Image className="h-full w-full object-contain" height={500} width={500} src={items.logo} priority />
+                      </div>
+                      <div className="flex flex-col justify-center gap-[6px] w-[70%]">
 
-                    <div className="text-[16px] capitalize font-semibold"><h2>{items.name}</h2></div>
-                    <div className={`text-[15px] text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
-                    <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
-                  </div>
-                </div>
-              )
-            })}
+                        <div className="text-[16px] capitalize font-semibold"><h2>{items.name}</h2></div>
+                        <div className={`text-[15px] text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
+                        <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                )
+              })}
+
+            </Swiper>
 
           </div>
 
@@ -343,26 +360,44 @@ const Landing = () => {
           </div>
 
           <div data-aos='fade-up' data-aos-duration="400" className="lg:w-[30%] flex flex-col shadow-md gap-[1px]">
-            {businessList.filter((items, index) => index >= 4 && index !== 8 ).map((items, index) => {
+          <Swiper
+              modules={[Autoplay,Pagination]}
+              slidesPerView={4}
+              direction={'vertical'}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+         
+              loop
+              className="swiper h-full w-full z-0"
+            >
 
-              const address = "/businesses/" + getLink(items.name)
 
-              return (
-                <div onClick={() => handleActiveSlide(index+4)} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
+              {businessList.map((items, index) => {
+
+                const address = "/businesses/" + getLink(items.name)
+
+                return (
+                  <SwiperSlide>
+                    <div onClick={() => {handleActiveSlide(index);console.log(index)}} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
-                                                ${activeSlide === index+4 ? 'bg-primary1 text-white' : ' bg-white '}`}>
-                  <div className="w-[30%]  p-[15px]">
-                    <Image className="h-full w-full object-contain" height={500} width={500}  src={items.logo} priority />
-                  </div>
-                  <div className="flex flex-col justify-center gap-[6px] w-[70%]">
+                                                ${activeSlide === index ? 'bg-primary1 text-white' : ' bg-white '}`}>
+                      <div className="w-[30%] p-[15px]">
+                        <Image className="h-full w-full object-contain" height={500} width={500} src={items.logo} priority />
+                      </div>
+                      <div className="flex flex-col justify-center gap-[6px] w-[70%]">
 
-                    <div className="text-[16px] capitalize font-semibold"><h2>{items.name}</h2></div>
-                    <div className={`text-[15px] text-neutral-700 ${activeSlide === index+4 ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
-                    <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index+4 ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
-                  </div>
-                </div>
-              )
-            })}
+                        <div className="text-[16px] capitalize font-semibold"><h2>{items.name}</h2></div>
+                        <div className={`text-[15px] text-neutral-700 ${activeSlide === index ? 'text-white' : ''}`}><p>"{items.description}" </p></div>
+                        <div className={`text-[10px] hover:underline hover:font-semibold ${activeSlide === index ? 'block' : 'hidden'}`}><Link href={address}><p>VIEW MORE <FontAwesomeIcon icon={faAngleRight} /></p></Link></div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                )
+              })}
+
+            </Swiper>
 
           </div>
 
@@ -398,7 +433,7 @@ const Landing = () => {
                       {/* <div className="text-[12px] text-primary1"><Link href={address}>VIEW MORE</Link></div> */}
                     </div>
                     <div className="h-[300px] shadow-xl">
-                      <Image className="h-full rr shadow-md w-full object-cover" height={1000} width={1000}  src={activeCard.image[0].image} alt="kim" priority />
+                      <Image className="h-full rr shadow-md w-full object-cover" height={1000} width={1000} src={activeCard.image[0].image} alt="kim" priority />
                     </div>
                     <div><Link href={address}><button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">View more</button></Link></div>
                   </div>

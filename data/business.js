@@ -203,9 +203,7 @@ export const businessList =  [
         name: "NAS Agro Solutions",
         logo: agro,
         image: [
-            {
-                image: agro1
-            },
+          
             {
                 image: agro2
             },
@@ -227,7 +225,7 @@ export const businessList =  [
             },
         ]
     },
-    // import 
+    // agro 
     {
         name: "National cargo and Logistics Service (NAS)",
         logo: cargo,
@@ -296,7 +294,7 @@ export const businessList =  [
             },
            
         ],
-        description: "",
+        description: "Comprehensinve import and export solutions",
         industry: "Import & export",
         text:[
             {

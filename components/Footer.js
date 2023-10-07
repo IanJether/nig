@@ -16,7 +16,7 @@ const Footer = () => {
 
                 <div className="footer1 overflow-hidden cursor-pointer flex flex-col gap-[10px] lg:gap-[15px] lg:w-[30%]">
                     <div className="div mb-[15px] lg:mb-[5px] bg-teal-5 font-semibold text-orange-500">
-                        <Image className="h-[60px] w-[250px]" height={500} width={500} src="/images/logo/logoc.png" />
+                        <Image alt="" className="h-[60px] w-[250px]" height={500} width={500} src="/images/logo/logoc.png" />
                     </div>
                     {socialLinks.filter((items,index)=>index<3).map((items, index) => {
 

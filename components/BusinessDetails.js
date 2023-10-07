@@ -5,13 +5,14 @@ import { businessList } from "<nig>/data/business";
 import { getLink } from "<nig>/data/getLink";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight, faArrowRight, faFile } from "@fortawesome/free-solid-svg-icons";
-import ContactComp from "./Contact";
+import { faAngleRight, faFile } from "@fortawesome/free-solid-svg-icons";
+// import ContactComp from "./Contact";
 import ContactPrompt from "./commons/ContactPrompt";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import { useRouter } from "next/router";
 
 
 
@@ -19,10 +20,13 @@ const Businessdetails = ({ name }) => {
 
 
 
-    
+    // console.log(name) 
+    // return ""
     const businessDetails = businessList.find((items, index) => getLink(items.name) == name)
 
-    console.log(businessDetails)
+    const router = useRouter()
+
+    console.log(router.pathname)
 
     if(!name){
         return <div>Loading...</div>
@@ -38,12 +42,12 @@ const Businessdetails = ({ name }) => {
                     {/* section one  */}
 
                     <div className="sectioneonedetails h-[600px] lg:h-screen relative w-full">
-                        <Image className="h-full w-full object-cover filter brightness-[43%]" height={2000} width={2000} src={businessDetails.image[0].image} />
+                        <Image className="h-full w-full object-cover filter brightness-[43%]" height={2000} alt="kim" width={2000} src={businessDetails.image[0].image} />
 
                         <div className="detailsabsolute absolute h-full w-full top-[0px] flex flex-col lg:flex-row pad items-center justify-center gap-[20px]">
 
                             <div className="lg:h-[8vw] lg:w-[8vw] absolute bottom-[0px] right-[0px] h-[160px] w-[160px]  rr overflow-hidden">
-                                <Image className="h-full w-full object-contain opacity-[70%]" height={1500} width={1500} src={businessDetails.logo} />
+                                <Image className="h-full w-full object-contain opacity-[70%]" height={1500} width={1500} alt="kim" src={businessDetails.logo} />
                             </div>
 
                             <div className="text-white flex text-center flex-col gap-[15px] lg:w-[36vw]">
@@ -142,7 +146,7 @@ const Businessdetails = ({ name }) => {
                                     return (
                                         <SwiperSlide key={index}>
                                             <div key={index} className="mappedgallery h-[190px] lg:h-[12vw] bg-gray-200">
-                                                <Image className="h-full w-full object-cover " height={2000} width={2000} src={items.image} />
+                                                <Image alt="kim" className="h-full w-full object-cover " height={2000} width={2000} src={items.image} />
                                             </div>
                                         </SwiperSlide>
                                     )
@@ -171,7 +175,7 @@ const Businessdetails = ({ name }) => {
                                     return (
                                         <SwiperSlide key={index}>
                                             <div key={index} className="mappedgallery h-[60vh] w-[25vw] bg-gray-200">
-                                            <Image className="h-full w-full object-cover " height={2000} width={2000} src={items.image} />
+                                            <Image alt="kim" className="h-full w-full object-cover " height={2000} width={2000} src={items.image} />
                                             </div>
                                         </SwiperSlide>
                                     )

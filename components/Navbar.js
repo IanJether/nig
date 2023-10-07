@@ -81,7 +81,7 @@ const Navbar = () => {
             <div className="mobilenav lg:hidden pad flex justify-between fixed top-[0px] w-[100vw]  py-[20px]  z-10">
                 <div className="logonav text-white font-bold text-[20px] h-[40px] w-[200px]">
 
-                  <Link href="/">  <Image priority className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" /> </Link>
+                  <Link href="/">  <Image priority className="h-full w-full" height={500} alt="" width={500} src="/images/logo/logow.png" /> </Link>
                 </div>
                 <div onClick={menucl} className="barsnav text-white text-[23px]">
                     <div className="navbars"> <FontAwesomeIcon className="navbars" icon={faBars} /> </div>
@@ -139,7 +139,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="h-[50px]">
-                       <Link href="/"> <Image priority className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" /> </Link>
+                       <Link href="/"> <Image alt="" priority className="h-full w-full" height={500} width={500} src="/images/logo/logow.png" /> </Link>
                     </div>
                     {/* <div className="nvsocial flex gap-[20px] text-[18px]">
                         <div><FontAwesomeIcon icon={faFacebook}/></div>

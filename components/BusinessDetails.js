@@ -16,6 +16,7 @@ import { useRouter } from "next/router";
 
 
 
+
 const Businessdetails = ({ name }) => {
 
 

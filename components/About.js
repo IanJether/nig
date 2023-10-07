@@ -159,7 +159,7 @@ const About = () => {
 
       {/* section three - Team */}
 
-      <div className="sectionthree pad py-[40px] lg:py-[100px] flex flex-col gap-[40px]">
+      <div className="sectionthree pad py-[40px] lg:py-[140px] flex flex-col gap-[40px] lg:gap-[70px]">
 
         <div className="flex flex-col lg:flex-row lg:justify-between gap-[20px]">
           <div>
@@ -172,7 +172,7 @@ const About = () => {
 
         </div>
 
-        <div className="flex flex-wrap gap-[30px] justify-center lg:justify-between">
+        <div className="flex flex-wrap gap-[40px] justify-center lg:justify-start">
           {managementList.map((items, index) => {
 
             return (

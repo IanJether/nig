@@ -100,15 +100,15 @@ const Navbar = () => {
                                     </li></Link>
                             )
                         })}
+                        </ul>
 
-                        <div className="soshomobile flex justify-between w-[49vw] text-[20px]">
+                        <div className="soshomobile text-primary2 mt-[15px] flex justify-between w-[49vw] text-[20px]">
                             <div><FontAwesomeIcon icon={faPhone} /></div>
                             <div><FontAwesomeIcon icon={faEnvelope} /></div>
                             <div><FontAwesomeIcon icon={faLinkedin} /></div>
                             <div><FontAwesomeIcon icon={faTwitter} /></div>
                             <div><FontAwesomeIcon icon={faFacebook} /></div>
                         </div>
-                    </ul>
 
 
                 </div>

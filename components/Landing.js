@@ -368,7 +368,6 @@ const Landing = () => {
                 delay: 3000,
                 disableOnInteraction: false,
               }}
-         
               loop
               className="swiper h-full w-full z-0"
             >
@@ -407,7 +406,7 @@ const Landing = () => {
 
         {/* the mobile screen  */}
 
-        <div data-aos='fade-up' data-aos-duration="200" className="pb-[40px] lg:hidden">
+        <div data-aos='fade-u' data-aos-duration="200" className="pb-[40px] lg:hidden">
           <Swiper
             modules={[Autoplay, Pagination]}
             slidesPerView={1}

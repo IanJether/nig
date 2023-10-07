@@ -4,14 +4,14 @@ import Navbar from "./Navbar";
 import { businessList } from "<nig>/data/business";
 import { getLink } from "<nig>/data/getLink";
 import Link from "next/link";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faAngleRight, faFile } from "@fortawesome/free-solid-svg-icons";
-// import ContactComp from "./Contact";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight, faFile } from "@fortawesome/free-solid-svg-icons";
+import ContactComp from "./Contact";
 import ContactPrompt from "./commons/ContactPrompt";
-// import { Autoplay, Pagination } from "swiper/modules";
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css';
-// import 'swiper/css/autoplay';
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 import { useRouter } from "next/router";
 
 
@@ -71,13 +71,13 @@ const Businessdetails = ({ name }) => {
                                 <Link href="/">Home</Link>
                             </div>
                             <div>
-                                {/* <FontAwesomeIcon icon={faAngleRight} /> */}
+                                <FontAwesomeIcon icon={faAngleRight} />
                             </div>
                             <div className="hidden lg:block hover:text-primary1 hover:underline">
                                 <Link href="/businesses">Our Businesses</Link>
                             </div>
                             <div className="hidden lg:block">
-                                {/* <FontAwesomeIcon icon={faAngleRight} /> */}
+                                <FontAwesomeIcon icon={faAngleRight} />
                             </div>
                             <div className="hover:text-primary1 hover:underline">
                                 <Link href="/">{businessDetails.name}</Link>
@@ -108,7 +108,7 @@ const Businessdetails = ({ name }) => {
                                     <p>{businessDetails.industry}</p>
                                 </div>
                                 <div className="h-[70px] hover:bg-sec1 w-full bg-orange-500 text-white px-[10px] flex items-center font-semibold rr  cursor-pointer">
-                                    {/* <p> <FontAwesomeIcon className="mr-[5px] text-[19px]" icon={faFile} /> Company Profile</p> */}
+                                    <p> <FontAwesomeIcon className="mr-[5px] text-[19px]" icon={faFile} /> Company Profile</p>
                                 </div>
 
                             </div>
@@ -127,7 +127,7 @@ const Businessdetails = ({ name }) => {
                             <h2>Gallery <div className="und"></div></h2>
                         </div>
 
-                        {/* <div className="flex flex-wrap gap-[10px] lg:hidden">
+                        <div className="flex flex-wrap gap-[10px] lg:hidden">
 
                             <Swiper
                                 modules={[Autoplay]}
@@ -183,7 +183,7 @@ const Businessdetails = ({ name }) => {
                                 })}
                             </Swiper>
 
-                        </div> */}
+                        </div>
 
                     </div>
 

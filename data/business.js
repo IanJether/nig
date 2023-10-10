@@ -271,7 +271,7 @@ export const businessList =  [
         industry: "Tours and Travel",
         text:[
             {
-                text: "Waliya Tour and Travel arranges tours for those who would like to experience the real life of their destination as an active participant in the culture and customs of each locality of their visit. Waliya Tour and Travel provides customized service to its customer in Car rental, Air ticket, Tour Package, Hotekkkkkl booking"
+                text: "Waliya Tour and Travel arranges tours for those who would like to experience the real life of their destination as an active participant in the culture and customs of each locality of their visit. Waliya Tour and Travel provides customized service to its customer in Car rental, Air ticket, Tour Package, Hotel booking"
             },
             {
                 text: ""

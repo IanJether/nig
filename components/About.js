@@ -78,7 +78,7 @@ const About = () => {
 
       <div className="section2 pad flex flex-col lg:flex-row-reverse lg:items-center gap-[60px] lg:gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
 
-        <div  data-aos="fade-left" data-aos-duration="300" className="section11 h-[250px] lg:h-[50vh] relative rr lg:w-[50%]">
+        <div  data-aos="fade-left" data-aos-duration="300" className="section11 h-[250px] md:h-[400px] lg:h-[50vh] relative rr lg:w-[50%]">
 
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/banner4.jpg" alt="kim" />
           <div className="11abs absolute z-10 p-[10px] hidden rr bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[90px] w-[70%] bg-opacity-[95%] lg:bg-opacity-[90%] lg:h-[70px] lg:w-[70%] right-[10px] bottom-[-33px] shadow-2xl">
@@ -176,7 +176,7 @@ const About = () => {
           {managementList.map((items, index) => {
 
             return (
-              <div key={index} className="mappedteamlist h-[350px] lg:h-[50vh] rr w-[75vw] lg:w-[17vw] relative">
+              <div key={index} className="mappedteamlist h-[350px] lg:h-[50vh] rr w-[75vw] md:w-[290px] lg:w-[17vw] relative">
                 <div className="h-full w-full overflow-hidden bg-gray-600">
                   <Image className="h-full w-full object-cover" height={600} width={600} src={items.image} alt="kim" />
                 </div>
@@ -217,14 +217,14 @@ const About = () => {
                 disableOnInteraction: false,
               }}
               loop
-              className="swiper h-full w-full z-0 mb-[40px]"
+              className="swiper h-full w-full mx-auto z-0 mb-[40px]"
             >
 
               {partnersList.map((items, index) => {
 
                 return (
-                  <SwiperSlide>
-                    <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[66%] rr h-[150px] flex items-center justify-center">
+                  <SwiperSlide className="mx-auto">
+                    <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[66%] rr h-[150px] md:w-[200px] flex items-center justify-center">
                       <Image className="h-full w-full object-contain" height={400} width={400} priority src={items.logo} />
                     </div>
                   </SwiperSlide>
@@ -275,7 +275,7 @@ const About = () => {
           <h2>Message from the CEO <div className="und"></div></h2>
         </div>
 
-        <div className="ceo w-full rr overflow-hidden h-[450px] lg:h-[60vh] mb-[40px] relative">
+        <div className="ceo w-full rr overflow-hidden h-[450px] md:h-[550px] lg:h-[60vh] mb-[40px] relative">
           <Image className="h-full rr w-full object-cover filter brightness-[100%]" height={1500} width={1500} src="/images/New/ceo2.jpg" priority />
 
           <div data-aos="fade-right" data-aos-duration="200" className="ceotext text-white px-[10px] rr flex flex-col gap-[25px] items-center justify-center text-center absolute bg-black bg-opacity-[60%] top-[10%] left-[10%] lg:left-[6%] h-[80%] w-[80%] lg:w-[30%] ">

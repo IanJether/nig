@@ -122,11 +122,11 @@ const Landing = () => {
     <div className="Landing">
       {/* section one  */}
 
-      <div className="section1 relative h-[700px] lg:h-[100vh] bg-primary1">
+      <div className="section1 relative h-[700px] md:h-[850px] lg:h-[100vh] bg-primary1">
 
         {/* <Image className="h-full w-full object-cover filter brightness-[50%]" priority height={1500} width={1500} src="/images/home/home.jpg" alt="" />/ */}
 
-        <div className="absolute hidden lg:block h-[55vh] top-[27%] right-[15%]">
+        <div className="absolute hidden md:block lg:block md:h-[250px] lg:h-[55vh] top-[68%] lg:top-[27%] left-[5%] lg:right-[15%]">
           <Image className="h-full w-full object-contain" height={1000} width={1000} src="/images/banner06.svg" />
         </div>
 
@@ -205,7 +205,7 @@ const Landing = () => {
 
       <div data-aos="fade-up" data-aos-duration="300" className="section2 pad flex flex-col lg:flex-row lg:items-center gap-[60px] py-[40px] lg:h-screen lg:py-[100px]">
 
-        <div className="section11 h-[300px] lg:h-[60vh] relative rr lg:w-[50%]">
+        <div className="section11 h-[300px] md:h-[500px] lg:h-[60vh] relative rr lg:w-[50%]">
           <Swiper
             modules={[Autoplay]}
             slidesPerView={1}
@@ -227,7 +227,7 @@ const Landing = () => {
 
           </Swiper>
           {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/home/arch.jpg" alt="kim" /> */}
-          <div data-aos='fade-up' data-aos-duration="600" className="11abs rr absolute z-10 p-[10px] bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[95px] w-[70%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[190px] left-[3px] lg:left-[68%] bottom-[-40px] lg:bottom-[0px] shadow-xl">
+          <div data-aos='fade-up' data-aos-duration="600" className="11abs rr absolute z-10 p-[10px] bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[95px] w-[70%] md:w-[40%] lg:bg-opacity-[90%] lg:h-[170px] lg:w-[190px] left-[3px] lg:left-[68%] bottom-[-40px] lg:bottom-[0px] shadow-xl">
             <div className="flex gap-[10px] items-center hidden lg:flex justify-center">
               <div className="text-primary1 text-[20px]"><FontAwesomeIcon icon={faQuoteLeft} /></div>
               <div className="text-orange-500 underline font-semibold"><p>Capt. Abera Lemi</p></div>
@@ -273,7 +273,7 @@ const Landing = () => {
 
       {/* section four new  */}
 
-      <div className="sectionfour relative h-[600px] lg:h-screen  ">
+      <div className="sectionfour relative h-[600px] md:h-[700px] lg:h-screen  ">
 
         <Image className="h-full w-full object-cover" alt="kim" height={2000} width={2000} priority src="/images/banner3.jpg" />
 
@@ -431,7 +431,7 @@ const Landing = () => {
                       <div className="font-light text-[14px]"><h3>"{items.description}"</h3></div>
                       {/* <div className="text-[12px] text-primary1"><Link href={address}>VIEW MORE</Link></div> */}
                     </div>
-                    <div className="h-[300px] shadow-xl">
+                    <div className="h-[300px] md:h-[500px] shadow-xl">
                       <Image className="h-full rr shadow-md w-full object-cover" height={1000} width={1000} src={activeCard.image[0].image} alt="kim" priority />
                     </div>
                     <div><Link href={address}><button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">View more</button></Link></div>
@@ -469,7 +469,7 @@ const Landing = () => {
 
           <div data-aos='fade-left' data-aos-duration="300" className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[30%] lg:h-[300px]">
             <div className="uppercase font-semibold text-[14px]"><p>7 Sustainability Pillars</p></div>
-            <div className="flex flex-wrap justify-between lg:justify-start gap-[20px]">
+            <div className="flex flex-wrap justify-between md:justify-start gap-[20px] md:gap-[50px]">
               {sustainabiltyList.filter((items, index) => index < 4).map((items, index) => {
 
                 return (
@@ -480,7 +480,7 @@ const Landing = () => {
                 )
               })}
             </div>
-            <div className="flex flex-wrap justify-between lg:justify-start gap-[20px]">
+            <div className="flex flex-wrap justify-between md:justify-start gap-[20px] md:gap-[50px]">
               {sustainabiltyList.filter((items, index) => index >= 4).map((items, index) => {
 
                 return (

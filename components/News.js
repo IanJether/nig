@@ -26,7 +26,7 @@ const NewsComp = () => {
                     {newsList.map((items, index) => {
 
                         return (
-                            <div key={index} className="mappednews cursor-pointer bg-white rr shadow-xl hover:shadow-2xl lg:w-[24vw]">
+                            <div key={index} className="mappednews cursor-pointer bg-white rr shadow-xl hover:shadow-2xl md:w-[315px] lg:w-[24vw]">
                                 <div className="h-[240px] lg:h-[30vh] overflow-hidden bg-gray-500">
                                     <Image priority className="h-full w-full object-cover" quality={70} height={1000} width={1000} src={items.image} />
                                 </div>

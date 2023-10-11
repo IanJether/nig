@@ -36,13 +36,13 @@ console.log(businessList.map((items)=>items.name))
                 return (
                     <div data-aos="fade-up" data-aos-duration="400" className={`section2 pad flex flex-col ${lgFlexClass} gap-[40px] py-[40px] lg:py-[100px]`}>
 
-                        <div className="section11 h-[290px] lg:h-[64vh] relative rr lg:w-[50%]">
+                        <div className="section11 h-[290px] md:h-[400px] lg:h-[64vh] relative rr lg:w-[50%]">
 
-                            <div className="absolute h-[55%] w-[90%] lg:w-[70%] top-[0px] left-[0px]">
+                            <div className="absolute h-[55%] w-[90%] md:w-[60%] lg:w-[70%] top-[0px] left-[0px]">
                                 <Image className="h-full w-full rr object-cover shadow-xl" height={1000} width={1000} priority src={items.image[1].image} alt="" />
                             </div>
 
-                            <div className="absolute h-[55%] w-[90%] lg:w-[70%] bottom-[0px] right-[0px]">
+                            <div className="absolute h-[55%] w-[90%] md:w-[60%] lg:w-[70%] bottom-[0px] right-[0px]">
                                 <Image className="h-full rr w-full object-cover shadow-xl" height={1000} width={1000} priority src={items.image[0].image} alt="" />
                             </div>
 

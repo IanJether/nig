@@ -8,16 +8,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationPin, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { contactPersonList } from "<nig>/data/contactPeople";
+import Head from "next/head";
 
 
 const ContactComp = () => {
   return (
     <div className='ContactComp bg-stone-100'>
+
+      <Head>
+        <title>Contact</title>
+        <meta name="description" content="NIG" />
+        <meta name="description" content="NATIONAL INVESTMENT GROUP" />
+        <meta name="description" content="NIG EHTOPIA" />
+        <meta name="description" content="INVESTMENT AFRICA" />
+        <meta name="description" content="AFRICA COOPERATE" />
+        <meta name="description" content="ETHIOPIA COOPERATE" />
+        <meta name="description" content="SAFRAICOM ETHIOPIA" />
+        <meta name="description" content="BUSINESS ETHIOPIA" />
+        <meta
+          property="og:title"
+          content="Contact - NATIONAL INVESTMENT GROUP "
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+
       <Header image={pic} page="Contact us" pageDescription="for any inquiries" />
 
       {/* section one  */}
 
-     
+
 
       {/* section two  */}
 
@@ -97,26 +117,26 @@ const ContactComp = () => {
 
 
       <div data-aos="fade-up" data-aos-duration="300" className="h-[550px] lg:h-[700px] pad shadow-xl pb-[40px] lg:pb-[100px] overflow-hidden">
-          <iframe className="w-full h-full" 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.503167514216!2d38.79848387420257!3d9.01777948916619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b859eaf6a53a5%3A0x7717d41abd5534ec!2sPrivate%20Organizations%20Employees&#39;%20Social%20Security%20Administration%20Caf%C3%A9!5e0!3m2!1sen!2ske!4v1696280932547!5m2!1sen!2ske" 
-          width="300" 
-          height="450" 
-          style={{ border: "0" }} 
-          allowfullscreen="" 
-          loading="lazy" 
+        <iframe className="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.503167514216!2d38.79848387420257!3d9.01777948916619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b859eaf6a53a5%3A0x7717d41abd5534ec!2sPrivate%20Organizations%20Employees&#39;%20Social%20Security%20Administration%20Caf%C3%A9!5e0!3m2!1sen!2ske!4v1696280932547!5m2!1sen!2ske"
+          width="300"
+          height="450"
+          style={{ border: "0" }}
+          allowfullscreen=""
+          loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        </div>
+      </div>
 
       {/* <div className="sectiononecontact flex flex-col lg:flex-row lg:justify-between gap-[30px] "> */}
-        {/* <div className="cc">
+      {/* <div className="cc">
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/contact/possea3.jpg" />
         </div> */}
-        {/* <div className="h-[500px] shadow-xl overflow-hidden">
+      {/* <div className="h-[500px] shadow-xl overflow-hidden">
           <iframe className="h-full w-full object-cover" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.503167514216!2d38.79848387420257!3d9.01777948916619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b859eaf6a53a5%3A0x7717d41abd5534ec!2sPrivate%20Organizations%20Employees&#39;%20Social%20Security%20Administration%20Caf%C3%A9!5e0!3m2!1sen!2ske!4v1696280932547!5m2!1sen!2ske" width="600" height="450" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div> */}
-        {/* <div className="cc relative">
+      {/* <div className="cc relative">
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/contact/possea.jpg" />
           <div className="ccmapped h-full w-full absolute px-[20px] text-white flex flex-col gap-[15px] text-[16px] justify-center top-[0px] inset-0 bg-primary1 bg-opacity-[70%]">
             <div className="text-[24px] font-semibold"><h2>Contact Details</h2></div>

@@ -16,49 +16,50 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import Head from "next/head";
 
 
 const About = () => {
 
   const countUpRefs = useRef([]);
-  
+
   useEffect(() => {
     const options = {
-      root: null, 
-      rootMargin: '0px', 
-      threshold: 0.5, 
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-         
+
           const index = countUpRefs.current.findIndex((el) => el === entry.target);
           if (index !== -1) {
             const finalNumber = statsList[index].number;
-            const duration = 400; 
+            const duration = 400;
             startCounting(entry.target, finalNumber, duration);
           }
-        
+
           // observer.unobserve(entry.target);
         }
       });
     }, options);
 
-    
+
     countUpRefs.current.forEach((ref) => {
       observer.observe(ref);
     });
 
-    
+
     const startCounting = (element, finalNumber, duration) => {
       let start = 0;
-      const increment = finalNumber / (duration / 16); 
+      const increment = finalNumber / (duration / 16);
 
       const updateCount = () => {
         start += increment;
         element.textContent = Math.round(start);
-        
+
         if (start < finalNumber) {
           requestAnimationFrame(updateCount);
         }
@@ -71,6 +72,23 @@ const About = () => {
   return (
     <div className='About'>
 
+      <Head>
+        <title>Who We Are</title>
+        <meta name="description" content="NIG" />
+        <meta name="description" content="NATIONAL INVESTMENT GROUP" />
+        <meta name="description" content="NIG EHTOPIA" />
+        <meta name="description" content="INVESTMENT AFRICA" />
+        <meta name="description" content="AFRICA COOPERATE" />
+        <meta name="description" content="ETHIOPIA COOPERATE" />
+        <meta name="description" content="SAFRAICOM ETHIOPIA" />
+        <meta name="description" content="BUSINESS ETHIOPIA" />
+        <meta
+          property="og:title"
+          content="Who We Are - NATIONAL INVESTMENT GROUP "
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Header image={pic1} page="Who We Are" pageDescription="as an investment firm" />
 
 
@@ -78,7 +96,7 @@ const About = () => {
 
       <div className="section2 pad flex flex-col lg:flex-row-reverse lg:items-center gap-[60px] lg:gap-[40px] py-[40px] lg:h-screen lg:py-[100px]">
 
-        <div  data-aos="fade-left" data-aos-duration="300" className="section11 h-[250px] md:h-[400px] lg:h-[50vh] relative rr lg:w-[50%]">
+        <div data-aos="fade-left" data-aos-duration="300" className="section11 h-[250px] md:h-[400px] lg:h-[50vh] relative rr lg:w-[50%]">
 
           <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/banner4.jpg" alt="kim" />
           <div className="11abs absolute z-10 p-[10px] hidden rr bg-white flex flex-col gap-[5px] justify-center lg:items-center h-[90px] w-[70%] bg-opacity-[95%] lg:bg-opacity-[90%] lg:h-[70px] lg:w-[70%] right-[10px] bottom-[-33px] shadow-2xl">
@@ -167,7 +185,7 @@ const About = () => {
             <div className="font-semibold text-[28px]"><h2>Meet Our Top Executives <div className="und"></div> </h2></div>
           </div>
           <div>
-           <Link href="/contact"> <button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">Contact Us</button> </Link>
+            <Link href="/contact"> <button className="h-[54px] bg-orange-500 hover:bg-sec2 font-semibold px-[20px] rr text-white">Contact Us</button> </Link>
           </div>
 
         </div>
@@ -204,11 +222,11 @@ const About = () => {
         <div data-aos="fade-up" data-aos-duration="400" className="pad flex flex-col justify-center gap-[45px] absolute top-[0px] w-full h-full inset-0 text-white py-[40px]">
           <div className="flex flex-col gap-[20px]">
             <div className="text-[28px] font-semibold"><h3>Our Partners <div className="und"></div></h3></div>
-            <div className="lg:w-[60%]"><p>We're proud to partner with key organizations, offering sustainable solutions and representing Ethiopia in leading investments.</p></div>
+            <div className="lg:w-[60%] lg:text-[18px]"><p>We're proud to partner with key organizations, offering sustainable solutions and representing Ethiopia in leading investments.</p></div>
           </div>
           <div className="lg:hidden ">
             <Swiper
-              modules={[Autoplay,Pagination]}
+              modules={[Autoplay, Pagination]}
               pagination
               slidesPerView={1}
               spaceBetween={10}
@@ -235,8 +253,8 @@ const About = () => {
           </div>
           <div className="hidden lg:flex justify-between gap-[10px]">
 
-          <Swiper
-              modules={[Autoplay,Pagination]}
+            <Swiper
+              modules={[Autoplay, Pagination]}
               pagination
               slidesPerView={5}
               spaceBetween={10}
@@ -252,14 +270,14 @@ const About = () => {
 
                 return (
                   <SwiperSlide>
-                   <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[70%] px-[6px] rr h-[140px] w-[14vw] flex items-center justify-center">
-                  <Image className="h-full w-full object-contain" height={400} width={400} priority src={items.logo} />
-                </div>
+                    <div key={index} className="mappedpartnerslist bg-gray-100 bg-opacity-[70%] px-[6px] rr h-[140px] w-[14vw] flex items-center justify-center">
+                      <Image className="h-full w-full object-contain" height={400} width={400} priority src={items.logo} />
+                    </div>
                   </SwiperSlide>
                 )
               })}
             </Swiper>
-            
+
           </div>
 
         </div>

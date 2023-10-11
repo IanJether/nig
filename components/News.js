@@ -7,11 +7,30 @@ import { newsList } from "<nig>/data/news";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Head from "next/head";
 
 
 const NewsComp = () => {
     return (
         <div className='NewsComp bg-gray-100'>
+
+
+            <Head>
+                <title>News</title>
+                <meta name="description" content="NIG" />
+                <meta name="description" content="NATIONAL INVESTMENT GROUP" />
+                <meta name="description" content="NIG EHTOPIA" />
+                <meta name="description" content="INVESTMENT AFRICA" />
+                <meta name="description" content="AFRICA COOPERATE" />
+                <meta name="description" content="ETHIOPIA COOPERATE" />
+                <meta name="description" content="SAFRAICOM ETHIOPIA" />
+                <meta name="description" content="BUSINESS ETHIOPIA" />
+                <meta
+                    property="og:title"
+                    content="News - NATIONAL INVESTMENT GROUP "
+                />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
             <Header image={pic} page="News" pageDescription="and articles" />
 
@@ -41,7 +60,7 @@ const NewsComp = () => {
                     })}
 
                 </div>
-               
+
             </div>
 
             <ContactPrompt />

@@ -28,6 +28,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { aboutSliderList } from "<nig>/data/aboutSlider";
 import { socialLinks } from "<nig>/data/socialsLink";
+import Head from "next/head";
 
 
 
@@ -36,7 +37,7 @@ const Landing = () => {
   const [activeSlide, setActiveSlide] = useState(0)
   const [isManualSlideChange, setIsManualSlideChange] = useState(false);
 
- 
+
 
 
   const handleActiveSlide = (index) => {
@@ -120,13 +121,32 @@ const Landing = () => {
 
   return (
     <div className="Landing">
+
+      <Head>
+        <title>NATIONAL INVESTMENT GROUP - NIG ETHIOPIA</title>
+        <meta name="description" content="NIG" />
+        <meta name="description" content="NATIONAL INVESTMENT GROUP" />
+        <meta name="description" content="NIG EHTOPIA" />
+        <meta name="description" content="INVESTMENT AFRICA" />
+        <meta name="description" content="AFRICA COOPERATE" />
+        <meta name="description" content="ETHIOPIA COOPERATE" />
+        <meta name="description" content="SAFRAICOM ETHIOPIA" />
+        <meta name="description" content="BUSINESS ETHIOPIA" />
+        <meta
+          property="og:title"
+          content="NIG - NATIONAL INVESTMENT GROUP "
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+
       {/* section one  */}
 
       <div className="section1 relative h-[700px] md:h-[850px] lg:h-[100vh] bg-primary1">
 
         {/* <Image className="h-full w-full object-cover filter brightness-[50%]" priority height={1500} width={1500} src="/images/home/home.jpg" alt="" />/ */}
 
-        <div className="absolute hidden md:block lg:block md:h-[250px] lg:h-[55vh] top-[68%] lg:top-[27%] left-[5%] lg:right-[15%]">
+        <div className="absolute hidden lg:block md:h-[250px] lg:h-[55vh] top-[68%] lg:top-[27%]  lg:right-[15%]">
           <Image className="h-full w-full object-contain" height={1000} width={1000} src="/images/banner06.svg" />
         </div>
 
@@ -314,14 +334,14 @@ const Landing = () => {
 
           <div data-aos='fade-up' data-aos-duration="200" className="lg:w-[30%] flex flex-col shadow-md gap-[1px]">
             <Swiper
-              modules={[Autoplay,Pagination]}
+              modules={[Autoplay, Pagination]}
               slidesPerView={4}
               direction={'vertical'}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
               }}
-         
+
               loop
               className="swiper h-full w-full z-0"
             >
@@ -333,7 +353,7 @@ const Landing = () => {
 
                 return (
                   <SwiperSlide>
-                    <div onClick={() => {handleActiveSlide(index);console.log(index)}} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
+                    <div onClick={() => { handleActiveSlide(index); console.log(index) }} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
                                                 ${activeSlide === index ? 'bg-primary1 text-white' : ' bg-white '}`}>
                       <div className="w-[30%] p-[15px]">
@@ -360,8 +380,8 @@ const Landing = () => {
           </div>
 
           <div data-aos='fade-up' data-aos-duration="400" className="lg:w-[30%] flex flex-col shadow-md gap-[1px]">
-          <Swiper
-              modules={[Autoplay,Pagination]}
+            <Swiper
+              modules={[Autoplay, Pagination]}
               slidesPerView={4}
               direction={'vertical'}
               autoplay={{
@@ -379,7 +399,7 @@ const Landing = () => {
 
                 return (
                   <SwiperSlide>
-                    <div onClick={() => {handleActiveSlide(handleIndex(index));console.log(handleIndex(index))}} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
+                    <div onClick={() => { handleActiveSlide(handleIndex(index)); console.log(handleIndex(index)) }} key={index} className={`mappedbusineslist cursor-pointer flex gap-[7px]
                                                 px-[10px] border-b-2 h-[120px] w-full transition ease-in-out duration-300
                                                 ${activeSlide === handleIndex(index) ? 'bg-primary1 text-white' : ' bg-white '}`}>
                       <div className="w-[30%] p-[15px]">

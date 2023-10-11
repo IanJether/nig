@@ -10,6 +10,7 @@ import ContactPrompt from "./commons/ContactPrompt";
 import pic from "../public/images/New/glass.jpg"
 import Link from "next/link";
 import { getLink } from "<nig>/data/getLink";
+import Head from "next/head";
 
 
 const BusinessesComp = () => {
@@ -20,6 +21,25 @@ console.log(businessList.map((items)=>items.name))
 
     return (
         <div className='BusinessesComp bg-gray-100'>
+
+<Head>
+        <title>Our Businesses</title>
+        <meta name="description" content="NIG" />
+        <meta name="description" content="NATIONAL INVESTMENT GROUP" />
+        <meta name="description" content="NIG EHTOPIA" />
+        <meta name="description" content="INVESTMENT AFRICA" />
+        <meta name="description" content="AFRICA COOPERATE" />
+        <meta name="description" content="ETHIOPIA COOPERATE" />
+        <meta name="description" content="SAFRAICOM ETHIOPIA" />
+        <meta name="description" content="BUSINESS ETHIOPIA" />
+        <meta
+          property="og:title"
+          content="Our Businesses - NATIONAL INVESTMENT GROUP "
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+
             <Header image={pic} page="Our businesses" pageDescription="across diverse industries" />
 
             {/* section one  */}

@@ -5,7 +5,7 @@ import { businessList } from "<nig>/data/business";
 import { getLink } from "<nig>/data/getLink";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight, faFile } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faEarth, faFile } from "@fortawesome/free-solid-svg-icons";
 import ContactComp from "./Contact";
 import ContactPrompt from "./commons/ContactPrompt";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -14,6 +14,8 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import { useRouter } from "next/router";
 import "styled-jsx/style"
+import Head from "next/head";
+import { faWeebly } from "@fortawesome/free-brands-svg-icons";
 
 
 
@@ -30,12 +32,29 @@ const Businessdetails = ({ name }) => {
 
     console.log(router.pathname)
 
-    if(!name){
+    if (!name) {
         return <div>Loading...</div>
     }
 
     return (
         <div className='Businessdetails'>
+
+            <Head>
+                <title>{businessDetails.name}</title>
+                <meta name="description" content="NIG" />
+                <meta name="description" content="NATIONAL INVESTMENT GROUP" />
+                <meta name="description" content="NIG EHTOPIA" />
+                <meta name="description" content="INVESTMENT AFRICA" />
+                <meta name="description" content="AFRICA COOPERATE" />
+                <meta name="description" content="ETHIOPIA COOPERATE" />
+                <meta name="description" content="SAFRAICOM ETHIOPIA" />
+                <meta name="description" content="BUSINESS ETHIOPIA" />
+                <meta
+                    property="og:title"
+                    content={`${businessDetails.name} - NATIONAL INVESTMENT GROUP `}
+                />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
             {businessDetails ?
 
@@ -109,7 +128,7 @@ const Businessdetails = ({ name }) => {
                                     <p>{businessDetails.industry}</p>
                                 </div>
                                 <div className="h-[70px] hover:bg-sec1 w-full bg-orange-500 text-white px-[10px] flex items-center font-semibold rr  cursor-pointer">
-                                    <p> <FontAwesomeIcon className="mr-[5px] text-[19px]" icon={faFile} /> Company Profile</p>
+                                    <p> <FontAwesomeIcon className="mr-[5px] text-[19px]" icon={faEarth} /> Company Website </p>
                                 </div>
 
                             </div>
@@ -177,7 +196,7 @@ const Businessdetails = ({ name }) => {
                                     return (
                                         <SwiperSlide key={index}>
                                             <div key={index} className="mappedgallery h-[60vh] w-[25vw] bg-gray-200">
-                                            <Image alt="kim" className="h-full w-full object-cover " height={2000} width={2000} src={items.image} />
+                                                <Image alt="kim" className="h-full w-full object-cover " height={2000} width={2000} src={items.image} />
                                             </div>
                                         </SwiperSlide>
                                     )

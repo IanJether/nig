@@ -7,12 +7,30 @@ import { sustainabiltyList } from "<nig>/data/sustainable";
 import { partnersList } from "<nig>/data/partners";
 import ContactPrompt from "./commons/ContactPrompt";
 import { businessList } from "<nig>/data/business";
+import Head from "next/head";
 
 
 
 const SustainabilityComp = () => {
   return (
     <div className='SustainabilityComp'>
+
+      <Head>
+        <title>Sustainability</title>
+        <meta name="description" content="NIG" />
+        <meta name="description" content="NATIONAL INVESTMENT GROUP" />
+        <meta name="description" content="NIG EHTOPIA" />
+        <meta name="description" content="INVESTMENT AFRICA" />
+        <meta name="description" content="AFRICA COOPERATE" />
+        <meta name="description" content="ETHIOPIA COOPERATE" />
+        <meta name="description" content="SAFRAICOM ETHIOPIA" />
+        <meta name="description" content="BUSINESS ETHIOPIA" />
+        <meta
+          property="og:title"
+          content="Sustainability - NATIONAL INVESTMENT GROUP "
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
       {/* section one  */}
 
@@ -26,7 +44,7 @@ const SustainabilityComp = () => {
 
         </div>
 
-          <div className="flex flex-wrap hidden absolute w-full pad bottom-[50px] justify-center lg:justify-between gap-[20px]">
+        <div className="flex flex-wrap hidden absolute w-full pad bottom-[50px] justify-center lg:justify-between gap-[20px]">
           {sustainabiltyList.filter((items, index) => index < 7).map((items, index) => {
 
             return (
@@ -41,7 +59,7 @@ const SustainabilityComp = () => {
 
       {/* .section two  */}
 
-    
+
 
       {/* section three  */}
 

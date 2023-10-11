@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Header from "./commons/Header";
-import pic from "../public/images/New/ceo1.jpg"
+import pic from "../public/images/home/building2.jpg";
 import ContactPrompt from "./commons/ContactPrompt";
 import { newsList } from "<nig>/data/news";
 import Image from "next/image";

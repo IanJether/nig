@@ -7,7 +7,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import { industries } from "<nig>/data/industries";
 import ContactPrompt from "./commons/ContactPrompt";
-import pic from "../public/images/New/glass.jpg"
+import pic from "../public/images/home/building.jpg";
 import Link from "next/link";
 import { getLink } from "<nig>/data/getLink";
 import Head from "next/head";

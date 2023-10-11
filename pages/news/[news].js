@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 
        return( 
           <div className='newsPage'>
-                <Businessdetails name={news}/>
+                {/* <Businessdetails name={news}/> */}
           </div> 
 )
 }

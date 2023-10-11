@@ -7,7 +7,7 @@ import Image from "next/image";
 import { statsList } from "<nig>/data/stats";
 import { teamList } from "<nig>/data/team";
 import { partnersList } from "<nig>/data/partners";
-import pic1 from "../public/images/New/build.jpg";
+import pic1 from "../public/images/home/building4.jpg";
 import { managementList } from "<nig>/data/management";
 import 'swiper/css';
 import 'swiper/css/autoplay';

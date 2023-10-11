@@ -489,7 +489,7 @@ const Landing = () => {
 
           <div data-aos='fade-left' data-aos-duration="300" className="flex flex-col gap-[10px] lg:gap-[35px] lg:w-[30%] lg:h-[300px]">
             <div className="uppercase font-semibold text-[14px]"><p>7 Sustainability Pillars</p></div>
-            <div className="flex flex-wrap justify-between md:justify-start gap-[20px] md:gap-[50px]">
+            <div className="flex flex-wrap justify-between md:justify-start gap-[20px] md:gap-[50px] lg:gap-[20px]">
               {sustainabiltyList.filter((items, index) => index < 4).map((items, index) => {
 
                 return (
@@ -500,7 +500,7 @@ const Landing = () => {
                 )
               })}
             </div>
-            <div className="flex flex-wrap justify-between md:justify-start gap-[20px] md:gap-[50px]">
+            <div className="flex flex-wrap justify-between md:justify-start gap-[20px] md:gap-[50px] lg:gap-[20px]">
               {sustainabiltyList.filter((items, index) => index >= 4).map((items, index) => {
 
                 return (

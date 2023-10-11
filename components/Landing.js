@@ -123,7 +123,7 @@ const Landing = () => {
     <div className="Landing">
 
       <Head>
-        <title>NATIONAL INVESTMENT GROUP - NIG ETHIOPIA</title>
+        <title>National Investment Group NIG</title>
         <meta name="description" content="NIG" />
         <meta name="description" content="NATIONAL INVESTMENT GROUP" />
         <meta name="description" content="NIG EHTOPIA" />
@@ -134,7 +134,7 @@ const Landing = () => {
         <meta name="description" content="BUSINESS ETHIOPIA" />
         <meta
           property="og:title"
-          content="NIG - NATIONAL INVESTMENT GROUP "
+          content="NIG - National Investment Group "
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

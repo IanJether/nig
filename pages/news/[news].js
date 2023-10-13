@@ -1,4 +1,5 @@
 import Businessdetails from "<nig>/components/BusinessDetails";
+import Newsdetails from "<nig>/components/Newsdetails";
 import { useRouter } from "next/router";
 
 
@@ -12,7 +13,7 @@ import { useRouter } from "next/router";
 
        return( 
           <div className='newsPage'>
-                {/* <Businessdetails name={news}/> */}
+               <Newsdetails title={news}/>
           </div> 
 )
 }

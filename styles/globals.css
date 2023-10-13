@@ -5,6 +5,9 @@
 .pad {
   @apply px-[5%] lg:px-[10%]
 }
+.pad2 {
+  @apply px-[5%] lg:px-[20%]
+}
 
 body{
   font-family: 'Poppins', sans-serif;

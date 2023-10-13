@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Header = ({ page, pageDescription, image }) => {
     return (
-        <div className='Header relative h-[300px]  lg:h-[50vh] bg-neutral-700'>
+        <div className='Header relative h-[300px] z-0 lg:h-[50vh] bg-neutral-700'>
 
             <Image className="h-full w-full object-cover filter brightness-[35%]" height={1500} width={1600}  src={image} priority />
 

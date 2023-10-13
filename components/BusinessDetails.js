@@ -63,7 +63,7 @@ const Businessdetails = ({ name }) => {
                     {/* section one  */}
 
                     <div className="sectioneonedetails h-[600px] lg:h-screen relative w-full">
-                        <Image className="h-full w-full object-cover filter brightness-[43%]" height={2000} alt="kim" width={2000} src={businessDetails.image[0].image} />
+                        <Image className="h-full w-full object-cover filter brightness-[55%]" height={2000} alt="kim" width={2000} src={businessDetails.image[0].image} />
 
                         <div className="detailsabsolute absolute h-full w-full top-[0px] flex flex-col lg:flex-row pad items-center justify-center gap-[20px]">
 
@@ -71,8 +71,8 @@ const Businessdetails = ({ name }) => {
                                 <Image className="h-full w-full object-contain opacity-[70%]" height={1500} width={1500} alt="kim" src={businessDetails.logo} />
                             </div>
 
-                            <div className="text-white flex text-center flex-col gap-[15px] lg:w-[36vw]">
-                                <div className="text-[43px] lg:text-[60px] font-light leading-[43px] lg:leading-[50px]"><h1>{businessDetails.name}</h1></div>
+                            <div className="text-white flex text-center flex-col gap-[15px] lg:w-[40vw]">
+                                <div className="text-[43px] lg:text-[60px] leading-[43px] lg:leading-[62px]"><h1>{businessDetails.name}</h1></div>
                                 <div className="text-[20px]"><p>"{businessDetails.description}"</p></div>
                             </div>
 

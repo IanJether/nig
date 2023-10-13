@@ -430,7 +430,7 @@ const Landing = () => {
 
         {/* the mobile screen  */}
 
-        <div data-aos='fade-u' data-aos-duration="200" className="pb-[40px] lg:hidden">
+        <div data-aos data-aos-duration="200" className="pb-[0px] lg:hidden">
           <Swiper
             modules={[Autoplay, Pagination]}
             slidesPerView={1}
@@ -448,7 +448,7 @@ const Landing = () => {
 
               return (
                 <SwiperSlide key={index} className="mappedmobilebusiness">
-                  <div className="flex flex-col gap-[17px]">
+                  <div className="flex flex-col gap-[17px] pb-[50px]">
                     <div className="flex flex-col gap-[5px] h-[115px]">
                       <div className="h-[50px] w-[50%]"><Image className="h-full w-full object-contain" height={500} width={500} src={items.logo} /></div>
                       <div className="text-[17px] leading-[25px] capitalize font-semibold"><h2>{items.name}</h2></div>

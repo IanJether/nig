@@ -69,15 +69,15 @@ const Newsdetails = ({ title }) => {
 
             <div data-aos="fade-right" data-aos-duration="400" className="flex flex-col w-[30%] lg:items-center lg:w-[30%] gap-[2px]">
                <div className="text-gray-500"><p>Author</p></div>
-               <div className="text-[20px] "><h3>{newsDetails.author}</h3></div>
+               <div className="lg:text-[20px] "><h3>{newsDetails.author}</h3></div>
             </div>
             <div data-aos="fade-right" data-aos-duration="600" className="flex flex-col lg:items-center w-[53%] lg:w-[30%] gap-[2px]">
                <div className="text-gray-500 "><p>Date</p></div>
-               <div className="text-[20px] "><h3>{newsDetails.date}</h3></div>
+               <div className="lg:text-[20px] "><h3>{newsDetails.date}</h3></div>
             </div>
             <div data-aos="fade-right" data-aos-duration="800" className="flex flex-col w-[33%] lg:items-center lg:w-[30%] gap-[2px]">
                <div className="text-gray-500"><p>Category</p></div>
-               <div className="text-[20px] "><h3>Articles</h3></div>
+               <div className="lg:text-[20px] "><h3>Articles</h3></div>
             </div>
 
          </div>

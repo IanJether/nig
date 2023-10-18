@@ -436,7 +436,7 @@ const Landing = () => {
             slidesPerView={1}
             spaceBetween={10}
             autoplay={{
-              delay: 3000,
+              delay: 4000,
               disableOnInteraction: false,
             }}
             pagination={{ clickable: true }}

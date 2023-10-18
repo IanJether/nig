@@ -90,8 +90,8 @@ const Footer = () => {
             </div>
             {/* <div className="linefooter border-b-[1px] border-gray-400"></div> */}
             <div className="footerbottom text-center text-[14px] py-[40px] bg-neutral-900 flex flex-col lg:flex-row lg:justify-between pad gap-[5px]">
-                <div>Copyright &copy; 2023 NIG international</div>
-                <div>Developed by <span className="text-blue-500"> Fineteklabs </span></div>
+                <div>Copyright &copy; 2023 National Investment Group</div>
+                <div>Engineered by <a target="_blank" href="https://www.fineteklabs.com/"><span className="text-blue-500 hover:text-blue-600 hover:underline"> Fineteklabs </span></a></div>
             </div>
 
         </div>

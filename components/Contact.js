@@ -93,7 +93,7 @@ const ContactComp = () => {
                 <div className="hover:text-black hover:underline"><p>Addis Ababa, Ethiopia ,Megnagna POSSEA Building 3rd floor</p></div>
               </div>
               <div className="flex lg:absolute lg:bottom-[15px] z-10 justify-self-end soshobox gap-[20px] lg:gap-[30px] text-[28px] text-white">
-                <div><FontAwesomeIcon icon={faFacebook} /></div>
+                <div><FontAwesomeIcon icon={faEnvelope} /></div>
                 <div><FontAwesomeIcon icon={faInstagram} /></div>
                 <div><FontAwesomeIcon icon={faTwitter} /></div>
                 <div><FontAwesomeIcon icon={faLinkedin} /></div>

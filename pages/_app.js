@@ -27,3 +27,6 @@ export default function App({ Component, pageProps }) {
 
 
 // npx tailwindcss -i ./styles/globals.css -o ./styles/output.css --watch
+
+// https://github.com/IanJether/nig.git
+// https://github.com/Fineteklabs-Engineering/nationalInvestmentGroupFrontEnd.git

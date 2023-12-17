@@ -136,10 +136,11 @@ const Landing = () => {
           property="og:title"
           content="NIG - National Investment Group "
         />
-          <meta
-               property="og:site_name"
-               content={`National Investment Group Ltd`}
-            />
+        <meta
+          property="og:site_name"
+          content={`National Investment Group Ltd`}
+        />
+        {/* <meta name="google-site-verification" content="UqGuceOxr4U-liMrbD9KKYdIbW6NSUprWzixZQrZD0A" /> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

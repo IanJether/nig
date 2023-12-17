@@ -69,12 +69,12 @@ const SustainabilityComp = () => {
 
           <div className="sus lg:h-[102%] lg:w-[50%] relative">
             <Image className="h-full w-full object-cover filter brightness-[60%]" height={1000} width={1000} priority src={businessList[1].image[1].image} alt="kim" />
-            <div className="absolute top-[10px] right-[10px] text-white font-semibold text-[30px]">
+            <div className="absolute top-[10px]  right-[10px] text-white font-semibold text-[30px]">
               <p>SDG #4</p>
             </div>
-            <div className="absolute bottom-[15px] text-white w-full text-center">
+            <div className="absolute bottom-[15px] p-[10px] text-white w-full text-center">
               <h3 className="font-semibold text-[18px]">National Aviation College</h3>
-              <p className="text-[18px]">Promoting sustainable Tourism</p>
+              <p className="text-[18px]">Integrating sustainable practices and fostering inclusive education for all</p>
             </div>
           </div>
           <div className="flex flex-col gap-[13px] lg:w-[50%] ">

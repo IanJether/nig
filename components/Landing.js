@@ -116,7 +116,7 @@ const Landing = () => {
     };
   }, [statsList]);
 
-  const mySocialOrderList = [0,1,2,3,4];
+  const mySocialOrderList = [0, 1, 2, 3, 4];
 
 
 
@@ -208,7 +208,7 @@ const Landing = () => {
                 <div key={index} data-aos='fade-up'
                   data-aos-duration={`${index == 0 ? "400" : index == 1 ? "600" : index == 2 ? '800' : index == 3 ? "1000" : "1200 "}`}
                   className="hover:text-red-500">
-                  <span className="text-neutral-800 mr-[15px] mt-[4px] textsociallinks text-[13px] hover:text-primary1 hover:underline font-semibold"> <Link href={socialLinks[items].link}> {socialLinks[items].text} </Link></span>
+                  <span className="text-neutral-800 mr-[15px] mt-[4px] textsociallinks text-[13px] hover:text-primary1 hover:underline font-semibold"> <a target="_blank" href={socialLinks[items].link}> {socialLinks[items].text} </a></span>
                   <FontAwesomeIcon icon={socialLinks[items].icon} />
 
                 </div>

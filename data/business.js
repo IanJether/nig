@@ -68,6 +68,7 @@ export const businessList =  [
             },
         ],
         description: "The Spirit of a Rising Nation",
+        website: "www.nationalairways.com",
         industry: "Aviation",
         text:[
             {
@@ -104,6 +105,7 @@ export const businessList =  [
             
         ],
         description: "Where Your Career Takes Off",
+        website: "www.nationalaviationcollege.com",
         industry: "Education",
         text:[
             {
@@ -133,6 +135,7 @@ export const businessList =  [
             },
         ],
         description: "Building the Future of Telecommunications",
+        website: "www.nationaltelecom.et",
         industry: "Technology",
         text:[
             {
@@ -159,6 +162,7 @@ export const businessList =  [
             },
         ],
         description: "Transforming Mobile Services with Tollo Cash Innovations",
+        website: "www.tollocashethiopia.com",
         industry: "Mobile Money",
         text:[
             {
@@ -185,6 +189,7 @@ export const businessList =  [
             },
         ],
         description: "Creating Best Practice Solutions",
+        website: "",
         industry: "Research",
         text:[
             {
@@ -212,6 +217,7 @@ export const businessList =  [
             },
         ],
         description: "Sustainable Solutions for Modern Agriculture",
+        website: "nationalagrosolutions.com",
         industry: "Agro-Solution",
         text:[
             {
@@ -238,6 +244,7 @@ export const businessList =  [
             },
         ],
         description: "Empowering Businesses wit Logistics Solutions",
+        website: "",
         industry: "Logistics",
         text:[
             {
@@ -268,6 +275,7 @@ export const businessList =  [
             },
         ],
         description: "Unforgettable Escape",
+        website: "",
         industry: "Tours and Travel",
         text:[
             {
@@ -295,6 +303,7 @@ export const businessList =  [
            
         ],
         description: "Comprehensinve import and export solutions",
+        website:"",
         industry: "Import & export",
         text:[
             {

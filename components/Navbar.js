@@ -5,6 +5,7 @@ import Link from "next/link";
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import { NavbarList } from "<nig>/data/navList";
+import { socialLinks } from "<nig>/data/socialsLink";
 
 const Navbar = () => {
 
@@ -72,6 +73,7 @@ const Navbar = () => {
             } catch { }
         }
     })
+    const mySocialOrderList = [0,1,2,3,4];
 
     return (
         <div className='Navbar'>
@@ -103,11 +105,14 @@ const Navbar = () => {
                         </ul>
 
                         <div className="soshomobile text-primary2 mt-[15px] flex justify-between w-[49vw] text-[20px]">
-                            <div><FontAwesomeIcon icon={faPhone} /></div>
-                            <div><FontAwesomeIcon icon={faEnvelope} /></div>
-                            <div><FontAwesomeIcon icon={faLinkedin} /></div>
-                            <div><FontAwesomeIcon icon={faTwitter} /></div>
-                            <div><FontAwesomeIcon icon={faFacebook} /></div>
+                           {mySocialOrderList.map((items,index)=>{
+
+                            return(
+                                <div className="mappedsocialsmobile">
+                                   <a target='_blank' href={socialLinks[items].link}> <FontAwesomeIcon icon={socialLinks[items].icon}/> </a>
+                                </div>
+                            )
+                           })}
                         </div>
 
 

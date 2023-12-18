@@ -41,7 +41,7 @@ const NewsComp = () => {
             <div className="sectiononeNews flex flex-col gap-[50px] lg:gap-[70px] pad py-[40px] lg:py-[100px] lg:pb-[130px]">
                 <div className="51top flex flex-col lg:flex-row lg:justify-between gap-[20px]">
                     <div className="text-[28px] font-semibold"><h2>News and Stories <div className="und"></div></h2></div>
-                    <div className="hidden lg:block"><button className="bg-orange-500 hover:bg-sec2 h-[50px] rr text-white font-semibold px-[15px]">Contact Us</button></div>
+                    <div className="hidden lg:block"> <Link href="/contact"> <button className="bg-orange-500 hover:bg-sec2 h-[50px] rr text-white font-semibold px-[15px]">Contact Us</button></Link></div>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="400" className="52bottom flex flex-wrap justify-between gap-[40px]">
                     {newsList.map((items, index) => {

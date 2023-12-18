@@ -9,9 +9,15 @@ import { faEnvelope, faLocationPin, faPhone } from "@fortawesome/free-solid-svg-
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { contactPersonList } from "<nig>/data/contactPeople";
 import Head from "next/head";
+import { socialLinks } from "<nig>/data/socialsLink";
 
 
 const ContactComp = () => {
+
+  const mySocialOrderList = [0, 1, 2];
+  const mySocialOrderList2 = [4, 5, 6, 3, 8];
+
+
   return (
     <div className='ContactComp bg-stone-100'>
 
@@ -80,23 +86,24 @@ const ContactComp = () => {
             {/* <Image className="h-full w-full object-cover" height={1000} width={1000} priority src="/images/contact/possea.jpg" /> */}
             <div className="ccmapped  h-full w-full absolute px-[20px] text-white flex flex-col gap-[25px] text-[16px] justify-center lg:justify-start top-[0px] inset-0 bg-primary1">
               <div className="text-[24px] lg:mt-[37px]"><h2>Contact Details <div className="und"></div> </h2></div>
-              <div className="flex gap-[10px] lg:mt-[20px]">
-                <div className="w-[20px] text-[18px] text-orange-500"><FontAwesomeIcon icon={faPhone} /></div>
-                <div className="hover:text-black hover:underline "><p>+252-911-201-722</p></div>
-              </div>
-              <div className="flex gap-[10px] z-10">
-                <div className="w-[25px] text-[18px] text-orange-500"><FontAwesomeIcon icon={faEnvelope} /></div>
-                <div className="hover:text-black hover:underline "><p>info@nationalinvestmentgoup.com</p></div>
-              </div>
-              <div className="flex z-10 gap-[10px]">
-                <div className="w-[24px] text-[18px] text-orange-500"><FontAwesomeIcon icon={faLocationPin} /></div>
-                <div className="hover:text-black hover:underline"><p>Addis Ababa, Ethiopia ,Megnagna POSSEA Building 3rd floor</p></div>
-              </div>
+              {mySocialOrderList.map((items, index) => {
+
+                return (
+                  <div key={index} className="mappedsociallinks flex gap-[10px]">
+                    <div className="w-[20px] text-orange-500"><FontAwesomeIcon icon={socialLinks[items].icon} /></div>
+                    <div className="hover:text-orange-500 hover:underline"> <a target="_blank" href={socialLinks[items].link}> <p>{socialLinks[items].text}</p></a></div>
+                  </div>
+                )
+              })}
               <div className="flex lg:absolute lg:bottom-[15px] z-10 justify-self-end soshobox gap-[20px] lg:gap-[30px] text-[28px] text-white">
-                <div><FontAwesomeIcon icon={faEnvelope} /></div>
-                <div><FontAwesomeIcon icon={faInstagram} /></div>
-                <div><FontAwesomeIcon icon={faTwitter} /></div>
-                <div><FontAwesomeIcon icon={faLinkedin} /></div>
+                {mySocialOrderList2.map((items, index) => {
+
+                  return (
+                    <div className="mappedsocialsmobile">
+                      <a target='_blank' href={socialLinks[items].link}> <FontAwesomeIcon icon={socialLinks[items].icon} /> </a>
+                    </div>
+                  )
+                })}
               </div>
 
             </div>

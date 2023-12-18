@@ -116,6 +116,8 @@ const Landing = () => {
     };
   }, [statsList]);
 
+  const mySocialOrderList = [0,1,2,3,4];
+
 
 
 
@@ -199,15 +201,15 @@ const Landing = () => {
         <div className="absolute right-[4%] top-[0px] h-[100%] flex items-center">
           <div className="sosholanding hidden lg:flex text-white h-[350px] flex flex-col items-end justify-between">
 
-            {socialLinks.map((items, index) => {
+            {mySocialOrderList.map((items, index) => {
 
               return (
 
                 <div key={index} data-aos='fade-up'
                   data-aos-duration={`${index == 0 ? "400" : index == 1 ? "600" : index == 2 ? '800' : index == 3 ? "1000" : "1200 "}`}
                   className="hover:text-red-500">
-                  <span className="text-neutral-800 mr-[15px] mt-[4px] textsociallinks text-[13px] hover:text-primary1 hover:underline font-semibold"> {items.text} </span>
-                  <FontAwesomeIcon icon={items.icon} />
+                  <span className="text-neutral-800 mr-[15px] mt-[4px] textsociallinks text-[13px] hover:text-primary1 hover:underline font-semibold"> <Link href={socialLinks[items].link}> {socialLinks[items].text} </Link></span>
+                  <FontAwesomeIcon icon={socialLinks[items].icon} />
 
                 </div>
 

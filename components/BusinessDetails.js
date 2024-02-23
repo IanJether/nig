@@ -129,7 +129,7 @@ const Businessdetails = ({ name }) => {
                                 </div>
                                 {businessDetails.website !== "" ?
 
-                                   <a target="_blank" href={businessDetails.website}> <div className="h-[70px] hover:bg-sec1 w-full bg-orange-500 text-white px-[10px] flex items-center font-semibold rr  cursor-pointer">
+                                   <a target="_blank" href={`https://${businessDetails.website}`}> <div className="h-[70px] hover:bg-sec1 w-full bg-orange-500 text-white px-[10px] flex items-center font-semibold rr  cursor-pointer">
                                         <p> <FontAwesomeIcon className="mr-[5px] text-[19px]" icon={faEarth} /> {businessDetails.website} </p>
                                     </div> </a>
 

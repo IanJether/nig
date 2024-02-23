@@ -14,6 +14,8 @@ const Footer = () => {
     const mySocialOrderList = [5, 6, 3, 8];
     const mySocialOrderList2 = [0,1,2];
 
+    const currentYear = new Date().getFullYear();
+
 
     return (
         <div className='Footer flex flex-col gap-[10px] pt-[40px] lg:pt-[100px] bg-neutral-800 text-white'>
@@ -89,7 +91,7 @@ const Footer = () => {
             </div>
             {/* <div className="linefooter border-b-[1px] border-gray-400"></div> */}
             <div className="footerbottom text-center text-[14px] py-[40px] bg-neutral-900 flex flex-col lg:flex-row lg:justify-between pad gap-[5px]">
-                <div>Copyright &copy; 2023 National Investment Group</div>
+                <div>Copyright &copy; {currentYear} National Investment Group</div>
                 <div>Engineered by <a target="_blank" href="https://www.fineteklabs.com/"><span className="text-blue-500 hover:text-blue-600 hover:underline"> Fineteklabs </span></a></div>
             </div>
 
